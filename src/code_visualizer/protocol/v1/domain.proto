@@ -1,0 +1,42 @@
+syntax = "proto3";
+package code_visualizer.protocol.v1;
+import "code_visualizer/protocol/v1/identity.proto";
+import "code_visualizer/protocol/v1/value.proto";
+
+message PropertyDefinition {
+  string id = 1; string name = 2; string value_kind = 3; bool required = 4;
+  CanonicalValue default_value = 5; repeated CanonicalValue choices = 6;
+  optional double minimum = 7; optional double maximum = 8;
+  ValueConstraints value_constraints = 9;
+}
+message RoleDefinition {
+  string id = 1; string name = 2; repeated string allowed_concept_ids = 3;
+  uint64 min_count = 4; optional uint64 max_count = 5; bool ordered = 6;
+}
+message ConstraintDefinition {
+  string id = 1; string kind = 2; string property_id = 3; optional string role_id = 4;
+}
+message ConceptDefinition {
+  string id = 1; string name = 2; repeated PropertyDefinition properties = 3;
+  repeated RoleDefinition containment_roles = 4; repeated RoleDefinition reference_roles = 5;
+  repeated ConstraintDefinition constraints = 6; optional string display_property_id = 7;
+  string description = 8;
+}
+message DomainSchema {
+  uint32 schema_version = 1;
+  string id = 2; string namespace = 3; string version = 4;
+  repeated ConceptDefinition concepts = 5;
+  VersionedReference bundle = 6; string description = 7;
+}
+message PropertyValue { string property_id = 1; CanonicalValue value = 2; }
+message RoleBinding { string role_id = 1; repeated string node_ids = 2; }
+message IntentionalNode {
+  uint32 schema_version = 1;
+  string id = 2; string concept_id = 3; repeated PropertyValue properties = 4;
+  repeated RoleBinding children = 5; repeated RoleBinding references = 6;
+}
+message DomainModel {
+  uint32 schema_version = 1;
+  string id = 2; VersionedReference schema = 3; repeated string roots = 4;
+  repeated IntentionalNode nodes = 5; string title = 6;
+}

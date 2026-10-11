@@ -1,0 +1,28 @@
+syntax = "proto3";
+package code_visualizer.protocol.v1;
+
+// Field numbers are permanent. Reserve removed numbers and names before evolution.
+message VersionedReference { string id = 1; string version = 2; }
+message SemanticReference {
+  string semantic_id = 1;
+  optional string model_id = 2;
+  optional string project_id = 3;
+}
+message OriginLink { string generated_id = 1; repeated string source_ids = 2; }
+message OriginMap { string project_id = 1; uint64 revision = 2; repeated OriginLink links = 3; }
+
+// Public names are distinct from opaque project/semantic object identities.
+// An owner claim never grants trust: the receiving host checks its namespace grants.
+message ContractDefinition {
+  string kind = 1;
+  string id = 2;
+  string version = 3;
+}
+message PublicationManifest {
+  uint32 naming_version = 1;
+  string owner_id = 2;
+  ContractDefinition bundle = 3;
+  repeated ContractDefinition contracts = 4;
+  repeated ContractDefinition dependencies = 5;
+  repeated ContractDefinition references = 6;
+}

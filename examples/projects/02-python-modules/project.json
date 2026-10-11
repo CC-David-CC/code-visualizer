@@ -1,0 +1,1112 @@
+{
+  "concepts": [],
+  "description": "",
+  "documents": [
+    {
+      "description": "",
+      "extensions": [],
+      "id": "diagram_b837bd54648643ba9c0c52f4df9b03d0",
+      "kind": "drakon",
+      "title": "main"
+    },
+    {
+      "description": "",
+      "extensions": [],
+      "id": "diagram_5d2035e317f5488891f785fc7fb9d7bc",
+      "kind": "drakon",
+      "title": "Build greeting"
+    }
+  ],
+  "domain_workspace": {
+    "bundle_references": [],
+    "language_definitions": [],
+    "models": [],
+    "schemas": []
+  },
+  "drakon_views": [
+    {
+      "document_id": "diagram_b837bd54648643ba9c0c52f4df9b03d0",
+      "end_id": "end_b6eb8a21df524ff9892e733e52d940bf",
+      "function_id": "diagram_b837bd54648643ba9c0c52f4df9b03d0",
+      "header_id": "header_84baeedeb7044e33a9a04f91e39fc693",
+      "title": "main"
+    },
+    {
+      "document_id": "diagram_5d2035e317f5488891f785fc7fb9d7bc",
+      "end_id": "end_a74c321e1f4a4ce3903687a1aa49c34f",
+      "function_id": "diagram_5d2035e317f5488891f785fc7fb9d7bc",
+      "header_id": "header_0f9b425c99d7464caac0fcadc9044a48",
+      "title": "Build greeting"
+    }
+  ],
+  "extensions": [],
+  "format_revision": 11,
+  "managed_assets": [],
+  "program_model": {
+    "entrypoint": {
+      "arguments": {
+        "keywords": [],
+        "kind": "literal",
+        "positional": []
+      },
+      "callable_id": "diagram_b837bd54648643ba9c0c52f4df9b03d0",
+      "id": "entrypoint:project_188a7b9d419b4ea6b53f784c3a3c46fa",
+      "startup": [
+        {
+          "annotation": null,
+          "id": "python_2f91ddcf112e2082d902ece6",
+          "kind": "assignment",
+          "operator": "=",
+          "target": {
+            "id": "expression:python_2f91ddcf112e2082d902ece6:target",
+            "role": "target",
+            "tree": {
+              "context": "store",
+              "id": "expression:python_2f91ddcf112e2082d902ece6:target:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:startup:d1f83a79182ad2055932e6349f7d9fb3337dbe03509f38d4ac00bc77593ebad0:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+              "kind": "symbol",
+              "name": "PROJECT_LABEL",
+              "symbol_id": null
+            }
+          },
+          "value": {
+            "id": "expression:python_2f91ddcf112e2082d902ece6:value",
+            "role": "value",
+            "tree": {
+              "id": "expression:python_2f91ddcf112e2082d902ece6:value:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:startup:d1f83a79182ad2055932e6349f7d9fb3337dbe03509f38d4ac00bc77593ebad0:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+              "kind": "literal",
+              "literal_kind": null,
+              "value": {
+                "kind": "str",
+                "value": "Module Setup demonstration"
+              }
+            }
+          },
+          "written_symbol_ids": []
+        }
+      ]
+    },
+    "functions": [
+      {
+        "body": {
+          "id": "sequence_507ba80ca1174d369bb15677f20320cb",
+          "statements": [
+            {
+              "id": "atom_606623aae25e44099c920e0761d4c056",
+              "kind": "action",
+              "source": {
+                "id": "expression:atom_606623aae25e44099c920e0761d4c056:source",
+                "role": "statements",
+                "tree": {
+                  "fields": [
+                    {
+                      "name": "body",
+                      "value": {
+                        "items": [
+                          {
+                            "value": {
+                              "fields": [
+                                {
+                                  "name": "value",
+                                  "value": {
+                                    "value": {
+                                      "arguments": [
+                                        {
+                                          "arguments": [],
+                                          "callee": {
+                                            "context": "load",
+                                            "id": "expression:atom_606623aae25e44099c920e0761d4c056:source:parse:55e62caeed23485e8fe77ce7d11bb9ff:node:0c828ee57d55e13aa2ffe597ec11aa698817a6409b482968f50b12a3df241b84",
+                                            "kind": "symbol",
+                                            "name": "make_greeting",
+                                            "symbol_id": null
+                                          },
+                                          "id": "expression:atom_606623aae25e44099c920e0761d4c056:source:parse:55e62caeed23485e8fe77ce7d11bb9ff:node:cdab044052e82df79580e3e9b25351a3da7a1bb9f802ced25f38a238e71a7030",
+                                          "keywords": [],
+                                          "kind": "call"
+                                        }
+                                      ],
+                                      "callee": {
+                                        "context": "load",
+                                        "id": "expression:atom_606623aae25e44099c920e0761d4c056:source:parse:55e62caeed23485e8fe77ce7d11bb9ff:node:5bf23479175df1c3e596a8889a4e7114e0032dd1dc6aacb22a68f268a9085b66",
+                                        "kind": "symbol",
+                                        "name": "print",
+                                        "symbol_id": null
+                                      },
+                                      "id": "expression:atom_606623aae25e44099c920e0761d4c056:source:parse:55e62caeed23485e8fe77ce7d11bb9ff:node:0c70ce0ac4f8bd15b6b151fbf0399d9be60b8f0688b42a0d7166a5d82693c493",
+                                      "keywords": [],
+                                      "kind": "call"
+                                    },
+                                    "value_kind": "node"
+                                  }
+                                }
+                              ],
+                              "id": "expression:atom_606623aae25e44099c920e0761d4c056:source:parse:55e62caeed23485e8fe77ce7d11bb9ff:node:ff524f8f9cdf6fb1f58d37ea4a0b77c67426f3582e7cb4c5c00949acc1f0c2fd",
+                              "kind": "composite",
+                              "python_kind": "Expr"
+                            },
+                            "value_kind": "node"
+                          }
+                        ],
+                        "value_kind": "list"
+                      }
+                    },
+                    {
+                      "name": "type_ignores",
+                      "value": {
+                        "items": [],
+                        "value_kind": "list"
+                      }
+                    }
+                  ],
+                  "id": "expression:atom_606623aae25e44099c920e0761d4c056:source:parse:55e62caeed23485e8fe77ce7d11bb9ff:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "composite",
+                  "python_kind": "Module"
+                }
+              }
+            }
+          ]
+        },
+        "decorators": [],
+        "display_name": "main",
+        "docstring": null,
+        "id": "diagram_b837bd54648643ba9c0c52f4df9b03d0",
+        "identifier": "main",
+        "kind": "sync",
+        "method_kind": null,
+        "parameters": [],
+        "return_annotation": null,
+        "symbol_id": "symbol_de33814ddfc0d150dc44b374",
+        "type_parameters": []
+      },
+      {
+        "body": {
+          "id": "sequence_905790174f4949fdb803c5d505c5a5f7",
+          "statements": [
+            {
+              "cause": null,
+              "expression": {
+                "id": "expression:atom_299ae9366cad452e831d65424301f1b2:expression",
+                "role": "expression",
+                "tree": {
+                  "arguments": [],
+                  "callee": {
+                    "attribute": "render",
+                    "context": "load",
+                    "id": "expression:atom_299ae9366cad452e831d65424301f1b2:expression:parse:6eb19d3c687841bbbc9b8b18403063b9:node:d39ce10a7f02853a540336b9564501a48784ff61e231c6d8e80f9bf049753136",
+                    "kind": "attribute",
+                    "value": {
+                      "arguments": [
+                        {
+                          "context": "load",
+                          "id": "expression:atom_299ae9366cad452e831d65424301f1b2:expression:parse:6eb19d3c687841bbbc9b8b18403063b9:node:86a057494759abe936bc510270f520f7e76b87a4530829a46b5df8680a183173",
+                          "kind": "symbol",
+                          "name": "MESSAGE",
+                          "symbol_id": null
+                        }
+                      ],
+                      "callee": {
+                        "context": "load",
+                        "id": "expression:atom_299ae9366cad452e831d65424301f1b2:expression:parse:6eb19d3c687841bbbc9b8b18403063b9:node:cd01cbf54d013f130c6da8c16acf17de42db23bfde2175a507982cc3c44d4ca3",
+                        "kind": "symbol",
+                        "name": "Greeter",
+                        "symbol_id": null
+                      },
+                      "id": "expression:atom_299ae9366cad452e831d65424301f1b2:expression:parse:6eb19d3c687841bbbc9b8b18403063b9:node:f74553425577457f0687b55fb498a797c5dd86ba55a07539ee6d59e1ace73b76",
+                      "keywords": [],
+                      "kind": "call"
+                    }
+                  },
+                  "id": "expression:atom_299ae9366cad452e831d65424301f1b2:expression:parse:6eb19d3c687841bbbc9b8b18403063b9:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "keywords": [],
+                  "kind": "call"
+                }
+              },
+              "id": "atom_299ae9366cad452e831d65424301f1b2",
+              "kind": "transfer",
+              "transfer_kind": "return"
+            }
+          ]
+        },
+        "decorators": [],
+        "display_name": "Build greeting",
+        "docstring": null,
+        "id": "diagram_5d2035e317f5488891f785fc7fb9d7bc",
+        "identifier": "build_greeting",
+        "kind": "sync",
+        "method_kind": null,
+        "parameters": [],
+        "return_annotation": null,
+        "symbol_id": "symbol_78c1a08f97d5cca72a55de0f",
+        "type_parameters": []
+      }
+    ],
+    "modules": [
+      {
+        "body": [
+          {
+            "id": "python_1a404fa59d01966c368c40da",
+            "kind": "import",
+            "source": {
+              "id": "expression:python_1a404fa59d01966c368c40da:statements",
+              "role": "statements",
+              "tree": {
+                "fields": [
+                  {
+                    "name": "body",
+                    "value": {
+                      "items": [
+                        {
+                          "value": {
+                            "fields": [
+                              {
+                                "name": "module",
+                                "value": {
+                                  "value": {
+                                    "kind": "str",
+                                    "value": "studio_demo.helpers"
+                                  },
+                                  "value_kind": "scalar"
+                                }
+                              },
+                              {
+                                "name": "names",
+                                "value": {
+                                  "items": [
+                                    {
+                                      "value": {
+                                        "fields": [
+                                          {
+                                            "name": "name",
+                                            "value": {
+                                              "value": {
+                                                "kind": "str",
+                                                "value": "build_greeting"
+                                              },
+                                              "value_kind": "scalar"
+                                            }
+                                          },
+                                          {
+                                            "name": "asname",
+                                            "value": {
+                                              "value": {
+                                                "kind": "str",
+                                                "value": "make_greeting"
+                                              },
+                                              "value_kind": "scalar"
+                                            }
+                                          }
+                                        ],
+                                        "id": "expression:python_1a404fa59d01966c368c40da:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:main:import:0:d798a225fda2b079f476267c80745b25e582bdaffb292e0aeeb0a1a1f2e96d8d:node:ee97c9b1eef411f053127d5ec9a9785366ee1f622d20240e8d9b2df353f756aa",
+                                        "kind": "composite",
+                                        "python_kind": "alias"
+                                      },
+                                      "value_kind": "node"
+                                    }
+                                  ],
+                                  "value_kind": "list"
+                                }
+                              },
+                              {
+                                "name": "level",
+                                "value": {
+                                  "value": {
+                                    "kind": "int",
+                                    "value": "0"
+                                  },
+                                  "value_kind": "scalar"
+                                }
+                              }
+                            ],
+                            "id": "expression:python_1a404fa59d01966c368c40da:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:main:import:0:d798a225fda2b079f476267c80745b25e582bdaffb292e0aeeb0a1a1f2e96d8d:node:ff524f8f9cdf6fb1f58d37ea4a0b77c67426f3582e7cb4c5c00949acc1f0c2fd",
+                            "kind": "composite",
+                            "python_kind": "ImportFrom"
+                          },
+                          "value_kind": "node"
+                        }
+                      ],
+                      "value_kind": "list"
+                    }
+                  },
+                  {
+                    "name": "type_ignores",
+                    "value": {
+                      "items": [],
+                      "value_kind": "list"
+                    }
+                  }
+                ],
+                "id": "expression:python_1a404fa59d01966c368c40da:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:main:import:0:d798a225fda2b079f476267c80745b25e582bdaffb292e0aeeb0a1a1f2e96d8d:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                "kind": "composite",
+                "python_kind": "Module"
+              }
+            }
+          },
+          {
+            "function_id": "diagram_b837bd54648643ba9c0c52f4df9b03d0",
+            "kind": "function_reference"
+          },
+          {
+            "annotation": {
+              "id": "expression:python_a1db76c32e425d5bbf032280:annotation",
+              "role": "annotation",
+              "tree": {
+                "context": "load",
+                "id": "expression:python_a1db76c32e425d5bbf032280:annotation:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:main:after_functions:a2f776c883d41525f5ac0d7adcbd01fd1e06af9a4ac11a1f3fc28c8c22dc400e:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                "kind": "symbol",
+                "name": "bool",
+                "symbol_id": null
+              }
+            },
+            "id": "python_a1db76c32e425d5bbf032280",
+            "kind": "assignment",
+            "operator": "=",
+            "target": {
+              "id": "expression:python_a1db76c32e425d5bbf032280:target",
+              "role": "target",
+              "tree": {
+                "context": "store",
+                "id": "expression:python_a1db76c32e425d5bbf032280:target:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:main:after_functions:a2f776c883d41525f5ac0d7adcbd01fd1e06af9a4ac11a1f3fc28c8c22dc400e:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                "kind": "symbol",
+                "name": "MODULE_READY",
+                "symbol_id": null
+              }
+            },
+            "value": {
+              "id": "expression:python_a1db76c32e425d5bbf032280:value",
+              "role": "value",
+              "tree": {
+                "id": "expression:python_a1db76c32e425d5bbf032280:value:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:main:after_functions:a2f776c883d41525f5ac0d7adcbd01fd1e06af9a4ac11a1f3fc28c8c22dc400e:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                "kind": "literal",
+                "literal_kind": null,
+                "value": {
+                  "kind": "bool",
+                  "value": "1"
+                }
+              }
+            },
+            "written_symbol_ids": []
+          }
+        ],
+        "docstring": "Runnable package entry point generated from a DRAKON diagram.",
+        "id": "module:studio_demo.main",
+        "kind": "module",
+        "path": "main"
+      },
+      {
+        "body": [
+          {
+            "annotation": {
+              "id": "expression:python_d1c471159022737ec0efcda1:annotation",
+              "role": "annotation",
+              "tree": {
+                "context": "load",
+                "id": "expression:python_d1c471159022737ec0efcda1:annotation:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:constant:0:1792373bf541fa15738271ec26cd9e269397edd1deb89a1453e582f845295e94:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                "kind": "symbol",
+                "name": "str",
+                "symbol_id": null
+              }
+            },
+            "id": "python_d1c471159022737ec0efcda1",
+            "kind": "assignment",
+            "operator": "=",
+            "target": {
+              "id": "expression:python_d1c471159022737ec0efcda1:target",
+              "role": "target",
+              "tree": {
+                "context": "store",
+                "id": "expression:python_d1c471159022737ec0efcda1:target:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:constant:0:1792373bf541fa15738271ec26cd9e269397edd1deb89a1453e582f845295e94:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                "kind": "symbol",
+                "name": "MESSAGE",
+                "symbol_id": null
+              }
+            },
+            "value": {
+              "id": "expression:python_d1c471159022737ec0efcda1:value",
+              "role": "value",
+              "tree": {
+                "id": "expression:python_d1c471159022737ec0efcda1:value:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:constant:0:1792373bf541fa15738271ec26cd9e269397edd1deb89a1453e582f845295e94:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                "kind": "literal",
+                "literal_kind": null,
+                "value": {
+                  "kind": "str",
+                  "value": "Hello from two modules!"
+                }
+              }
+            },
+            "written_symbol_ids": []
+          },
+          {
+            "id": "python_a23cbdf462410d0384f0e8bc",
+            "kind": "type_alias",
+            "source": {
+              "id": "expression:python_a23cbdf462410d0384f0e8bc:statements",
+              "role": "statements",
+              "tree": {
+                "fields": [
+                  {
+                    "name": "body",
+                    "value": {
+                      "items": [
+                        {
+                          "value": {
+                            "fields": [
+                              {
+                                "name": "name",
+                                "value": {
+                                  "value": {
+                                    "context": "store",
+                                    "id": "expression:python_a23cbdf462410d0384f0e8bc:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:alias:0:855be74bb21859e56e95da51cff45c1ff4b3f1d37de6af8de5eca52da745dd9e:node:73d0fbf68efa1b774a8142a5ffb754e5668b5525612e2591e67a0673e2582179",
+                                    "kind": "symbol",
+                                    "name": "MessageText",
+                                    "symbol_id": null
+                                  },
+                                  "value_kind": "node"
+                                }
+                              },
+                              {
+                                "name": "type_params",
+                                "value": {
+                                  "items": [],
+                                  "value_kind": "list"
+                                }
+                              },
+                              {
+                                "name": "value",
+                                "value": {
+                                  "value": {
+                                    "context": "load",
+                                    "id": "expression:python_a23cbdf462410d0384f0e8bc:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:alias:0:855be74bb21859e56e95da51cff45c1ff4b3f1d37de6af8de5eca52da745dd9e:node:0c70ce0ac4f8bd15b6b151fbf0399d9be60b8f0688b42a0d7166a5d82693c493",
+                                    "kind": "symbol",
+                                    "name": "str",
+                                    "symbol_id": null
+                                  },
+                                  "value_kind": "node"
+                                }
+                              }
+                            ],
+                            "id": "expression:python_a23cbdf462410d0384f0e8bc:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:alias:0:855be74bb21859e56e95da51cff45c1ff4b3f1d37de6af8de5eca52da745dd9e:node:ff524f8f9cdf6fb1f58d37ea4a0b77c67426f3582e7cb4c5c00949acc1f0c2fd",
+                            "kind": "composite",
+                            "python_kind": "TypeAlias"
+                          },
+                          "value_kind": "node"
+                        }
+                      ],
+                      "value_kind": "list"
+                    }
+                  },
+                  {
+                    "name": "type_ignores",
+                    "value": {
+                      "items": [],
+                      "value_kind": "list"
+                    }
+                  }
+                ],
+                "id": "expression:python_a23cbdf462410d0384f0e8bc:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:alias:0:855be74bb21859e56e95da51cff45c1ff4b3f1d37de6af8de5eca52da745dd9e:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                "kind": "composite",
+                "python_kind": "Module"
+              }
+            }
+          },
+          {
+            "arguments": null,
+            "body": [
+              {
+                "id": "python_f3dc120bc426b55ad8395d51",
+                "kind": "action",
+                "source": {
+                  "id": "expression:python_f3dc120bc426b55ad8395d51:statements",
+                  "role": "statements",
+                  "tree": {
+                    "fields": [
+                      {
+                        "name": "body",
+                        "value": {
+                          "items": [
+                            {
+                              "value": {
+                                "fields": [
+                                  {
+                                    "name": "name",
+                                    "value": {
+                                      "value": {
+                                        "kind": "str",
+                                        "value": "__init__"
+                                      },
+                                      "value_kind": "scalar"
+                                    }
+                                  },
+                                  {
+                                    "name": "args",
+                                    "value": {
+                                      "value": {
+                                        "fields": [
+                                          {
+                                            "name": "posonlyargs",
+                                            "value": {
+                                              "items": [],
+                                              "value_kind": "list"
+                                            }
+                                          },
+                                          {
+                                            "name": "args",
+                                            "value": {
+                                              "items": [
+                                                {
+                                                  "value": {
+                                                    "fields": [
+                                                      {
+                                                        "name": "arg",
+                                                        "value": {
+                                                          "value": {
+                                                            "kind": "str",
+                                                            "value": "self"
+                                                          },
+                                                          "value_kind": "scalar"
+                                                        }
+                                                      },
+                                                      {
+                                                        "name": "annotation",
+                                                        "value": {
+                                                          "value": {
+                                                            "kind": "none",
+                                                            "value": ""
+                                                          },
+                                                          "value_kind": "scalar"
+                                                        }
+                                                      },
+                                                      {
+                                                        "name": "type_comment",
+                                                        "value": {
+                                                          "value": {
+                                                            "kind": "none",
+                                                            "value": ""
+                                                          },
+                                                          "value_kind": "scalar"
+                                                        }
+                                                      }
+                                                    ],
+                                                    "id": "expression:python_f3dc120bc426b55ad8395d51:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:declarations:a869f534e180881146d92ce3befacbe341cdeb5c153ced427d48c2066ff05af8:node:671adece01669052e8609c115fbc99155bd6ef6d9bfda8ce6964cba3a681ebd5",
+                                                    "kind": "composite",
+                                                    "python_kind": "arg"
+                                                  },
+                                                  "value_kind": "node"
+                                                },
+                                                {
+                                                  "value": {
+                                                    "fields": [
+                                                      {
+                                                        "name": "arg",
+                                                        "value": {
+                                                          "value": {
+                                                            "kind": "str",
+                                                            "value": "message"
+                                                          },
+                                                          "value_kind": "scalar"
+                                                        }
+                                                      },
+                                                      {
+                                                        "name": "annotation",
+                                                        "value": {
+                                                          "value": {
+                                                            "context": "load",
+                                                            "id": "expression:python_f3dc120bc426b55ad8395d51:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:declarations:a869f534e180881146d92ce3befacbe341cdeb5c153ced427d48c2066ff05af8:node:e5fe728244583cd0b40601170a83e0c71545265fbed395b31be6d9e7fc6f7211",
+                                                            "kind": "symbol",
+                                                            "name": "MessageText",
+                                                            "symbol_id": null
+                                                          },
+                                                          "value_kind": "node"
+                                                        }
+                                                      },
+                                                      {
+                                                        "name": "type_comment",
+                                                        "value": {
+                                                          "value": {
+                                                            "kind": "none",
+                                                            "value": ""
+                                                          },
+                                                          "value_kind": "scalar"
+                                                        }
+                                                      }
+                                                    ],
+                                                    "id": "expression:python_f3dc120bc426b55ad8395d51:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:declarations:a869f534e180881146d92ce3befacbe341cdeb5c153ced427d48c2066ff05af8:node:d63593349163d0a491ef48cf04c888a5bf1c349603cf4cf3005f38110c16b767",
+                                                    "kind": "composite",
+                                                    "python_kind": "arg"
+                                                  },
+                                                  "value_kind": "node"
+                                                }
+                                              ],
+                                              "value_kind": "list"
+                                            }
+                                          },
+                                          {
+                                            "name": "vararg",
+                                            "value": {
+                                              "value": {
+                                                "kind": "none",
+                                                "value": ""
+                                              },
+                                              "value_kind": "scalar"
+                                            }
+                                          },
+                                          {
+                                            "name": "kwonlyargs",
+                                            "value": {
+                                              "items": [],
+                                              "value_kind": "list"
+                                            }
+                                          },
+                                          {
+                                            "name": "kw_defaults",
+                                            "value": {
+                                              "items": [],
+                                              "value_kind": "list"
+                                            }
+                                          },
+                                          {
+                                            "name": "kwarg",
+                                            "value": {
+                                              "value": {
+                                                "kind": "none",
+                                                "value": ""
+                                              },
+                                              "value_kind": "scalar"
+                                            }
+                                          },
+                                          {
+                                            "name": "defaults",
+                                            "value": {
+                                              "items": [],
+                                              "value_kind": "list"
+                                            }
+                                          }
+                                        ],
+                                        "id": "expression:python_f3dc120bc426b55ad8395d51:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:declarations:a869f534e180881146d92ce3befacbe341cdeb5c153ced427d48c2066ff05af8:node:49dff0fced983ff3f9c31fac3406fb85a5b3545229ad21cf7c822be87442b452",
+                                        "kind": "composite",
+                                        "python_kind": "arguments"
+                                      },
+                                      "value_kind": "node"
+                                    }
+                                  },
+                                  {
+                                    "name": "body",
+                                    "value": {
+                                      "items": [
+                                        {
+                                          "value": {
+                                            "fields": [
+                                              {
+                                                "name": "targets",
+                                                "value": {
+                                                  "items": [
+                                                    {
+                                                      "value": {
+                                                        "attribute": "message",
+                                                        "context": "store",
+                                                        "id": "expression:python_f3dc120bc426b55ad8395d51:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:declarations:a869f534e180881146d92ce3befacbe341cdeb5c153ced427d48c2066ff05af8:node:da883ecb7587d40c7ec82f7182b2c7da1d52f6c151e159db9cfe61f406bc8cd1",
+                                                        "kind": "attribute",
+                                                        "value": {
+                                                          "context": "load",
+                                                          "id": "expression:python_f3dc120bc426b55ad8395d51:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:declarations:a869f534e180881146d92ce3befacbe341cdeb5c153ced427d48c2066ff05af8:node:312f14ef92027bb946c710174cb07687b2ed0e628535748b4f6f3aa919ea6c91",
+                                                          "kind": "symbol",
+                                                          "name": "self",
+                                                          "symbol_id": null
+                                                        }
+                                                      },
+                                                      "value_kind": "node"
+                                                    }
+                                                  ],
+                                                  "value_kind": "list"
+                                                }
+                                              },
+                                              {
+                                                "name": "value",
+                                                "value": {
+                                                  "value": {
+                                                    "context": "load",
+                                                    "id": "expression:python_f3dc120bc426b55ad8395d51:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:declarations:a869f534e180881146d92ce3befacbe341cdeb5c153ced427d48c2066ff05af8:node:74c1e65d10b62e57cea19701138bab06754a50c32b55a2f8cd65660aac28fa0b",
+                                                    "kind": "symbol",
+                                                    "name": "message",
+                                                    "symbol_id": null
+                                                  },
+                                                  "value_kind": "node"
+                                                }
+                                              },
+                                              {
+                                                "name": "type_comment",
+                                                "value": {
+                                                  "value": {
+                                                    "kind": "none",
+                                                    "value": ""
+                                                  },
+                                                  "value_kind": "scalar"
+                                                }
+                                              }
+                                            ],
+                                            "id": "expression:python_f3dc120bc426b55ad8395d51:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:declarations:a869f534e180881146d92ce3befacbe341cdeb5c153ced427d48c2066ff05af8:node:b52ff968e5ba824bc72d866b01ded667919e6394cf77e5959c231acbfa098c2a",
+                                            "kind": "composite",
+                                            "python_kind": "Assign"
+                                          },
+                                          "value_kind": "node"
+                                        }
+                                      ],
+                                      "value_kind": "list"
+                                    }
+                                  },
+                                  {
+                                    "name": "decorator_list",
+                                    "value": {
+                                      "items": [],
+                                      "value_kind": "list"
+                                    }
+                                  },
+                                  {
+                                    "name": "returns",
+                                    "value": {
+                                      "value": {
+                                        "id": "expression:python_f3dc120bc426b55ad8395d51:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:declarations:a869f534e180881146d92ce3befacbe341cdeb5c153ced427d48c2066ff05af8:node:6a9def7b795bcaa549fb24a2f8fc1e81d9b42f4fb9ab1b66585eb076ee547329",
+                                        "kind": "literal",
+                                        "literal_kind": null,
+                                        "value": {
+                                          "kind": "none",
+                                          "value": ""
+                                        }
+                                      },
+                                      "value_kind": "node"
+                                    }
+                                  },
+                                  {
+                                    "name": "type_comment",
+                                    "value": {
+                                      "value": {
+                                        "kind": "none",
+                                        "value": ""
+                                      },
+                                      "value_kind": "scalar"
+                                    }
+                                  },
+                                  {
+                                    "name": "type_params",
+                                    "value": {
+                                      "items": [],
+                                      "value_kind": "list"
+                                    }
+                                  }
+                                ],
+                                "id": "expression:python_f3dc120bc426b55ad8395d51:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:declarations:a869f534e180881146d92ce3befacbe341cdeb5c153ced427d48c2066ff05af8:node:ff524f8f9cdf6fb1f58d37ea4a0b77c67426f3582e7cb4c5c00949acc1f0c2fd",
+                                "kind": "composite",
+                                "python_kind": "FunctionDef"
+                              },
+                              "value_kind": "node"
+                            }
+                          ],
+                          "value_kind": "list"
+                        }
+                      },
+                      {
+                        "name": "type_ignores",
+                        "value": {
+                          "items": [],
+                          "value_kind": "list"
+                        }
+                      }
+                    ],
+                    "id": "expression:python_f3dc120bc426b55ad8395d51:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:declarations:a869f534e180881146d92ce3befacbe341cdeb5c153ced427d48c2066ff05af8:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                    "kind": "composite",
+                    "python_kind": "Module"
+                  }
+                }
+              },
+              {
+                "id": "python_3d27090e0f71793e0e9a3e26",
+                "kind": "action",
+                "source": {
+                  "id": "expression:python_3d27090e0f71793e0e9a3e26:statements",
+                  "role": "statements",
+                  "tree": {
+                    "fields": [
+                      {
+                        "name": "body",
+                        "value": {
+                          "items": [
+                            {
+                              "value": {
+                                "fields": [
+                                  {
+                                    "name": "name",
+                                    "value": {
+                                      "value": {
+                                        "kind": "str",
+                                        "value": "render"
+                                      },
+                                      "value_kind": "scalar"
+                                    }
+                                  },
+                                  {
+                                    "name": "args",
+                                    "value": {
+                                      "value": {
+                                        "fields": [
+                                          {
+                                            "name": "posonlyargs",
+                                            "value": {
+                                              "items": [],
+                                              "value_kind": "list"
+                                            }
+                                          },
+                                          {
+                                            "name": "args",
+                                            "value": {
+                                              "items": [
+                                                {
+                                                  "value": {
+                                                    "fields": [
+                                                      {
+                                                        "name": "arg",
+                                                        "value": {
+                                                          "value": {
+                                                            "kind": "str",
+                                                            "value": "self"
+                                                          },
+                                                          "value_kind": "scalar"
+                                                        }
+                                                      },
+                                                      {
+                                                        "name": "annotation",
+                                                        "value": {
+                                                          "value": {
+                                                            "kind": "none",
+                                                            "value": ""
+                                                          },
+                                                          "value_kind": "scalar"
+                                                        }
+                                                      },
+                                                      {
+                                                        "name": "type_comment",
+                                                        "value": {
+                                                          "value": {
+                                                            "kind": "none",
+                                                            "value": ""
+                                                          },
+                                                          "value_kind": "scalar"
+                                                        }
+                                                      }
+                                                    ],
+                                                    "id": "expression:python_3d27090e0f71793e0e9a3e26:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:declarations:a869f534e180881146d92ce3befacbe341cdeb5c153ced427d48c2066ff05af8:node:671adece01669052e8609c115fbc99155bd6ef6d9bfda8ce6964cba3a681ebd5",
+                                                    "kind": "composite",
+                                                    "python_kind": "arg"
+                                                  },
+                                                  "value_kind": "node"
+                                                }
+                                              ],
+                                              "value_kind": "list"
+                                            }
+                                          },
+                                          {
+                                            "name": "vararg",
+                                            "value": {
+                                              "value": {
+                                                "kind": "none",
+                                                "value": ""
+                                              },
+                                              "value_kind": "scalar"
+                                            }
+                                          },
+                                          {
+                                            "name": "kwonlyargs",
+                                            "value": {
+                                              "items": [],
+                                              "value_kind": "list"
+                                            }
+                                          },
+                                          {
+                                            "name": "kw_defaults",
+                                            "value": {
+                                              "items": [],
+                                              "value_kind": "list"
+                                            }
+                                          },
+                                          {
+                                            "name": "kwarg",
+                                            "value": {
+                                              "value": {
+                                                "kind": "none",
+                                                "value": ""
+                                              },
+                                              "value_kind": "scalar"
+                                            }
+                                          },
+                                          {
+                                            "name": "defaults",
+                                            "value": {
+                                              "items": [],
+                                              "value_kind": "list"
+                                            }
+                                          }
+                                        ],
+                                        "id": "expression:python_3d27090e0f71793e0e9a3e26:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:declarations:a869f534e180881146d92ce3befacbe341cdeb5c153ced427d48c2066ff05af8:node:49dff0fced983ff3f9c31fac3406fb85a5b3545229ad21cf7c822be87442b452",
+                                        "kind": "composite",
+                                        "python_kind": "arguments"
+                                      },
+                                      "value_kind": "node"
+                                    }
+                                  },
+                                  {
+                                    "name": "body",
+                                    "value": {
+                                      "items": [
+                                        {
+                                          "value": {
+                                            "fields": [
+                                              {
+                                                "name": "value",
+                                                "value": {
+                                                  "value": {
+                                                    "attribute": "message",
+                                                    "context": "load",
+                                                    "id": "expression:python_3d27090e0f71793e0e9a3e26:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:declarations:a869f534e180881146d92ce3befacbe341cdeb5c153ced427d48c2066ff05af8:node:74c1e65d10b62e57cea19701138bab06754a50c32b55a2f8cd65660aac28fa0b",
+                                                    "kind": "attribute",
+                                                    "value": {
+                                                      "context": "load",
+                                                      "id": "expression:python_3d27090e0f71793e0e9a3e26:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:declarations:a869f534e180881146d92ce3befacbe341cdeb5c153ced427d48c2066ff05af8:node:60b14d5a5ffd73cef0af81f180e1ecc29cf8d0ed819a1c8dd33ddf1f617b4ac2",
+                                                      "kind": "symbol",
+                                                      "name": "self",
+                                                      "symbol_id": null
+                                                    }
+                                                  },
+                                                  "value_kind": "node"
+                                                }
+                                              }
+                                            ],
+                                            "id": "expression:python_3d27090e0f71793e0e9a3e26:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:declarations:a869f534e180881146d92ce3befacbe341cdeb5c153ced427d48c2066ff05af8:node:b52ff968e5ba824bc72d866b01ded667919e6394cf77e5959c231acbfa098c2a",
+                                            "kind": "composite",
+                                            "python_kind": "Return"
+                                          },
+                                          "value_kind": "node"
+                                        }
+                                      ],
+                                      "value_kind": "list"
+                                    }
+                                  },
+                                  {
+                                    "name": "decorator_list",
+                                    "value": {
+                                      "items": [],
+                                      "value_kind": "list"
+                                    }
+                                  },
+                                  {
+                                    "name": "returns",
+                                    "value": {
+                                      "value": {
+                                        "context": "load",
+                                        "id": "expression:python_3d27090e0f71793e0e9a3e26:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:declarations:a869f534e180881146d92ce3befacbe341cdeb5c153ced427d48c2066ff05af8:node:6a9def7b795bcaa549fb24a2f8fc1e81d9b42f4fb9ab1b66585eb076ee547329",
+                                        "kind": "symbol",
+                                        "name": "str",
+                                        "symbol_id": null
+                                      },
+                                      "value_kind": "node"
+                                    }
+                                  },
+                                  {
+                                    "name": "type_comment",
+                                    "value": {
+                                      "value": {
+                                        "kind": "none",
+                                        "value": ""
+                                      },
+                                      "value_kind": "scalar"
+                                    }
+                                  },
+                                  {
+                                    "name": "type_params",
+                                    "value": {
+                                      "items": [],
+                                      "value_kind": "list"
+                                    }
+                                  }
+                                ],
+                                "id": "expression:python_3d27090e0f71793e0e9a3e26:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:declarations:a869f534e180881146d92ce3befacbe341cdeb5c153ced427d48c2066ff05af8:node:ff524f8f9cdf6fb1f58d37ea4a0b77c67426f3582e7cb4c5c00949acc1f0c2fd",
+                                "kind": "composite",
+                                "python_kind": "FunctionDef"
+                              },
+                              "value_kind": "node"
+                            }
+                          ],
+                          "value_kind": "list"
+                        }
+                      },
+                      {
+                        "name": "type_ignores",
+                        "value": {
+                          "items": [],
+                          "value_kind": "list"
+                        }
+                      }
+                    ],
+                    "id": "expression:python_3d27090e0f71793e0e9a3e26:statements:parse:legacy:project_188a7b9d419b4ea6b53f784c3a3c46fa:helpers:declarations:a869f534e180881146d92ce3befacbe341cdeb5c153ced427d48c2066ff05af8:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                    "kind": "composite",
+                    "python_kind": "Module"
+                  }
+                }
+              }
+            ],
+            "decorators": [],
+            "docstring": null,
+            "id": "python_97cfc36af79e0da9b59b804b",
+            "identifier": "Greeter",
+            "kind": "class",
+            "type_parameters": []
+          },
+          {
+            "function_id": "diagram_5d2035e317f5488891f785fc7fb9d7bc",
+            "kind": "function_reference"
+          }
+        ],
+        "docstring": "Reusable values, declarations, and a generated helper function.",
+        "id": "module:studio_demo.helpers",
+        "kind": "module",
+        "path": "helpers"
+      }
+    ],
+    "package": "studio_demo",
+    "symbols": [
+      {
+        "declaration_id": "diagram_b837bd54648643ba9c0c52f4df9b03d0",
+        "id": "symbol_de33814ddfc0d150dc44b374",
+        "kind": "function",
+        "name": "main",
+        "owner_id": "diagram_b837bd54648643ba9c0c52f4df9b03d0"
+      },
+      {
+        "declaration_id": "diagram_5d2035e317f5488891f785fc7fb9d7bc",
+        "id": "symbol_78c1a08f97d5cca72a55de0f",
+        "kind": "function",
+        "name": "build_greeting",
+        "owner_id": "diagram_5d2035e317f5488891f785fc7fb9d7bc"
+      }
+    ]
+  },
+  "project_id": "project_188a7b9d419b4ea6b53f784c3a3c46fa",
+  "projection_definitions": [],
+  "revision": 5,
+  "runtime_settings": {
+    "active_run_profile": "Default",
+    "run_profiles": [
+      {
+        "arguments": "",
+        "environment": [
+          {
+            "name": "CV_EXAMPLE",
+            "value": "modules"
+          }
+        ],
+        "interpreter": "",
+        "name": "Default",
+        "working_directory": "."
+      }
+    ]
+  },
+  "semantic_relations": [],
+  "shape_packs": [],
+  "title": "Python Modules Example"
+}

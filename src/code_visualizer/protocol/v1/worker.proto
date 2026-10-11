@@ -1,0 +1,106 @@
+syntax = "proto3";
+package code_visualizer.protocol.v1;
+import "code_visualizer/protocol/v1/value.proto";
+import "code_visualizer/protocol/v1/resource.proto";
+import "code_visualizer/protocol/v1/computation.proto";
+import "code_visualizer/protocol/v1/evidence.proto";
+import "code_visualizer/protocol/v1/identity.proto";
+
+message WorkerPreparationRequest {
+  string session_id = 1; ResourceReference project = 2;
+  ComputationRequest request = 3; BackendDefinition backend = 4;
+}
+message WorkerExecutionRequest {
+  string session_id = 1; ComputationPlan plan = 2;
+  BackendDefinition backend = 3; ResourceReference execution_artifact = 4;
+}
+// Python invocation literals remain distinct from the universal value algebra.
+message InvocationLiteral {
+  oneof value {
+    bool null = 1;
+    string text = 2;
+    bool boolean = 3;
+    string integer_decimal = 4;
+    double real = 5;
+    InvocationSequence list = 6;
+    InvocationSequence tuple = 7;
+    InvocationDictionary dictionary = 8;
+  }
+}
+message InvocationSequence { repeated InvocationLiteral items = 1; }
+message InvocationEntry { string key = 1; InvocationLiteral value = 2; }
+message InvocationDictionary { repeated InvocationEntry entries = 1; }
+message InvocationArguments {
+  repeated InvocationLiteral positional = 1;
+  repeated InvocationEntry keywords = 2;
+}
+message WorkerEditorPreparationRequest {
+  string session_id = 1;
+  ResourceReference project = 2;
+  string project_id = 3;
+  uint64 revision = 4;
+  optional string focus_diagram_id = 5;
+  optional string model_id = 6;
+  InvocationArguments arguments = 7;
+}
+message WorkerRequest {
+  uint32 schema_version = 1;
+  oneof request {
+    WorkerPreparationRequest prepare = 10;
+    WorkerExecutionRequest execute = 11;
+    WorkerEditorPreparationRequest prepare_editor = 12;
+  }
+}
+message WorkerPrepared {
+  string session_id = 1; ComputationPlan plan = 2;
+  ResourceReference execution_artifact = 3;
+}
+message WorkerEditorPrepared {
+  string session_id = 1;
+  string source_digest = 2;
+  ResourceReference execution_artifact = 3;
+}
+message WorkerResourceEvent {
+  string session_id = 1; ResourceTransferFrame frame = 2;
+}
+message WorkerPublicationOffer {
+  string session_id = 1; uint64 sequence = 2; EvidenceArtifact artifact = 3;
+}
+message WorkerEvidenceProposal {
+  string session_id = 1; ComputationEvidence evidence = 2;
+}
+message WorkerCompletionVerified { string session_id = 1; }
+message WorkerFailure { string session_id = 1; EvidenceDiagnostic diagnostic = 2; }
+message WorkerTerminalSecured { string session_id = 1; string evidence_id = 2; }
+// Replaceable presentation, deliberately absent from evidence and publication history.
+message PreviewEvent {
+  uint32 schema_version = 1;
+  string session_id = 2; uint64 sequence = 3; string input_digest = 4;
+  VersionedReference interpretation = 5;
+  repeated string semantic_ids = 6;
+  repeated ComputationParameter values = 7;
+}
+message WorkerEvent {
+  uint32 schema_version = 1;
+  oneof event {
+    WorkerPrepared prepared = 10;
+    WorkerResourceEvent resource = 11;
+    ProgressEvent progress = 12;
+    ObservationEvent observation = 13;
+    WorkerPublicationOffer publication = 14;
+    WorkerEvidenceProposal evidence = 15;
+    WorkerCompletionVerified verified = 16;
+    WorkerFailure failure = 17;
+    WorkerEditorPrepared editor_prepared = 18;
+    PreviewEvent preview = 19;
+  }
+}
+message WorkerControl {
+  uint32 schema_version = 1;
+  oneof control {
+    WorkerRequest request = 10;
+    CancelRequest cancel = 11;
+    PublicationEvent publication_ack = 12;
+    WorkerTerminalSecured terminal_ack = 13;
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "concepts": [],
+  "description": "",
+  "documents": [
+    {
+      "description": "",
+      "extensions": [],
+      "id": "diagram_60dab0da7f23472485a89cecccaa742d",
+      "kind": "drakon",
+      "title": "main"
+    }
+  ],
+  "domain_workspace": {
+    "bundle_references": [],
+    "language_definitions": [],
+    "models": [],
+    "schemas": []
+  },
+  "drakon_views": [
+    {
+      "document_id": "diagram_60dab0da7f23472485a89cecccaa742d",
+      "end_id": "end_ad4d762ed9e3471db5ddc7bd57cae237",
+      "function_id": "diagram_60dab0da7f23472485a89cecccaa742d",
+      "header_id": "header_f0271660a806400a9b5c0611c96398f4",
+      "title": "main"
+    }
+  ],
+  "extensions": [],
+  "format_revision": 11,
+  "managed_assets": [],
+  "program_model": {
+    "entrypoint": {
+      "arguments": {
+        "keywords": [],
+        "kind": "literal",
+        "positional": []
+      },
+      "callable_id": "diagram_60dab0da7f23472485a89cecccaa742d",
+      "id": "entrypoint:project_a52287a388b0404cb569ba33af35cf92",
+      "startup": []
+    },
+    "functions": [
+      {
+        "body": {
+          "id": "sequence_03434cfa7304479ba145e8997997b566",
+          "statements": [
+            {
+              "destination": null,
+              "end": null,
+              "expression": {
+                "id": "expression:atom_e4b397f1bd8e4d9284fe2acbc8008c4e:expression",
+                "role": "expression",
+                "tree": {
+                  "id": "expression:atom_e4b397f1bd8e4d9284fe2acbc8008c4e:expression:parse:7ccc3b76a1454e3582fd5d4301cc6c8a:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "literal",
+                  "literal_kind": null,
+                  "value": {
+                    "kind": "str",
+                    "value": "generator started"
+                  }
+                }
+              },
+              "id": "atom_e4b397f1bd8e4d9284fe2acbc8008c4e",
+              "kind": "output"
+            },
+            {
+              "cause": null,
+              "expression": {
+                "id": "expression:atom_cafce73c0f184b7dba49f5763652ce9a:expression",
+                "role": "expression",
+                "tree": {
+                  "id": "expression:atom_cafce73c0f184b7dba49f5763652ce9a:expression:parse:bc41c473e0324c89a18fc3b425f7955d:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "literal",
+                  "literal_kind": null,
+                  "value": {
+                    "kind": "int",
+                    "value": "1"
+                  }
+                }
+              },
+              "id": "atom_cafce73c0f184b7dba49f5763652ce9a",
+              "kind": "transfer",
+              "transfer_kind": "yield"
+            },
+            {
+              "cause": null,
+              "expression": {
+                "id": "expression:atom_b346e5d0f599476f9df815dd21c33c3f:expression",
+                "role": "expression",
+                "tree": {
+                  "fields": [
+                    {
+                      "name": "elts",
+                      "value": {
+                        "items": [
+                          {
+                            "value": {
+                              "id": "expression:atom_b346e5d0f599476f9df815dd21c33c3f:expression:parse:8a43c22fb21240668d573a986fc86375:node:20afbd4f65b0e4d159f2bfbfde2906fbb800baf2f39feca9639bbdb98db5469c",
+                              "kind": "literal",
+                              "literal_kind": null,
+                              "value": {
+                                "kind": "int",
+                                "value": "2"
+                              }
+                            },
+                            "value_kind": "node"
+                          },
+                          {
+                            "value": {
+                              "id": "expression:atom_b346e5d0f599476f9df815dd21c33c3f:expression:parse:8a43c22fb21240668d573a986fc86375:node:1c6bfb3fb99729d9e1bbd5167cd2b1798d4cd2b1b5777fb5857ae36fbd68af61",
+                              "kind": "literal",
+                              "literal_kind": null,
+                              "value": {
+                                "kind": "int",
+                                "value": "3"
+                              }
+                            },
+                            "value_kind": "node"
+                          }
+                        ],
+                        "value_kind": "list"
+                      }
+                    },
+                    {
+                      "name": "ctx",
+                      "value": {
+                        "value": {
+                          "fields": [],
+                          "id": "expression:atom_b346e5d0f599476f9df815dd21c33c3f:expression:parse:8a43c22fb21240668d573a986fc86375:node:8ebf87bf49cc26e1fcff62234b941c5b7d16e04502f82fbacd2316f71ab0685a",
+                          "kind": "composite",
+                          "python_kind": "Load"
+                        },
+                        "value_kind": "node"
+                      }
+                    }
+                  ],
+                  "id": "expression:atom_b346e5d0f599476f9df815dd21c33c3f:expression:parse:8a43c22fb21240668d573a986fc86375:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "composite",
+                  "python_kind": "Tuple"
+                }
+              },
+              "id": "atom_b346e5d0f599476f9df815dd21c33c3f",
+              "kind": "transfer",
+              "transfer_kind": "yield_from"
+            }
+          ]
+        },
+        "decorators": [],
+        "display_name": "main",
+        "docstring": null,
+        "id": "diagram_60dab0da7f23472485a89cecccaa742d",
+        "identifier": "main",
+        "kind": "generator",
+        "method_kind": null,
+        "parameters": [],
+        "return_annotation": null,
+        "symbol_id": "symbol_18cbe41026d04ee619cb50e2",
+        "type_parameters": []
+      }
+    ],
+    "modules": [
+      {
+        "body": [
+          {
+            "function_id": "diagram_60dab0da7f23472485a89cecccaa742d",
+            "kind": "function_reference"
+          }
+        ],
+        "docstring": "",
+        "id": "module:app.main",
+        "kind": "module",
+        "path": "main"
+      }
+    ],
+    "package": "app",
+    "symbols": [
+      {
+        "declaration_id": "diagram_60dab0da7f23472485a89cecccaa742d",
+        "id": "symbol_18cbe41026d04ee619cb50e2",
+        "kind": "function",
+        "name": "main",
+        "owner_id": "diagram_60dab0da7f23472485a89cecccaa742d"
+      }
+    ]
+  },
+  "project_id": "project_a52287a388b0404cb569ba33af35cf92",
+  "projection_definitions": [],
+  "revision": 8,
+  "runtime_settings": {
+    "active_run_profile": "Default",
+    "run_profiles": [
+      {
+        "arguments": "",
+        "environment": [],
+        "interpreter": "",
+        "name": "Default",
+        "working_directory": "."
+      }
+    ]
+  },
+  "semantic_relations": [],
+  "shape_packs": [],
+  "title": "Generator Example"
+}

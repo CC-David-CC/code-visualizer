@@ -1,0 +1,287 @@
+{
+  "concepts": [],
+  "description": "",
+  "documents": [
+    {
+      "description": "",
+      "extensions": [],
+      "id": "diagram_c50a602dccec4ba5911e573d02034cac",
+      "kind": "drakon",
+      "title": "main"
+    }
+  ],
+  "domain_workspace": {
+    "bundle_references": [],
+    "language_definitions": [],
+    "models": [],
+    "schemas": []
+  },
+  "drakon_views": [
+    {
+      "document_id": "diagram_c50a602dccec4ba5911e573d02034cac",
+      "end_id": "end_6f09bc1283004890a97da20d71b2afc8",
+      "function_id": "diagram_c50a602dccec4ba5911e573d02034cac",
+      "header_id": "header_8b9d798c9b434391b35436e1d5a2549d",
+      "title": "main"
+    }
+  ],
+  "extensions": [],
+  "format_revision": 11,
+  "managed_assets": [],
+  "program_model": {
+    "entrypoint": {
+      "arguments": {
+        "keywords": [],
+        "kind": "literal",
+        "positional": []
+      },
+      "callable_id": "diagram_c50a602dccec4ba5911e573d02034cac",
+      "id": "entrypoint:project_b90cb6ded0e94490bbe854f0e4b0ecb5",
+      "startup": []
+    },
+    "functions": [
+      {
+        "body": {
+          "id": "sequence_a3e0da068f9d49559457236df0b6721a",
+          "statements": [
+            {
+              "branches": [
+                {
+                  "body": {
+                    "id": "sequence_atom_a90530eec21c4b4dba48b6d5758cfa73_parallel_one",
+                    "statements": [
+                      {
+                        "id": "atom_atom_a90530eec21c4b4dba48b6d5758cfa73_parallel_one_action",
+                        "kind": "action",
+                        "source": {
+                          "id": "expression:atom_atom_a90530eec21c4b4dba48b6d5758cfa73_parallel_one_action:source",
+                          "role": "statements",
+                          "tree": {
+                            "fields": [
+                              {
+                                "name": "body",
+                                "value": {
+                                  "items": [
+                                    {
+                                      "value": {
+                                        "fields": [
+                                          {
+                                            "name": "value",
+                                            "value": {
+                                              "value": {
+                                                "arguments": [
+                                                  {
+                                                    "id": "expression:atom_atom_a90530eec21c4b4dba48b6d5758cfa73_parallel_one_action:source:parse:f5acaed2cda049fbb2d9aba491d15d1e:node:cdab044052e82df79580e3e9b25351a3da7a1bb9f802ced25f38a238e71a7030",
+                                                    "kind": "literal",
+                                                    "literal_kind": null,
+                                                    "value": {
+                                                      "kind": "str",
+                                                      "value": "first process"
+                                                    }
+                                                  }
+                                                ],
+                                                "callee": {
+                                                  "context": "load",
+                                                  "id": "expression:atom_atom_a90530eec21c4b4dba48b6d5758cfa73_parallel_one_action:source:parse:f5acaed2cda049fbb2d9aba491d15d1e:node:5bf23479175df1c3e596a8889a4e7114e0032dd1dc6aacb22a68f268a9085b66",
+                                                  "kind": "symbol",
+                                                  "name": "print",
+                                                  "symbol_id": null
+                                                },
+                                                "id": "expression:atom_atom_a90530eec21c4b4dba48b6d5758cfa73_parallel_one_action:source:parse:f5acaed2cda049fbb2d9aba491d15d1e:node:0c70ce0ac4f8bd15b6b151fbf0399d9be60b8f0688b42a0d7166a5d82693c493",
+                                                "keywords": [],
+                                                "kind": "call"
+                                              },
+                                              "value_kind": "node"
+                                            }
+                                          }
+                                        ],
+                                        "id": "expression:atom_atom_a90530eec21c4b4dba48b6d5758cfa73_parallel_one_action:source:parse:f5acaed2cda049fbb2d9aba491d15d1e:node:ff524f8f9cdf6fb1f58d37ea4a0b77c67426f3582e7cb4c5c00949acc1f0c2fd",
+                                        "kind": "composite",
+                                        "python_kind": "Expr"
+                                      },
+                                      "value_kind": "node"
+                                    }
+                                  ],
+                                  "value_kind": "list"
+                                }
+                              },
+                              {
+                                "name": "type_ignores",
+                                "value": {
+                                  "items": [],
+                                  "value_kind": "list"
+                                }
+                              }
+                            ],
+                            "id": "expression:atom_atom_a90530eec21c4b4dba48b6d5758cfa73_parallel_one_action:source:parse:f5acaed2cda049fbb2d9aba491d15d1e:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                            "kind": "composite",
+                            "python_kind": "Module"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "id": "branch_atom_a90530eec21c4b4dba48b6d5758cfa73_one",
+                  "name": "First process"
+                },
+                {
+                  "body": {
+                    "id": "sequence_atom_a90530eec21c4b4dba48b6d5758cfa73_parallel_two",
+                    "statements": [
+                      {
+                        "id": "atom_atom_a90530eec21c4b4dba48b6d5758cfa73_parallel_two_action",
+                        "kind": "action",
+                        "source": {
+                          "id": "expression:atom_atom_a90530eec21c4b4dba48b6d5758cfa73_parallel_two_action:source",
+                          "role": "statements",
+                          "tree": {
+                            "fields": [
+                              {
+                                "name": "body",
+                                "value": {
+                                  "items": [
+                                    {
+                                      "value": {
+                                        "fields": [
+                                          {
+                                            "name": "value",
+                                            "value": {
+                                              "value": {
+                                                "arguments": [
+                                                  {
+                                                    "id": "expression:atom_atom_a90530eec21c4b4dba48b6d5758cfa73_parallel_two_action:source:parse:f333a8fd480249f98149011c4b3a9ec0:node:cdab044052e82df79580e3e9b25351a3da7a1bb9f802ced25f38a238e71a7030",
+                                                    "kind": "literal",
+                                                    "literal_kind": null,
+                                                    "value": {
+                                                      "kind": "str",
+                                                      "value": "second process"
+                                                    }
+                                                  }
+                                                ],
+                                                "callee": {
+                                                  "context": "load",
+                                                  "id": "expression:atom_atom_a90530eec21c4b4dba48b6d5758cfa73_parallel_two_action:source:parse:f333a8fd480249f98149011c4b3a9ec0:node:5bf23479175df1c3e596a8889a4e7114e0032dd1dc6aacb22a68f268a9085b66",
+                                                  "kind": "symbol",
+                                                  "name": "print",
+                                                  "symbol_id": null
+                                                },
+                                                "id": "expression:atom_atom_a90530eec21c4b4dba48b6d5758cfa73_parallel_two_action:source:parse:f333a8fd480249f98149011c4b3a9ec0:node:0c70ce0ac4f8bd15b6b151fbf0399d9be60b8f0688b42a0d7166a5d82693c493",
+                                                "keywords": [],
+                                                "kind": "call"
+                                              },
+                                              "value_kind": "node"
+                                            }
+                                          }
+                                        ],
+                                        "id": "expression:atom_atom_a90530eec21c4b4dba48b6d5758cfa73_parallel_two_action:source:parse:f333a8fd480249f98149011c4b3a9ec0:node:ff524f8f9cdf6fb1f58d37ea4a0b77c67426f3582e7cb4c5c00949acc1f0c2fd",
+                                        "kind": "composite",
+                                        "python_kind": "Expr"
+                                      },
+                                      "value_kind": "node"
+                                    }
+                                  ],
+                                  "value_kind": "list"
+                                }
+                              },
+                              {
+                                "name": "type_ignores",
+                                "value": {
+                                  "items": [],
+                                  "value_kind": "list"
+                                }
+                              }
+                            ],
+                            "id": "expression:atom_atom_a90530eec21c4b4dba48b6d5758cfa73_parallel_two_action:source:parse:f333a8fd480249f98149011c4b3a9ec0:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                            "kind": "composite",
+                            "python_kind": "Module"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "id": "branch_atom_a90530eec21c4b4dba48b6d5758cfa73_two",
+                  "name": "Second process"
+                }
+              ],
+              "id": "atom_a90530eec21c4b4dba48b6d5758cfa73",
+              "kind": "parallel",
+              "mode": "sync"
+            },
+            {
+              "destination": null,
+              "end": null,
+              "expression": {
+                "id": "expression:atom_14390103e61b4eef950c33a893f1da0c:expression",
+                "role": "expression",
+                "tree": {
+                  "id": "expression:atom_14390103e61b4eef950c33a893f1da0c:expression:parse:12abb599728845199064d88c108f2e17:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "literal",
+                  "literal_kind": null,
+                  "value": {
+                    "kind": "str",
+                    "value": "output"
+                  }
+                }
+              },
+              "id": "atom_14390103e61b4eef950c33a893f1da0c",
+              "kind": "output"
+            }
+          ]
+        },
+        "decorators": [],
+        "display_name": "main",
+        "docstring": null,
+        "id": "diagram_c50a602dccec4ba5911e573d02034cac",
+        "identifier": "main",
+        "kind": "sync",
+        "method_kind": null,
+        "parameters": [],
+        "return_annotation": null,
+        "symbol_id": "symbol_9648814df38f56e58ed8b1fb",
+        "type_parameters": []
+      }
+    ],
+    "modules": [
+      {
+        "body": [
+          {
+            "function_id": "diagram_c50a602dccec4ba5911e573d02034cac",
+            "kind": "function_reference"
+          }
+        ],
+        "docstring": "",
+        "id": "module:app.main",
+        "kind": "module",
+        "path": "main"
+      }
+    ],
+    "package": "app",
+    "symbols": [
+      {
+        "declaration_id": "diagram_c50a602dccec4ba5911e573d02034cac",
+        "id": "symbol_9648814df38f56e58ed8b1fb",
+        "kind": "function",
+        "name": "main",
+        "owner_id": "diagram_c50a602dccec4ba5911e573d02034cac"
+      }
+    ]
+  },
+  "project_id": "project_b90cb6ded0e94490bbe854f0e4b0ecb5",
+  "projection_definitions": [],
+  "revision": 4,
+  "runtime_settings": {
+    "active_run_profile": "Default",
+    "run_profiles": [
+      {
+        "arguments": "",
+        "environment": [],
+        "interpreter": "",
+        "name": "Default",
+        "working_directory": "."
+      }
+    ]
+  },
+  "semantic_relations": [],
+  "shape_packs": [],
+  "title": "Parallel Processes Example"
+}

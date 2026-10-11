@@ -1,0 +1,6 @@
+# P5 optional field runtime, tested Windows x64 / CPython 3.13 pins.
+# Qualification results belong in the source-bound P5 verification receipt.
+pint==0.26.1
+sympy==1.14.0
+numpy==2.5.3
+scipy==1.18.1

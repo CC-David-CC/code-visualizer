@@ -1,0 +1,1 @@
+{"byte_size":2517896,"content_hash":"f5c075382ee4757863744013b46a7c322bdc0576f41e97eebf2bc688cc00177e","id":"resource:ed1051f87e02ea94a735423aa99cdf30962e430c4c66033e329068daf0c79ba8","logical_type":{"id":"foundation.fields.float64_array","version":"1"},"media_type":"application/x-npy","tensor":{"axes":[],"dtype":"float64","shape":[121,2601],"unit":null},"version":2}

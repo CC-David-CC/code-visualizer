@@ -1,0 +1,153 @@
+{
+  "input_digest": "2349bfc5963968cb80ee1768a49984b4d31dcd8a30214d1ad96d83a3c16ef859",
+  "model": {
+    "$value": "resource",
+    "content_hash": "d4de131c92266546abe37c441ebeac1a8267bc5a48c47dfcb59c04bf8887fdbf",
+    "id": "resource:c38c82827a9e4b54a0d4e172dbf2cb383cf87e2ca0104c369ff86fc9b0082345",
+    "version": 1
+  },
+  "origins": [
+    {
+      "generated_id": "matrix:A",
+      "source_ids": [
+        "matrix:A"
+      ]
+    },
+    {
+      "generated_id": "matrix:A:value",
+      "source_ids": [
+        "matrix:A:value"
+      ]
+    },
+    {
+      "generated_id": "matrix:B",
+      "source_ids": [
+        "matrix:B"
+      ]
+    },
+    {
+      "generated_id": "matrix:B:value",
+      "source_ids": [
+        "matrix:B:value"
+      ]
+    },
+    {
+      "generated_id": "matrix:C",
+      "source_ids": [
+        "matrix:C"
+      ]
+    },
+    {
+      "generated_id": "matrix:equation",
+      "source_ids": [
+        "matrix:equation"
+      ]
+    },
+    {
+      "generated_id": "matrix:expression:A",
+      "source_ids": [
+        "matrix:expression:A"
+      ]
+    },
+    {
+      "generated_id": "matrix:expression:A:index:0",
+      "source_ids": [
+        "matrix:expression:A:index:0"
+      ]
+    },
+    {
+      "generated_id": "matrix:expression:A:index:1",
+      "source_ids": [
+        "matrix:expression:A:index:1"
+      ]
+    },
+    {
+      "generated_id": "matrix:expression:B",
+      "source_ids": [
+        "matrix:expression:B"
+      ]
+    },
+    {
+      "generated_id": "matrix:expression:B:index:0",
+      "source_ids": [
+        "matrix:expression:B:index:0"
+      ]
+    },
+    {
+      "generated_id": "matrix:expression:B:index:1",
+      "source_ids": [
+        "matrix:expression:B:index:1"
+      ]
+    },
+    {
+      "generated_id": "matrix:expression:C",
+      "source_ids": [
+        "matrix:expression:C"
+      ]
+    },
+    {
+      "generated_id": "matrix:expression:C:index:0",
+      "source_ids": [
+        "matrix:expression:C:index:0"
+      ]
+    },
+    {
+      "generated_id": "matrix:expression:C:index:1",
+      "source_ids": [
+        "matrix:expression:C:index:1"
+      ]
+    },
+    {
+      "generated_id": "matrix:expression:multiply",
+      "source_ids": [
+        "matrix:expression:multiply"
+      ]
+    },
+    {
+      "generated_id": "matrix:expression:sum",
+      "source_ids": [
+        "matrix:expression:sum"
+      ]
+    },
+    {
+      "generated_id": "matrix:i",
+      "source_ids": [
+        "matrix:i"
+      ]
+    },
+    {
+      "generated_id": "matrix:j",
+      "source_ids": [
+        "matrix:j"
+      ]
+    },
+    {
+      "generated_id": "matrix:k",
+      "source_ids": [
+        "matrix:k"
+      ]
+    },
+    {
+      "generated_id": "matrix:model",
+      "source_ids": [
+        "matrix:model"
+      ]
+    }
+  ],
+  "representation": {
+    "id": "foundation.math",
+    "version": "1"
+  },
+  "request": {
+    "backend_id": "foundation.math.indexed_equations",
+    "backend_version": "1",
+    "configuration": [],
+    "model_id": "matrix:model",
+    "project_id": "foundation:matrix-product",
+    "resources": [],
+    "revision": 0,
+    "seed": null
+  },
+  "transformations": [],
+  "version": 1
+}

@@ -1,0 +1,124 @@
+{
+  "concepts": [],
+  "description": "",
+  "documents": [
+    {
+      "description": "",
+      "extensions": [],
+      "id": "diagram_6a8fed5bb2d647238e9aaba50ae25ae2",
+      "kind": "drakon",
+      "title": "main"
+    }
+  ],
+  "domain_workspace": {
+    "bundle_references": [],
+    "language_definitions": [],
+    "models": [],
+    "schemas": []
+  },
+  "drakon_views": [
+    {
+      "document_id": "diagram_6a8fed5bb2d647238e9aaba50ae25ae2",
+      "end_id": "end_59115b2a279d4092bf32c197c22ea12b",
+      "function_id": "diagram_6a8fed5bb2d647238e9aaba50ae25ae2",
+      "header_id": "header_33631c22b6e34c84ab660428d174100c",
+      "title": "main"
+    }
+  ],
+  "extensions": [],
+  "format_revision": 11,
+  "managed_assets": [],
+  "program_model": {
+    "entrypoint": {
+      "arguments": {
+        "keywords": [],
+        "kind": "literal",
+        "positional": []
+      },
+      "callable_id": "diagram_6a8fed5bb2d647238e9aaba50ae25ae2",
+      "id": "entrypoint:project_9dbde18c8fbc4b2aaeb0f84841427dea",
+      "startup": []
+    },
+    "functions": [
+      {
+        "body": {
+          "id": "sequence_0811cb5491454c9f94ff76979a57f4a7",
+          "statements": [
+            {
+              "destination": null,
+              "end": null,
+              "expression": {
+                "id": "expression:atom_edda422bed9847f7bb092b92240c0f9c:expression",
+                "role": "expression",
+                "tree": {
+                  "id": "expression:atom_edda422bed9847f7bb092b92240c0f9c:expression:parse:1c0483ad824b41eab31ee5c7a09a3671:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "literal",
+                  "literal_kind": null,
+                  "value": {
+                    "kind": "str",
+                    "value": "Hello, world!"
+                  }
+                }
+              },
+              "id": "atom_edda422bed9847f7bb092b92240c0f9c",
+              "kind": "output"
+            }
+          ]
+        },
+        "decorators": [],
+        "display_name": "main",
+        "docstring": null,
+        "id": "diagram_6a8fed5bb2d647238e9aaba50ae25ae2",
+        "identifier": "main",
+        "kind": "sync",
+        "method_kind": null,
+        "parameters": [],
+        "return_annotation": null,
+        "symbol_id": "symbol_329f6be431f7975ac551ffd1",
+        "type_parameters": []
+      }
+    ],
+    "modules": [
+      {
+        "body": [
+          {
+            "function_id": "diagram_6a8fed5bb2d647238e9aaba50ae25ae2",
+            "kind": "function_reference"
+          }
+        ],
+        "docstring": "",
+        "id": "module:app.main",
+        "kind": "module",
+        "path": "main"
+      }
+    ],
+    "package": "app",
+    "symbols": [
+      {
+        "declaration_id": "diagram_6a8fed5bb2d647238e9aaba50ae25ae2",
+        "id": "symbol_329f6be431f7975ac551ffd1",
+        "kind": "function",
+        "name": "main",
+        "owner_id": "diagram_6a8fed5bb2d647238e9aaba50ae25ae2"
+      }
+    ]
+  },
+  "project_id": "project_9dbde18c8fbc4b2aaeb0f84841427dea",
+  "projection_definitions": [],
+  "revision": 2,
+  "runtime_settings": {
+    "active_run_profile": "Default",
+    "run_profiles": [
+      {
+        "arguments": "",
+        "environment": [],
+        "interpreter": "",
+        "name": "Default",
+        "working_directory": "."
+      }
+    ]
+  },
+  "semantic_relations": [],
+  "shape_packs": [],
+  "title": "Hello World Example"
+}

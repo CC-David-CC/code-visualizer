@@ -1,0 +1,135 @@
+{
+  "concepts": [],
+  "description": "",
+  "documents": [
+    {
+      "description": "",
+      "extensions": [],
+      "id": "diagram_b06c95bf33d5456c98d605c0ab9757a9",
+      "kind": "drakon",
+      "title": "Run application"
+    }
+  ],
+  "domain_workspace": {
+    "bundle_references": [],
+    "language_definitions": [],
+    "models": [],
+    "schemas": []
+  },
+  "drakon_views": [
+    {
+      "document_id": "diagram_b06c95bf33d5456c98d605c0ab9757a9",
+      "end_id": "end_ba3e7fd639af418685cc3c2f2c90c058",
+      "function_id": "diagram_b06c95bf33d5456c98d605c0ab9757a9",
+      "header_id": "header_702775cc15714c1f8d282e3176edbcd4",
+      "title": "Run application"
+    }
+  ],
+  "extensions": [],
+  "format_revision": 11,
+  "managed_assets": [],
+  "program_model": {
+    "entrypoint": {
+      "arguments": {
+        "keywords": [],
+        "kind": "literal",
+        "positional": []
+      },
+      "callable_id": "diagram_b06c95bf33d5456c98d605c0ab9757a9",
+      "id": "entrypoint:project_80298e67eb5e46c984dc7bf97cab7633",
+      "startup": []
+    },
+    "functions": [
+      {
+        "body": {
+          "id": "sequence_693b9ffe8db5432081d623f816348a76",
+          "statements": [
+            {
+              "destination": null,
+              "end": null,
+              "expression": {
+                "id": "expression:atom_d2f86bb0cd484713a2bffb27ae4ef4c2:expression",
+                "role": "expression",
+                "tree": {
+                  "id": "expression:atom_d2f86bb0cd484713a2bffb27ae4ef4c2:expression:parse:a3bdb7f5377d49be88ce6c04c5dcca57:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "literal",
+                  "literal_kind": null,
+                  "value": {
+                    "kind": "str",
+                    "value": "Hello from a generated static method"
+                  }
+                }
+              },
+              "id": "atom_d2f86bb0cd484713a2bffb27ae4ef4c2",
+              "kind": "output"
+            }
+          ]
+        },
+        "decorators": [],
+        "display_name": "Run application",
+        "docstring": null,
+        "id": "diagram_b06c95bf33d5456c98d605c0ab9757a9",
+        "identifier": "run",
+        "kind": "sync",
+        "method_kind": "static",
+        "parameters": [],
+        "return_annotation": null,
+        "symbol_id": "symbol_5e7979939c86587a05ba0145",
+        "type_parameters": []
+      }
+    ],
+    "modules": [
+      {
+        "body": [
+          {
+            "arguments": null,
+            "body": [
+              {
+                "function_id": "diagram_b06c95bf33d5456c98d605c0ab9757a9",
+                "kind": "function_reference"
+              }
+            ],
+            "decorators": [],
+            "docstring": null,
+            "id": "class:module:app.main:ExampleApplication",
+            "identifier": "ExampleApplication",
+            "kind": "class",
+            "type_parameters": []
+          }
+        ],
+        "docstring": "",
+        "id": "module:app.main",
+        "kind": "module",
+        "path": "main"
+      }
+    ],
+    "package": "app",
+    "symbols": [
+      {
+        "declaration_id": "diagram_b06c95bf33d5456c98d605c0ab9757a9",
+        "id": "symbol_5e7979939c86587a05ba0145",
+        "kind": "function",
+        "name": "run",
+        "owner_id": "diagram_b06c95bf33d5456c98d605c0ab9757a9"
+      }
+    ]
+  },
+  "project_id": "project_80298e67eb5e46c984dc7bf97cab7633",
+  "projection_definitions": [],
+  "revision": 5,
+  "runtime_settings": {
+    "active_run_profile": "Default",
+    "run_profiles": [
+      {
+        "arguments": "",
+        "environment": [],
+        "interpreter": "",
+        "name": "Default",
+        "working_directory": "."
+      }
+    ]
+  },
+  "semantic_relations": [],
+  "shape_packs": [],
+  "title": "Classes and Methods Example"
+}

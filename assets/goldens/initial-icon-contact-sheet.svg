@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 1800 2520" width="1800" height="2520">
+<title>DRAKON algorithm</title>
+<style>.field{fill:#dff4f8}.route,.divider{fill:none;stroke:#111827;stroke-width:2}.icon{fill:#fff;stroke:#111827;stroke-width:2;stroke-linejoin:round}.code,.route-label{fill:#111827;font-family:'DejaVu Sans Mono',monospace;font-size:13px}</style>
+<rect x="0" y="0" width="1800" height="2520" class="field"/>
+<g id="contact_function_header" aria-label="Function Header: shortest_path(graph, start, goal)">
+<rect x="141.44" y="92" width="317.12" height="48" rx="16" class="icon"/>
+<text x="157.44" y="123.04" class="code">shortest_path(graph, start, goal)</text>
+</g>
+<g id="contact_end" aria-label="End: End">
+<rect x="741.44" y="92" width="317.12" height="48" rx="24" class="icon"/>
+<text x="757.44" y="123.04" class="code">End</text>
+</g>
+<g id="contact_action" aria-label="Action: distance = current_cost + weight">
+<polygon points="1341.44,92 1658.56,92 1658.56,140 1341.44,140" class="icon"/>
+<text x="1357.44" y="123.04" class="code">distance = current_cost + weight</text>
+</g>
+<g id="contact_if_question" aria-label="If Question: distance &lt; best[neighbor]">
+<polygon points="141.44,372 458.56,372 498.56,396 458.56,420 141.44,420" class="icon"/>
+<line x1="458.56" y1="372" x2="458.56" y2="420" class="divider"/>
+<text x="157.44" y="403.04" class="code">distance &lt; best[neighbor]</text>
+</g>
+<g id="contact_select" aria-label="Select: match command">
+<polygon points="741.44,372 1058.56,372 1098.56,396 1058.56,420 741.44,420" class="icon"/>
+<line x1="1058.56" y1="372" x2="1058.56" y2="420" class="divider"/>
+<text x="757.44" y="403.04" class="code">match command</text>
+</g>
+<g id="contact_case" aria-label="Case: case &#x27;open&#x27; if permitted">
+<polygon points="1341.44,372 1658.56,372 1658.56,420 1341.44,420" class="icon"/>
+<text x="1357.44" y="403.04" class="code">case &#x27;open&#x27; if permitted</text>
+</g>
+<g id="contact_branch_header" aria-label="Branch Header: Explore frontier">
+<rect x="141.44" y="652" width="317.12" height="48" rx="16" class="icon"/>
+<text x="157.44" y="683.04" class="code">Explore frontier</text>
+</g>
+<g id="contact_address" aria-label="Address: relax neighbors">
+<rect x="741.44" y="652" width="317.12" height="48" rx="16" class="icon"/>
+<text x="757.44" y="683.04" class="code">relax neighbors</text>
+</g>
+<g id="contact_call" aria-label="Call: result = solve(graph)">
+<polygon points="1341.44,652 1658.56,652 1658.56,700 1341.44,700" class="icon"/>
+<line x1="1357.44" y1="652" x2="1357.44" y2="700" class="divider"/>
+<line x1="1642.56" y1="652" x2="1642.56" y2="700" class="divider"/>
+<text x="1373.44" y="683.04" class="code">result = solve(graph)</text>
+</g>
+<g id="contact_assignment_shelf" aria-label="Assignment Shelf: best: dict[str, float]">
+<polygon points="141.44,932 458.56,932 458.56,1004 141.44,1004" class="icon"/>
+<line x1="141.44" y1="968" x2="458.56" y2="968" class="divider"/>
+<text x="157.44" y="954.4" class="code">best: dict[str, float]</text>
+<text x="157.44" y="990.4" class="code">initialize_distances(vertices)</text>
+</g>
+<g id="contact_signature_panel" aria-label="Signature Panel: parameters">
+<polygon points="741.44,932 1058.56,932 1058.56,1004 741.44,1004" class="icon"/>
+<line x1="741.44" y1="968" x2="1058.56" y2="968" class="divider"/>
+<text x="757.44" y="954.4" class="code">parameters</text>
+<text x="757.44" y="990.4" class="code">graph, start, goal</text>
+</g>
+<g id="contact_for_start" aria-label="For Start: for neighbor, weight in graph[node]">
+<polygon points="1365.44,932 1634.56,932 1658.56,980 1341.44,980" class="icon"/>
+<text x="1373.44" y="951.52" class="code">for neighbor, weight in</text>
+<text x="1373.44" y="967.52" class="code">graph[node]</text>
+</g>
+<g id="contact_for_end" aria-label="For End: next neighbor">
+<polygon points="141.44,1212 458.56,1212 434.56,1260 165.44,1260" class="icon"/>
+<text x="173.44" y="1243.04" class="code">next neighbor</text>
+</g>
+<g id="contact_output" aria-label="Output: f&quot;path={path}, cost={cost}&quot;">
+<polygon points="741.44,1212 1058.56,1212 1098.56,1236 1058.56,1260 741.44,1260" class="icon"/>
+<line x1="1058.56" y1="1212" x2="1058.56" y2="1260" class="divider"/>
+<text x="757.44" y="1243.04" class="code">f&quot;path={path}, cost={cost}&quot;</text>
+</g>
+<g id="contact_input" aria-label="Input: start = input(&#x27;Start: &#x27;)">
+<polygon points="1381.44,1212 1698.56,1212 1698.56,1260 1381.44,1260 1341.44,1236" class="icon"/>
+<line x1="1381.44" y1="1212" x2="1381.44" y2="1260" class="divider"/>
+<text x="1397.44" y="1243.04" class="code">start = input(&#x27;Start: &#x27;)</text>
+</g>
+<g id="contact_delay" aria-label="Delay: delay 0.25 s">
+<polygon points="157.44,1492 442.56,1492 458.56,1516 442.56,1540 157.44,1540 141.44,1516" class="icon"/>
+<text x="173.44" y="1523.04" class="code">delay 0.25 s</text>
+</g>
+<g id="contact_period" aria-label="Period: render_cycle">
+<polygon points="757.44,1492 1042.56,1492 1058.56,1516 1042.56,1540 757.44,1540 741.44,1516" class="icon"/>
+<line x1="900" y1="1492" x2="900" y2="1540" class="divider"/>
+<text x="773.44" y="1523.04" class="code">render_cycle</text>
+<text x="916" y="1523.04" class="code">1/60 s</text>
+</g>
+<g id="contact_start_timer" aria-label="Start Timer: start timer · render_cycle">
+<polygon points="1353.44,1492 1646.56,1492 1658.56,1504 1658.56,1528 1646.56,1540 1353.44,1540 1341.44,1528 1341.44,1504" class="icon"/>
+<text x="1357.44" y="1523.04" class="code">start timer · render_cycle</text>
+</g>
+<g id="contact_synchronizer" aria-label="Synchronizer: render_cycle ≤ 1/60 s">
+<polygon points="141.44,1772 458.56,1772 498.56,1796 458.56,1820 141.44,1820" class="icon"/>
+<line x1="458.56" y1="1772" x2="458.56" y2="1820" class="divider"/>
+<text x="157.44" y="1803.04" class="code">render_cycle ≤ 1/60 s</text>
+</g>
+<g id="contact_realtime_process" aria-label="Realtime Parallel Process: await refresh_view()">
+<polygon points="741.44,1772 1058.56,1772 1058.56,1820 741.44,1820" class="icon"/>
+<line x1="749.44" y1="1772" x2="749.44" y2="1820" class="divider"/>
+<line x1="1050.56" y1="1772" x2="1050.56" y2="1820" class="divider"/>
+<text x="765.44" y="1803.04" class="code">await refresh_view()</text>
+</g>
+<g id="contact_note_rich" aria-label="Rich Note: Why this route is preferred">
+<polygon points="1341.44,1772 1634.56,1772 1658.56,1796 1658.56,1820 1341.44,1820" class="icon"/>
+<line x1="1634.56" y1="1772" x2="1634.56" y2="1796" class="divider"/>
+<line x1="1341.44" y1="1812" x2="1658.56" y2="1812" class="divider"/>
+<text x="1357.44" y="1803.04" class="code">Why this route is preferred</text>
+</g>
+<g id="contact_note_right" aria-label="Right Note: Alternate route detail">
+<polygon points="141.44,2052 434.56,2052 458.56,2076 458.56,2100 141.44,2100" class="icon"/>
+<line x1="434.56" y1="2052" x2="434.56" y2="2076" class="divider"/>
+<text x="157.44" y="2083.04" class="code">Alternate route detail</text>
+</g>
+<g id="contact_note_left" aria-label="Left Note: Precondition and invariant">
+<polygon points="765.44,2052 1058.56,2052 1058.56,2100 741.44,2100 741.44,2076" class="icon"/>
+<line x1="741.44" y1="2076" x2="765.44" y2="2076" class="divider"/>
+<line x1="765.44" y1="2052" x2="765.44" y2="2076" class="divider"/>
+<text x="781.44" y="2083.04" class="code">Precondition and invariant</text>
+</g>
+<g id="contact_loop_return" aria-label="Loop Return Arrow: continue iteration">
+<polygon points="1365.44,2052 1658.56,2052 1658.56,2100 1365.44,2100 1341.44,2076" class="icon"/>
+<text x="1373.44" y="2083.04" class="code">continue iteration</text>
+</g>
+<g id="contact_silhouette_transition" aria-label="Silhouette Transition: transition to Finish">
+<polygon points="141.44,2332 458.56,2332 498.56,2356 458.56,2380 141.44,2380" class="icon"/>
+<line x1="458.56" y1="2332" x2="458.56" y2="2380" class="divider"/>
+<text x="157.44" y="2363.04" class="code">transition to Finish</text>
+</g>
+<g id="contact_connector_marker" aria-label="Connector Marker: A">
+<polygon points="900,2332 948,2356 900,2380 852,2356" class="icon"/>
+<text x="868" y="2363.04" class="code">A</text>
+</g>
+<g id="contact_concurrent_process_boundary" aria-label="Concurrent Process Boundary: parallel process boundary">
+<polygon points="1341.44,2332 1658.56,2332 1658.56,2384 1341.44,2384" class="icon"/>
+<line x1="1341.44" y1="2340" x2="1658.56" y2="2340" class="divider"/>
+<line x1="1341.44" y1="2376" x2="1658.56" y2="2376" class="divider"/>
+<text x="1357.44" y="2362.4" class="code">parallel process boundary</text>
+</g>
+<text x="48" y="53" class="route-label">01 · Header</text>
+<text x="648" y="53" class="route-label">02 · End</text>
+<text x="1248" y="53" class="route-label">03 · Action</text>
+<text x="48" y="333" class="route-label">04 · If</text>
+<text x="648" y="333" class="route-label">05 · Select</text>
+<text x="1248" y="333" class="route-label">06 · Case</text>
+<text x="48" y="613" class="route-label">07 · Branch Header</text>
+<text x="648" y="613" class="route-label">08 · Address</text>
+<text x="1248" y="613" class="route-label">09 · Call</text>
+<text x="48" y="893" class="route-label">10 · Shelf / Assignment</text>
+<text x="648" y="893" class="route-label">11 · Signature Panel</text>
+<text x="1248" y="893" class="route-label">12 · For Start</text>
+<text x="48" y="1173" class="route-label">13 · For End</text>
+<text x="648" y="1173" class="route-label">14 · Output</text>
+<text x="1248" y="1173" class="route-label">15 · Input</text>
+<text x="48" y="1453" class="route-label">16 · Delay</text>
+<text x="648" y="1453" class="route-label">17 · Period</text>
+<text x="1248" y="1453" class="route-label">18 · Start Timer</text>
+<text x="48" y="1733" class="route-label">19 · Synchronizer</text>
+<text x="648" y="1733" class="route-label">20 · Realtime Process</text>
+<text x="1248" y="1733" class="route-label">21 · Rich Note</text>
+<text x="48" y="2013" class="route-label">22 · Right Note</text>
+<text x="648" y="2013" class="route-label">23 · Left Note</text>
+<text x="1248" y="2013" class="route-label">24 · Loop Return</text>
+<text x="48" y="2293" class="route-label">25 · Silhouette Transition</text>
+<text x="648" y="2293" class="route-label">26 · Connector Marker</text>
+<text x="1248" y="2293" class="route-label">27 · Concurrent Process Boundary</text>
+</svg>

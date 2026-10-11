@@ -1,0 +1,507 @@
+{
+  "bundle_references": [
+    {
+      "id": "org.example.sample",
+      "version": "3"
+    }
+  ],
+  "language_definitions": [
+    {
+      "id": "language",
+      "notations": [],
+      "schema_id": "schema",
+      "schema_version": "3",
+      "syntax_version": 2,
+      "title": "Authored data",
+      "transformations": [],
+      "type": "AuthoredDomainLanguage",
+      "validators": [],
+      "version": "7"
+    }
+  ],
+  "models": [
+    {
+      "id": "model",
+      "nodes": [
+        {
+          "children": [
+            {
+              "node_ids": [
+                "child"
+              ],
+              "role_id": "owned"
+            }
+          ],
+          "concept_id": "sample",
+          "id": "root",
+          "properties": [
+            {
+              "property_id": "property:0",
+              "value": "\u03bb\n\"\\"
+            },
+            {
+              "property_id": "property:1",
+              "value": false
+            },
+            {
+              "property_id": "property:2",
+              "value": 340282366920938463463374607431768211456
+            },
+            {
+              "property_id": "property:3",
+              "value": -0.0
+            },
+            {
+              "property_id": "property:4",
+              "value": {
+                "$value": "complex",
+                "imaginary": -2.5,
+                "real": 1.25,
+                "version": 1
+              }
+            },
+            {
+              "property_id": "property:5",
+              "value": {
+                "$value": "quantity",
+                "magnitude": {
+                  "$value": "complex",
+                  "imaginary": 1.0,
+                  "real": 0.0,
+                  "version": 1
+                },
+                "unit": {
+                  "dimension": {
+                    "powers": [
+                      {
+                        "basis_id": "org.example.dimension:length",
+                        "exponent": 1
+                      }
+                    ]
+                  },
+                  "id": "org.example.units:step",
+                  "version": "3"
+                },
+                "version": 1
+              }
+            },
+            {
+              "property_id": "property:6",
+              "value": {
+                "$value": "tensor",
+                "dtype": "float64",
+                "elements": [
+                  1.0,
+                  -0.0
+                ],
+                "shape": [
+                  1,
+                  2
+                ],
+                "version": 1
+              }
+            },
+            {
+              "property_id": "property:7",
+              "value": {
+                "$value": "resource",
+                "content_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "id": "resource:sample",
+                "version": 1
+              }
+            }
+          ],
+          "references": []
+        },
+        {
+          "children": [],
+          "concept_id": "sample",
+          "id": "child",
+          "properties": [
+            {
+              "property_id": "property:0",
+              "value": "\u03bb\n\"\\"
+            },
+            {
+              "property_id": "property:1",
+              "value": false
+            },
+            {
+              "property_id": "property:2",
+              "value": 340282366920938463463374607431768211456
+            },
+            {
+              "property_id": "property:3",
+              "value": -0.0
+            },
+            {
+              "property_id": "property:4",
+              "value": {
+                "$value": "complex",
+                "imaginary": -2.5,
+                "real": 1.25,
+                "version": 1
+              }
+            },
+            {
+              "property_id": "property:5",
+              "value": {
+                "$value": "quantity",
+                "magnitude": {
+                  "$value": "complex",
+                  "imaginary": 1.0,
+                  "real": 0.0,
+                  "version": 1
+                },
+                "unit": {
+                  "dimension": {
+                    "powers": [
+                      {
+                        "basis_id": "org.example.dimension:length",
+                        "exponent": 1
+                      }
+                    ]
+                  },
+                  "id": "org.example.units:step",
+                  "version": "3"
+                },
+                "version": 1
+              }
+            },
+            {
+              "property_id": "property:6",
+              "value": {
+                "$value": "tensor",
+                "dtype": "float64",
+                "elements": [
+                  1.0,
+                  -0.0
+                ],
+                "shape": [
+                  1,
+                  2
+                ],
+                "version": 1
+              }
+            },
+            {
+              "property_id": "property:7",
+              "value": {
+                "$value": "resource",
+                "content_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "id": "resource:sample",
+                "version": 1
+              }
+            }
+          ],
+          "references": [
+            {
+              "node_ids": [
+                "root"
+              ],
+              "role_id": "linked"
+            }
+          ]
+        }
+      ],
+      "roots": [
+        "root"
+      ],
+      "schema_id": "schema",
+      "schema_version": "3",
+      "title": "Workspace"
+    }
+  ],
+  "schemas": [
+    {
+      "bundle": {
+        "id": "org.example.sample",
+        "version": "3"
+      },
+      "concepts": [
+        {
+          "constraints": [
+            {
+              "id": "named",
+              "kind": "nonempty",
+              "property_id": "property:0",
+              "role_id": null
+            },
+            {
+              "id": "unique",
+              "kind": "unique_property",
+              "property_id": "property:0",
+              "role_id": "owned"
+            }
+          ],
+          "containment_roles": [
+            {
+              "allowed_concept_ids": [
+                "sample"
+              ],
+              "id": "owned",
+              "max_count": null,
+              "min_count": 0,
+              "name": "Children",
+              "ordered": true
+            }
+          ],
+          "description": "Rich schema data",
+          "display_property_id": "property:0",
+          "id": "sample",
+          "name": "Sample",
+          "properties": [
+            {
+              "choices": [
+                "\u03bb\n\"\\"
+              ],
+              "default": "\u03bb\n\"\\",
+              "id": "property:0",
+              "maximum": null,
+              "minimum": null,
+              "name": "Property 0",
+              "required": true,
+              "value_constraints": {
+                "dimension": null,
+                "tensor_dtype": null,
+                "tensor_shape": null
+              },
+              "value_kind": "string"
+            },
+            {
+              "choices": [
+                false
+              ],
+              "default": false,
+              "id": "property:1",
+              "maximum": null,
+              "minimum": null,
+              "name": "Property 1",
+              "required": true,
+              "value_constraints": {
+                "dimension": null,
+                "tensor_dtype": null,
+                "tensor_shape": null
+              },
+              "value_kind": "boolean"
+            },
+            {
+              "choices": [
+                340282366920938463463374607431768211456
+              ],
+              "default": 340282366920938463463374607431768211456,
+              "id": "property:2",
+              "maximum": null,
+              "minimum": null,
+              "name": "Property 2",
+              "required": true,
+              "value_constraints": {
+                "dimension": null,
+                "tensor_dtype": null,
+                "tensor_shape": null
+              },
+              "value_kind": "integer"
+            },
+            {
+              "choices": [
+                -0.0
+              ],
+              "default": -0.0,
+              "id": "property:3",
+              "maximum": 8.5,
+              "minimum": -4.5,
+              "name": "Property 3",
+              "required": true,
+              "value_constraints": {
+                "dimension": null,
+                "tensor_dtype": null,
+                "tensor_shape": null
+              },
+              "value_kind": "number"
+            },
+            {
+              "choices": [
+                {
+                  "$value": "complex",
+                  "imaginary": -2.5,
+                  "real": 1.25,
+                  "version": 1
+                }
+              ],
+              "default": {
+                "$value": "complex",
+                "imaginary": -2.5,
+                "real": 1.25,
+                "version": 1
+              },
+              "id": "property:4",
+              "maximum": null,
+              "minimum": null,
+              "name": "Property 4",
+              "required": true,
+              "value_constraints": {
+                "dimension": null,
+                "tensor_dtype": null,
+                "tensor_shape": null
+              },
+              "value_kind": "complex"
+            },
+            {
+              "choices": [
+                {
+                  "$value": "quantity",
+                  "magnitude": {
+                    "$value": "complex",
+                    "imaginary": 1.0,
+                    "real": 0.0,
+                    "version": 1
+                  },
+                  "unit": {
+                    "dimension": {
+                      "powers": [
+                        {
+                          "basis_id": "org.example.dimension:length",
+                          "exponent": 1
+                        }
+                      ]
+                    },
+                    "id": "org.example.units:step",
+                    "version": "3"
+                  },
+                  "version": 1
+                }
+              ],
+              "default": {
+                "$value": "quantity",
+                "magnitude": {
+                  "$value": "complex",
+                  "imaginary": 1.0,
+                  "real": 0.0,
+                  "version": 1
+                },
+                "unit": {
+                  "dimension": {
+                    "powers": [
+                      {
+                        "basis_id": "org.example.dimension:length",
+                        "exponent": 1
+                      }
+                    ]
+                  },
+                  "id": "org.example.units:step",
+                  "version": "3"
+                },
+                "version": 1
+              },
+              "id": "property:5",
+              "maximum": null,
+              "minimum": null,
+              "name": "Property 5",
+              "required": true,
+              "value_constraints": {
+                "dimension": {
+                  "powers": [
+                    {
+                      "basis_id": "org.example.dimension:length",
+                      "exponent": 1
+                    }
+                  ]
+                },
+                "tensor_dtype": null,
+                "tensor_shape": null
+              },
+              "value_kind": "quantity"
+            },
+            {
+              "choices": [
+                {
+                  "$value": "tensor",
+                  "dtype": "float64",
+                  "elements": [
+                    1.0,
+                    -0.0
+                  ],
+                  "shape": [
+                    1,
+                    2
+                  ],
+                  "version": 1
+                }
+              ],
+              "default": {
+                "$value": "tensor",
+                "dtype": "float64",
+                "elements": [
+                  1.0,
+                  -0.0
+                ],
+                "shape": [
+                  1,
+                  2
+                ],
+                "version": 1
+              },
+              "id": "property:6",
+              "maximum": null,
+              "minimum": null,
+              "name": "Property 6",
+              "required": true,
+              "value_constraints": {
+                "dimension": null,
+                "tensor_dtype": "float64",
+                "tensor_shape": [
+                  null,
+                  2
+                ]
+              },
+              "value_kind": "tensor"
+            },
+            {
+              "choices": [
+                {
+                  "$value": "resource",
+                  "content_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "id": "resource:sample",
+                  "version": 1
+                }
+              ],
+              "default": {
+                "$value": "resource",
+                "content_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "id": "resource:sample",
+                "version": 1
+              },
+              "id": "property:7",
+              "maximum": null,
+              "minimum": null,
+              "name": "Property 7",
+              "required": true,
+              "value_constraints": {
+                "dimension": null,
+                "tensor_dtype": null,
+                "tensor_shape": null
+              },
+              "value_kind": "resource"
+            }
+          ],
+          "reference_roles": [
+            {
+              "allowed_concept_ids": [
+                "sample"
+              ],
+              "id": "linked",
+              "max_count": 2,
+              "min_count": 0,
+              "name": "References",
+              "ordered": false
+            }
+          ]
+        }
+      ],
+      "description": "Description",
+      "id": "schema",
+      "namespace": "org.example.sample",
+      "version": "3"
+    }
+  ]
+}

@@ -1,0 +1,821 @@
+{
+  "concepts": [],
+  "description": "",
+  "documents": [],
+  "domain_workspace": {
+    "bundle_references": [],
+    "language_definitions": [
+      {
+        "id": "proof:language",
+        "notations": [
+          {
+            "body": null,
+            "columns": [],
+            "concept_ids": [
+              "proof:State"
+            ],
+            "edge_rules": [
+              {
+                "concept_id": "proof:Transition",
+                "label_fields": [
+                  {
+                    "property_id": "proof:event-name",
+                    "reference_role_ids": [],
+                    "type": "NotationField"
+                  }
+                ],
+                "source_role_id": "proof:source",
+                "target_role_id": "proof:target",
+                "type": "NotationEdgeRule"
+              }
+            ],
+            "id": "proof:graph",
+            "kind": "graph",
+            "layout": "hierarchical",
+            "node_rules": [
+              {
+                "concept_id": "proof:State",
+                "label_fields": [],
+                "label_property_id": "proof:state-name",
+                "type": "NotationNodeRule"
+              }
+            ],
+            "schema_id": "proof:schema",
+            "title": "Toggle graph",
+            "type": "NotationDefinition"
+          },
+          {
+            "body": null,
+            "columns": [
+              {
+                "editable": true,
+                "field": {
+                  "property_id": "proof:state-name",
+                  "reference_role_ids": [
+                    "proof:source"
+                  ],
+                  "type": "NotationField"
+                },
+                "id": "source",
+                "title": "Source",
+                "type": "NotationColumn"
+              },
+              {
+                "editable": true,
+                "field": {
+                  "property_id": "proof:event-name",
+                  "reference_role_ids": [],
+                  "type": "NotationField"
+                },
+                "id": "event",
+                "title": "Event",
+                "type": "NotationColumn"
+              },
+              {
+                "editable": true,
+                "field": {
+                  "property_id": "proof:state-name",
+                  "reference_role_ids": [
+                    "proof:target"
+                  ],
+                  "type": "NotationField"
+                },
+                "id": "target",
+                "title": "Target",
+                "type": "NotationColumn"
+              }
+            ],
+            "concept_ids": [
+              "proof:Transition"
+            ],
+            "edge_rules": [],
+            "id": "proof:table",
+            "kind": "table",
+            "layout": "hierarchical",
+            "node_rules": [],
+            "schema_id": "proof:schema",
+            "title": "Transition table",
+            "type": "NotationDefinition"
+          },
+          {
+            "body": null,
+            "columns": [],
+            "concept_ids": [],
+            "edge_rules": [],
+            "id": "proof:form",
+            "kind": "tree_form",
+            "layout": "hierarchical",
+            "node_rules": [
+              {
+                "concept_id": "proof:Transition",
+                "label_fields": [
+                  {
+                    "property_id": "proof:state-name",
+                    "reference_role_ids": [
+                      "proof:source"
+                    ],
+                    "type": "NotationField"
+                  },
+                  {
+                    "property_id": "proof:event-name",
+                    "reference_role_ids": [],
+                    "type": "NotationField"
+                  },
+                  {
+                    "property_id": "proof:state-name",
+                    "reference_role_ids": [
+                      "proof:target"
+                    ],
+                    "type": "NotationField"
+                  }
+                ],
+                "label_property_id": null,
+                "type": "NotationNodeRule"
+              }
+            ],
+            "schema_id": "proof:schema",
+            "title": "Hierarchy and form",
+            "type": "NotationDefinition"
+          }
+        ],
+        "schema_id": "proof:schema",
+        "schema_version": "1",
+        "syntax_version": 2,
+        "title": "Authored toggle behavior",
+        "transformations": [
+          {
+            "definition": {
+              "depends_on": [],
+              "description": "",
+              "id": "proof:lower",
+              "source": {
+                "id": "proof.authored.toggle",
+                "type": "Representation",
+                "version": "1"
+              },
+              "target": {
+                "id": "code_visualizer.program",
+                "type": "Representation",
+                "version": "1"
+              },
+              "type": "TransformationDefinition",
+              "version": "1"
+            },
+            "domain": null,
+            "functions": [
+              {
+                "binding_id": "machine",
+                "body": [
+                  {
+                    "id": "proof:initial-state",
+                    "origins": [],
+                    "symbol_id": "proof:current",
+                    "type": "TemplateAssignment",
+                    "value": {
+                      "id": "proof:syntax:39",
+                      "query": {
+                        "id": "proof:syntax:40",
+                        "source": {
+                          "id": "proof:syntax:41",
+                          "operand": {
+                            "id": "proof:syntax:42",
+                            "role_id": "proof:initial",
+                            "source": {
+                              "binding_id": "machine",
+                              "id": "proof:syntax:43",
+                              "type": "QueryVariable"
+                            },
+                            "type": "QueryRole"
+                          },
+                          "operator": "first",
+                          "type": "QueryUnary"
+                        },
+                        "type": "QueryIdentity"
+                      },
+                      "type": "RuntimeLiteral"
+                    }
+                  },
+                  {
+                    "body": [
+                      {
+                        "id": "proof:remember-state",
+                        "origins": [],
+                        "symbol_id": "proof:previous",
+                        "type": "TemplateAssignment",
+                        "value": {
+                          "id": "proof:syntax:48",
+                          "symbol_id": "proof:current",
+                          "type": "RuntimeVariable"
+                        }
+                      },
+                      {
+                        "binding_id": "transition",
+                        "body": [
+                          {
+                            "condition": {
+                              "id": "proof:syntax:7",
+                              "left": {
+                                "id": "proof:syntax:8",
+                                "symbol_id": "proof:previous",
+                                "type": "RuntimeVariable"
+                              },
+                              "operator": "equal",
+                              "right": {
+                                "id": "proof:syntax:9",
+                                "query": {
+                                  "id": "proof:syntax:10",
+                                  "source": {
+                                    "id": "proof:syntax:11",
+                                    "operand": {
+                                      "id": "proof:syntax:12",
+                                      "role_id": "proof:source",
+                                      "source": {
+                                        "binding_id": "transition",
+                                        "id": "proof:syntax:13",
+                                        "type": "QueryVariable"
+                                      },
+                                      "type": "QueryRole"
+                                    },
+                                    "operator": "first",
+                                    "type": "QueryUnary"
+                                  },
+                                  "type": "QueryIdentity"
+                                },
+                                "type": "RuntimeLiteral"
+                              },
+                              "type": "RuntimeBinary"
+                            },
+                            "false_body": [],
+                            "id": "proof:take-transition",
+                            "origins": [
+                              {
+                                "binding_id": "transition",
+                                "id": "proof:syntax:32",
+                                "type": "QueryVariable"
+                              },
+                              {
+                                "id": "proof:syntax:33",
+                                "operand": {
+                                  "id": "proof:syntax:34",
+                                  "role_id": "proof:target",
+                                  "source": {
+                                    "binding_id": "transition",
+                                    "id": "proof:syntax:35",
+                                    "type": "QueryVariable"
+                                  },
+                                  "type": "QueryRole"
+                                },
+                                "operator": "first",
+                                "type": "QueryUnary"
+                              }
+                            ],
+                            "true_body": [
+                              {
+                                "id": "proof:change-state",
+                                "origins": [
+                                  {
+                                    "binding_id": "transition",
+                                    "id": "proof:syntax:19",
+                                    "type": "QueryVariable"
+                                  },
+                                  {
+                                    "id": "proof:syntax:20",
+                                    "operand": {
+                                      "id": "proof:syntax:21",
+                                      "role_id": "proof:target",
+                                      "source": {
+                                        "binding_id": "transition",
+                                        "id": "proof:syntax:22",
+                                        "type": "QueryVariable"
+                                      },
+                                      "type": "QueryRole"
+                                    },
+                                    "operator": "first",
+                                    "type": "QueryUnary"
+                                  }
+                                ],
+                                "symbol_id": "proof:current",
+                                "type": "TemplateAssignment",
+                                "value": {
+                                  "id": "proof:syntax:14",
+                                  "query": {
+                                    "id": "proof:syntax:15",
+                                    "source": {
+                                      "id": "proof:syntax:16",
+                                      "operand": {
+                                        "id": "proof:syntax:17",
+                                        "role_id": "proof:target",
+                                        "source": {
+                                          "binding_id": "transition",
+                                          "id": "proof:syntax:18",
+                                          "type": "QueryVariable"
+                                        },
+                                        "type": "QueryRole"
+                                      },
+                                      "operator": "first",
+                                      "type": "QueryUnary"
+                                    },
+                                    "type": "QueryIdentity"
+                                  },
+                                  "type": "RuntimeLiteral"
+                                }
+                              },
+                              {
+                                "id": "proof:show-state",
+                                "origins": [
+                                  {
+                                    "binding_id": "transition",
+                                    "id": "proof:syntax:28",
+                                    "type": "QueryVariable"
+                                  },
+                                  {
+                                    "id": "proof:syntax:29",
+                                    "operand": {
+                                      "id": "proof:syntax:30",
+                                      "role_id": "proof:target",
+                                      "source": {
+                                        "binding_id": "transition",
+                                        "id": "proof:syntax:31",
+                                        "type": "QueryVariable"
+                                      },
+                                      "type": "QueryRole"
+                                    },
+                                    "operator": "first",
+                                    "type": "QueryUnary"
+                                  }
+                                ],
+                                "type": "TemplateOutput",
+                                "value": {
+                                  "id": "proof:syntax:23",
+                                  "query": {
+                                    "id": "proof:syntax:24",
+                                    "property_id": "proof:state-name",
+                                    "source": {
+                                      "id": "proof:syntax:25",
+                                      "operand": {
+                                        "id": "proof:syntax:26",
+                                        "role_id": "proof:target",
+                                        "source": {
+                                          "binding_id": "transition",
+                                          "id": "proof:syntax:27",
+                                          "type": "QueryVariable"
+                                        },
+                                        "type": "QueryRole"
+                                      },
+                                      "operator": "first",
+                                      "type": "QueryUnary"
+                                    },
+                                    "type": "QueryProperty"
+                                  },
+                                  "type": "RuntimeLiteral"
+                                }
+                              }
+                            ],
+                            "type": "TemplateIf"
+                          }
+                        ],
+                        "collection": {
+                          "id": "proof:syntax:49",
+                          "role_id": "proof:transitions",
+                          "source": {
+                            "binding_id": "machine",
+                            "id": "proof:syntax:50",
+                            "type": "QueryVariable"
+                          },
+                          "type": "QueryRole"
+                        },
+                        "id": "proof:expand-transitions",
+                        "type": "TemplateExpand"
+                      }
+                    ],
+                    "id": "proof:steps",
+                    "iterable": {
+                      "arguments": [
+                        {
+                          "id": "proof:syntax:45",
+                          "query": {
+                            "id": "proof:syntax:46",
+                            "property_id": "proof:step-count",
+                            "source": {
+                              "binding_id": "machine",
+                              "id": "proof:syntax:47",
+                              "type": "QueryVariable"
+                            },
+                            "type": "QueryProperty"
+                          },
+                          "type": "RuntimeLiteral"
+                        }
+                      ],
+                      "builtin": "range",
+                      "id": "proof:syntax:44",
+                      "type": "RuntimeCall"
+                    },
+                    "origins": [],
+                    "symbol_id": "proof:tick",
+                    "type": "TemplateFor"
+                  }
+                ],
+                "display_name": {
+                  "id": "proof:syntax:37",
+                  "property_id": "proof:machine-name",
+                  "source": {
+                    "binding_id": "machine",
+                    "id": "proof:syntax:38",
+                    "type": "QueryVariable"
+                  },
+                  "type": "QueryProperty"
+                },
+                "entrypoint": true,
+                "id": "proof:function",
+                "identifier_prefix": "run_toggle",
+                "parameters": [],
+                "source": {
+                  "concept_id": "proof:Machine",
+                  "id": "proof:syntax:36",
+                  "roots_only": true,
+                  "type": "QueryNodes"
+                },
+                "symbols": [
+                  {
+                    "id": "proof:current",
+                    "name": "state",
+                    "type": "TemplateSymbol"
+                  },
+                  {
+                    "id": "proof:previous",
+                    "name": "previous",
+                    "type": "TemplateSymbol"
+                  },
+                  {
+                    "id": "proof:tick",
+                    "name": "tick",
+                    "type": "TemplateSymbol"
+                  }
+                ],
+                "type": "FunctionTemplate"
+              }
+            ],
+            "type": "AuthoredTransformation"
+          }
+        ],
+        "type": "AuthoredDomainLanguage",
+        "validators": [
+          {
+            "binding_id": "machine",
+            "code": "PROOF_AMBIGUOUS_STATE",
+            "concept_id": "proof:Machine",
+            "id": "proof:deterministic",
+            "message": "Each state has one outgoing transition",
+            "predicate": {
+              "binding_id": "transition",
+              "collection": {
+                "id": "proof:syntax:1",
+                "role_id": "proof:transitions",
+                "source": {
+                  "binding_id": "machine",
+                  "id": "proof:syntax:2",
+                  "type": "QueryVariable"
+                },
+                "type": "QueryRole"
+              },
+              "id": "proof:syntax:0",
+              "key": {
+                "id": "proof:syntax:3",
+                "source": {
+                  "id": "proof:syntax:4",
+                  "operand": {
+                    "id": "proof:syntax:5",
+                    "role_id": "proof:source",
+                    "source": {
+                      "binding_id": "transition",
+                      "id": "proof:syntax:6",
+                      "type": "QueryVariable"
+                    },
+                    "type": "QueryRole"
+                  },
+                  "operator": "first",
+                  "type": "QueryUnary"
+                },
+                "type": "QueryIdentity"
+              },
+              "type": "QueryUnique"
+            },
+            "type": "ValidatorDefinition"
+          }
+        ],
+        "version": "1"
+      }
+    ],
+    "models": [
+      {
+        "id": "proof:model",
+        "nodes": [
+          {
+            "children": [
+              {
+                "node_ids": [
+                  "proof:idle",
+                  "proof:active"
+                ],
+                "role_id": "proof:states"
+              },
+              {
+                "node_ids": [
+                  "proof:activate",
+                  "proof:deactivate"
+                ],
+                "role_id": "proof:transitions"
+              }
+            ],
+            "concept_id": "proof:Machine",
+            "id": "proof:toggle",
+            "properties": [
+              {
+                "property_id": "proof:machine-name",
+                "value": "Toggle"
+              },
+              {
+                "property_id": "proof:step-count",
+                "value": 4
+              }
+            ],
+            "references": [
+              {
+                "node_ids": [
+                  "proof:idle"
+                ],
+                "role_id": "proof:initial"
+              }
+            ]
+          },
+          {
+            "children": [],
+            "concept_id": "proof:State",
+            "id": "proof:idle",
+            "properties": [
+              {
+                "property_id": "proof:state-name",
+                "value": "Rest"
+              }
+            ],
+            "references": []
+          },
+          {
+            "children": [],
+            "concept_id": "proof:State",
+            "id": "proof:active",
+            "properties": [
+              {
+                "property_id": "proof:state-name",
+                "value": "Engaged"
+              }
+            ],
+            "references": []
+          },
+          {
+            "children": [],
+            "concept_id": "proof:Transition",
+            "id": "proof:activate",
+            "properties": [
+              {
+                "property_id": "proof:event-name",
+                "value": "toggle"
+              }
+            ],
+            "references": [
+              {
+                "node_ids": [
+                  "proof:idle"
+                ],
+                "role_id": "proof:source"
+              },
+              {
+                "node_ids": [
+                  "proof:active"
+                ],
+                "role_id": "proof:target"
+              }
+            ]
+          },
+          {
+            "children": [],
+            "concept_id": "proof:Transition",
+            "id": "proof:deactivate",
+            "properties": [
+              {
+                "property_id": "proof:event-name",
+                "value": "toggle"
+              }
+            ],
+            "references": [
+              {
+                "node_ids": [
+                  "proof:active"
+                ],
+                "role_id": "proof:source"
+              },
+              {
+                "node_ids": [
+                  "proof:idle"
+                ],
+                "role_id": "proof:target"
+              }
+            ]
+          }
+        ],
+        "roots": [
+          "proof:toggle"
+        ],
+        "schema_id": "proof:schema",
+        "schema_version": "1",
+        "title": "Two-state toggle"
+      }
+    ],
+    "schemas": [
+      {
+        "bundle": null,
+        "concepts": [
+          {
+            "constraints": [],
+            "containment_roles": [
+              {
+                "allowed_concept_ids": [
+                  "proof:State"
+                ],
+                "id": "proof:states",
+                "max_count": null,
+                "min_count": 2,
+                "name": "States",
+                "ordered": true
+              },
+              {
+                "allowed_concept_ids": [
+                  "proof:Transition"
+                ],
+                "id": "proof:transitions",
+                "max_count": null,
+                "min_count": 2,
+                "name": "Transitions",
+                "ordered": true
+              }
+            ],
+            "description": "",
+            "display_property_id": "proof:machine-name",
+            "id": "proof:Machine",
+            "name": "Machine",
+            "properties": [
+              {
+                "choices": [],
+                "default": null,
+                "id": "proof:machine-name",
+                "maximum": null,
+                "minimum": null,
+                "name": "Name",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "string"
+              },
+              {
+                "choices": [],
+                "default": null,
+                "id": "proof:step-count",
+                "maximum": 20.0,
+                "minimum": 1.0,
+                "name": "Steps",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "integer"
+              }
+            ],
+            "reference_roles": [
+              {
+                "allowed_concept_ids": [
+                  "proof:State"
+                ],
+                "id": "proof:initial",
+                "max_count": 1,
+                "min_count": 1,
+                "name": "Initial",
+                "ordered": true
+              }
+            ]
+          },
+          {
+            "constraints": [],
+            "containment_roles": [],
+            "description": "",
+            "display_property_id": "proof:state-name",
+            "id": "proof:State",
+            "name": "State",
+            "properties": [
+              {
+                "choices": [],
+                "default": null,
+                "id": "proof:state-name",
+                "maximum": null,
+                "minimum": null,
+                "name": "Name",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "string"
+              }
+            ],
+            "reference_roles": []
+          },
+          {
+            "constraints": [],
+            "containment_roles": [],
+            "description": "",
+            "display_property_id": "proof:event-name",
+            "id": "proof:Transition",
+            "name": "Transition",
+            "properties": [
+              {
+                "choices": [],
+                "default": null,
+                "id": "proof:event-name",
+                "maximum": null,
+                "minimum": null,
+                "name": "Event",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "string"
+              }
+            ],
+            "reference_roles": [
+              {
+                "allowed_concept_ids": [
+                  "proof:State"
+                ],
+                "id": "proof:source",
+                "max_count": 1,
+                "min_count": 1,
+                "name": "Source",
+                "ordered": true
+              },
+              {
+                "allowed_concept_ids": [
+                  "proof:State"
+                ],
+                "id": "proof:target",
+                "max_count": 1,
+                "min_count": 1,
+                "name": "Target",
+                "ordered": true
+              }
+            ]
+          }
+        ],
+        "description": "",
+        "id": "proof:schema",
+        "namespace": "proof.authored.toggle",
+        "version": "1"
+      }
+    ]
+  },
+  "drakon_views": [],
+  "extensions": [],
+  "format_revision": 11,
+  "managed_assets": [],
+  "program_model": {
+    "entrypoint": null,
+    "functions": [],
+    "modules": [],
+    "package": "app",
+    "symbols": []
+  },
+  "project_id": "proof:project",
+  "projection_definitions": [],
+  "revision": 40,
+  "runtime_settings": {
+    "active_run_profile": "Default",
+    "run_profiles": [
+      {
+        "arguments": "",
+        "environment": [],
+        "interpreter": "",
+        "name": "Default",
+        "working_directory": "."
+      }
+    ]
+  },
+  "semantic_relations": [],
+  "shape_packs": [],
+  "title": "Authority-authored toggle"
+}

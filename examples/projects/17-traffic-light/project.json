@@ -1,0 +1,1354 @@
+{
+  "concepts": [],
+  "description": "One state machine edited through graph, transition table, and hierarchy; traced activity returns to its original intentions.",
+  "documents": [],
+  "domain_workspace": {
+    "bundle_references": [],
+    "language_definitions": [
+      {
+        "id": "recipe:language",
+        "notations": [
+          {
+            "body": null,
+            "columns": [],
+            "concept_ids": [],
+            "edge_rules": [
+              {
+                "concept_id": "fsm:transition",
+                "label_fields": [
+                  {
+                    "property_id": "fsm:event:name",
+                    "reference_role_ids": [
+                      "fsm:transition:event"
+                    ],
+                    "type": "NotationField"
+                  }
+                ],
+                "source_role_id": "fsm:transition:source",
+                "target_role_id": "fsm:transition:target",
+                "type": "NotationEdgeRule"
+              }
+            ],
+            "id": "authored:fsm:graph",
+            "kind": "graph",
+            "layout": "radial",
+            "node_rules": [
+              {
+                "concept_id": "fsm:state",
+                "label_fields": [],
+                "label_property_id": "fsm:state:name",
+                "type": "NotationNodeRule"
+              }
+            ],
+            "schema_id": "fsm:schema",
+            "title": "State graph",
+            "type": "NotationDefinition"
+          },
+          {
+            "body": null,
+            "columns": [
+              {
+                "editable": true,
+                "field": {
+                  "property_id": "fsm:state:name",
+                  "reference_role_ids": [
+                    "fsm:transition:source"
+                  ],
+                  "type": "NotationField"
+                },
+                "id": "source",
+                "title": "Source",
+                "type": "NotationColumn"
+              },
+              {
+                "editable": true,
+                "field": {
+                  "property_id": "fsm:event:name",
+                  "reference_role_ids": [
+                    "fsm:transition:event"
+                  ],
+                  "type": "NotationField"
+                },
+                "id": "event",
+                "title": "Event",
+                "type": "NotationColumn"
+              },
+              {
+                "editable": true,
+                "field": {
+                  "property_id": "fsm:action:message",
+                  "reference_role_ids": [
+                    "fsm:transition:action"
+                  ],
+                  "type": "NotationField"
+                },
+                "id": "action",
+                "title": "Action",
+                "type": "NotationColumn"
+              },
+              {
+                "editable": true,
+                "field": {
+                  "property_id": "fsm:state:name",
+                  "reference_role_ids": [
+                    "fsm:transition:target"
+                  ],
+                  "type": "NotationField"
+                },
+                "id": "target",
+                "title": "Target",
+                "type": "NotationColumn"
+              }
+            ],
+            "concept_ids": [
+              "fsm:transition"
+            ],
+            "edge_rules": [],
+            "id": "authored:fsm:table",
+            "kind": "table",
+            "layout": "hierarchical",
+            "node_rules": [],
+            "schema_id": "fsm:schema",
+            "title": "Transition table",
+            "type": "NotationDefinition"
+          },
+          {
+            "body": null,
+            "columns": [],
+            "concept_ids": [],
+            "edge_rules": [],
+            "id": "authored:fsm:form",
+            "kind": "tree_form",
+            "layout": "hierarchical",
+            "node_rules": [
+              {
+                "concept_id": "fsm:transition",
+                "label_fields": [
+                  {
+                    "property_id": "fsm:state:name",
+                    "reference_role_ids": [
+                      "fsm:transition:source"
+                    ],
+                    "type": "NotationField"
+                  },
+                  {
+                    "property_id": "fsm:event:name",
+                    "reference_role_ids": [
+                      "fsm:transition:event"
+                    ],
+                    "type": "NotationField"
+                  },
+                  {
+                    "property_id": "fsm:state:name",
+                    "reference_role_ids": [
+                      "fsm:transition:target"
+                    ],
+                    "type": "NotationField"
+                  }
+                ],
+                "label_property_id": null,
+                "type": "NotationNodeRule"
+              }
+            ],
+            "schema_id": "fsm:schema",
+            "title": "Hierarchy and properties",
+            "type": "NotationDefinition"
+          },
+          {
+            "body": {
+              "children": [
+                {
+                  "color": "#172033",
+                  "font_size": 22.0,
+                  "id": "authored:sentences:title",
+                  "strong": true,
+                  "text": "Read the machine in its own words",
+                  "type": "VisualText"
+                },
+                {
+                  "color": "#172033",
+                  "font_size": 14.0,
+                  "id": "authored:sentences:hint",
+                  "strong": false,
+                  "text": "Edit a state or event name in any sentence.",
+                  "type": "VisualText"
+                },
+                {
+                  "binding_id": "sentence:state",
+                  "binding_name": "state",
+                  "body": {
+                    "body": {
+                      "children": [
+                        {
+                          "binding_id": "sentence:state",
+                          "editable": true,
+                          "font_size": 20.0,
+                          "id": "authored:sentences:state-name",
+                          "property_id": "fsm:state:name",
+                          "reference_role_ids": [],
+                          "type": "VisualField"
+                        },
+                        {
+                          "binding_id": "sentence:transition",
+                          "binding_name": "transition",
+                          "body": {
+                            "children": [
+                              {
+                                "color": "#172033",
+                                "font_size": 14.0,
+                                "id": "authored:sentences:when",
+                                "strong": false,
+                                "text": "When",
+                                "type": "VisualText"
+                              },
+                              {
+                                "binding_id": "sentence:transition",
+                                "editable": true,
+                                "font_size": 14.0,
+                                "id": "authored:sentences:event",
+                                "property_id": "fsm:event:name",
+                                "reference_role_ids": [
+                                  "fsm:transition:event"
+                                ],
+                                "type": "VisualField"
+                              },
+                              {
+                                "color": "#172033",
+                                "font_size": 14.0,
+                                "id": "authored:sentences:becomes",
+                                "strong": false,
+                                "text": "arrives, change to",
+                                "type": "VisualText"
+                              },
+                              {
+                                "binding_id": "sentence:transition",
+                                "editable": true,
+                                "font_size": 14.0,
+                                "id": "authored:sentences:target",
+                                "property_id": "fsm:state:name",
+                                "reference_role_ids": [
+                                  "fsm:transition:target"
+                                ],
+                                "type": "VisualField"
+                              }
+                            ],
+                            "gap": 8.0,
+                            "id": "authored:sentences:sentence",
+                            "layout": "row",
+                            "padding": 0.0,
+                            "type": "VisualGroup",
+                            "wrap_width": 600.0
+                          },
+                          "gap": 8.0,
+                          "id": "authored:sentences:transitions",
+                          "layout": "column",
+                          "query": {
+                            "id": "authored:sentences:query-transitions",
+                            "incoming": true,
+                            "relation_kind": null,
+                            "relation_label": null,
+                            "role_id": "fsm:transition:source",
+                            "source_binding_id": "sentence:state",
+                            "type": "NotationRelated"
+                          },
+                          "type": "VisualRepeat"
+                        }
+                      ],
+                      "gap": 8.0,
+                      "id": "authored:sentences:state-body",
+                      "layout": "column",
+                      "padding": 0.0,
+                      "type": "VisualGroup",
+                      "wrap_width": 600.0
+                    },
+                    "fill": "#f1f6ff",
+                    "height": null,
+                    "id": "authored:sentences:card",
+                    "padding": 12.0,
+                    "shape": "rounded",
+                    "stroke": "#536b91",
+                    "type": "VisualBox",
+                    "width": null
+                  },
+                  "gap": 18.0,
+                  "id": "authored:sentences:states",
+                  "layout": "column",
+                  "query": {
+                    "concept_id": "fsm:state",
+                    "id": "authored:sentences:query-states",
+                    "model_id": null,
+                    "roots_only": false,
+                    "schema_id": null,
+                    "schema_version": null,
+                    "type": "NotationObjects",
+                    "workspace": false
+                  },
+                  "type": "VisualRepeat"
+                }
+              ],
+              "gap": 16.0,
+              "id": "authored:sentences:body",
+              "layout": "column",
+              "padding": 0.0,
+              "type": "VisualGroup",
+              "wrap_width": 600.0
+            },
+            "columns": [],
+            "concept_ids": [],
+            "edge_rules": [],
+            "id": "authored:fsm:sentences",
+            "kind": "composed",
+            "layout": "hierarchical",
+            "node_rules": [],
+            "schema_id": "fsm:schema",
+            "title": "Transition sentences",
+            "type": "NotationDefinition"
+          }
+        ],
+        "schema_id": "fsm:schema",
+        "schema_version": "1",
+        "syntax_version": 2,
+        "title": "Editable Traffic Light language",
+        "transformations": [
+          {
+            "definition": {
+              "depends_on": [],
+              "description": "",
+              "id": "recipe:lower",
+              "source": {
+                "id": "example.authored.fsm",
+                "type": "Representation",
+                "version": "1"
+              },
+              "target": {
+                "id": "code_visualizer.program",
+                "type": "Representation",
+                "version": "1"
+              },
+              "type": "TransformationDefinition",
+              "version": "1"
+            },
+            "domain": null,
+            "functions": [
+              {
+                "binding_id": "build:machine",
+                "body": [
+                  {
+                    "id": "recipe:initialize",
+                    "origins": [
+                      {
+                        "id": "recipe:syntax:60",
+                        "role_id": "fsm:machine:initial",
+                        "source": {
+                          "binding_id": "build:machine",
+                          "id": "recipe:syntax:61",
+                          "type": "QueryVariable"
+                        },
+                        "type": "QueryRole"
+                      }
+                    ],
+                    "symbol_id": "recipe:symbol:state",
+                    "type": "TemplateAssignment",
+                    "value": {
+                      "id": "recipe:syntax:59",
+                      "query": {
+                        "id": "recipe:syntax:55",
+                        "source": {
+                          "id": "recipe:syntax:56",
+                          "operand": {
+                            "id": "recipe:syntax:57",
+                            "role_id": "fsm:machine:initial",
+                            "source": {
+                              "binding_id": "build:machine",
+                              "id": "recipe:syntax:58",
+                              "type": "QueryVariable"
+                            },
+                            "type": "QueryRole"
+                          },
+                          "operator": "first",
+                          "type": "QueryUnary"
+                        },
+                        "type": "QueryIdentity"
+                      },
+                      "type": "RuntimeLiteral"
+                    }
+                  },
+                  {
+                    "body": [
+                      {
+                        "binding_id": "build:transition",
+                        "body": [
+                          {
+                            "condition": {
+                              "id": "recipe:syntax:32",
+                              "left": {
+                                "id": "recipe:syntax:24",
+                                "left": {
+                                  "id": "recipe:syntax:18",
+                                  "symbol_id": "recipe:symbol:state",
+                                  "type": "RuntimeVariable"
+                                },
+                                "operator": "equal",
+                                "right": {
+                                  "id": "recipe:syntax:23",
+                                  "query": {
+                                    "id": "recipe:syntax:19",
+                                    "source": {
+                                      "id": "recipe:syntax:20",
+                                      "operand": {
+                                        "id": "recipe:syntax:21",
+                                        "role_id": "fsm:transition:source",
+                                        "source": {
+                                          "binding_id": "build:transition",
+                                          "id": "recipe:syntax:22",
+                                          "type": "QueryVariable"
+                                        },
+                                        "type": "QueryRole"
+                                      },
+                                      "operator": "first",
+                                      "type": "QueryUnary"
+                                    },
+                                    "type": "QueryIdentity"
+                                  },
+                                  "type": "RuntimeLiteral"
+                                },
+                                "type": "RuntimeBinary"
+                              },
+                              "operator": "and",
+                              "right": {
+                                "id": "recipe:syntax:31",
+                                "left": {
+                                  "id": "recipe:syntax:25",
+                                  "symbol_id": "recipe:symbol:event",
+                                  "type": "RuntimeVariable"
+                                },
+                                "operator": "equal",
+                                "right": {
+                                  "id": "recipe:syntax:30",
+                                  "query": {
+                                    "id": "recipe:syntax:26",
+                                    "property_id": "fsm:event:name",
+                                    "source": {
+                                      "id": "recipe:syntax:27",
+                                      "operand": {
+                                        "id": "recipe:syntax:28",
+                                        "role_id": "fsm:transition:event",
+                                        "source": {
+                                          "binding_id": "build:transition",
+                                          "id": "recipe:syntax:29",
+                                          "type": "QueryVariable"
+                                        },
+                                        "type": "QueryRole"
+                                      },
+                                      "operator": "first",
+                                      "type": "QueryUnary"
+                                    },
+                                    "type": "QueryProperty"
+                                  },
+                                  "type": "RuntimeLiteral"
+                                },
+                                "type": "RuntimeBinary"
+                              },
+                              "type": "RuntimeBinary"
+                            },
+                            "false_body": [],
+                            "id": "recipe:transition-if",
+                            "origins": [
+                              {
+                                "id": "recipe:syntax:48",
+                                "role_id": "fsm:transition:target",
+                                "source": {
+                                  "binding_id": "build:transition",
+                                  "id": "recipe:syntax:49",
+                                  "type": "QueryVariable"
+                                },
+                                "type": "QueryRole"
+                              },
+                              {
+                                "id": "recipe:syntax:50",
+                                "role_id": "fsm:transition:event",
+                                "source": {
+                                  "binding_id": "build:transition",
+                                  "id": "recipe:syntax:51",
+                                  "type": "QueryVariable"
+                                },
+                                "type": "QueryRole"
+                              }
+                            ],
+                            "true_body": [
+                              {
+                                "id": "recipe:enter-target",
+                                "origins": [],
+                                "symbol_id": "recipe:symbol:state",
+                                "type": "TemplateAssignment",
+                                "value": {
+                                  "id": "recipe:syntax:37",
+                                  "query": {
+                                    "id": "recipe:syntax:33",
+                                    "source": {
+                                      "id": "recipe:syntax:34",
+                                      "operand": {
+                                        "id": "recipe:syntax:35",
+                                        "role_id": "fsm:transition:target",
+                                        "source": {
+                                          "binding_id": "build:transition",
+                                          "id": "recipe:syntax:36",
+                                          "type": "QueryVariable"
+                                        },
+                                        "type": "QueryRole"
+                                      },
+                                      "operator": "first",
+                                      "type": "QueryUnary"
+                                    },
+                                    "type": "QueryIdentity"
+                                  },
+                                  "type": "RuntimeLiteral"
+                                }
+                              },
+                              {
+                                "id": "recipe:show-target",
+                                "origins": [],
+                                "type": "TemplateOutput",
+                                "value": {
+                                  "id": "recipe:syntax:42",
+                                  "query": {
+                                    "id": "recipe:syntax:38",
+                                    "property_id": "fsm:state:name",
+                                    "source": {
+                                      "id": "recipe:syntax:39",
+                                      "operand": {
+                                        "id": "recipe:syntax:40",
+                                        "role_id": "fsm:transition:target",
+                                        "source": {
+                                          "binding_id": "build:transition",
+                                          "id": "recipe:syntax:41",
+                                          "type": "QueryVariable"
+                                        },
+                                        "type": "QueryRole"
+                                      },
+                                      "operator": "first",
+                                      "type": "QueryUnary"
+                                    },
+                                    "type": "QueryProperty"
+                                  },
+                                  "type": "RuntimeLiteral"
+                                }
+                              },
+                              {
+                                "binding_id": "build:action",
+                                "body": [
+                                  {
+                                    "id": "recipe:action-output",
+                                    "origins": [],
+                                    "type": "TemplateOutput",
+                                    "value": {
+                                      "id": "recipe:syntax:47",
+                                      "query": {
+                                        "id": "recipe:syntax:45",
+                                        "property_id": "fsm:action:message",
+                                        "source": {
+                                          "binding_id": "build:action",
+                                          "id": "recipe:syntax:46",
+                                          "type": "QueryVariable"
+                                        },
+                                        "type": "QueryProperty"
+                                      },
+                                      "type": "RuntimeLiteral"
+                                    }
+                                  }
+                                ],
+                                "collection": {
+                                  "id": "recipe:syntax:43",
+                                  "role_id": "fsm:transition:action",
+                                  "source": {
+                                    "binding_id": "build:transition",
+                                    "id": "recipe:syntax:44",
+                                    "type": "QueryVariable"
+                                  },
+                                  "type": "QueryRole"
+                                },
+                                "id": "recipe:actions",
+                                "type": "TemplateExpand"
+                              },
+                              {
+                                "id": "recipe:next-event",
+                                "kind": "continue",
+                                "origins": [],
+                                "type": "TemplateTransfer",
+                                "value": null
+                              }
+                            ],
+                            "type": "TemplateIf"
+                          }
+                        ],
+                        "collection": {
+                          "id": "recipe:syntax:72",
+                          "role_id": "fsm:machine:transitions",
+                          "source": {
+                            "binding_id": "build:machine",
+                            "id": "recipe:syntax:73",
+                            "type": "QueryVariable"
+                          },
+                          "type": "QueryRole"
+                        },
+                        "id": "recipe:transitions",
+                        "type": "TemplateExpand"
+                      },
+                      {
+                        "id": "recipe:unhandled",
+                        "kind": "raise",
+                        "origins": [],
+                        "type": "TemplateTransfer",
+                        "value": {
+                          "arguments": [
+                            {
+                              "id": "recipe:syntax:76",
+                              "query": {
+                                "id": "recipe:syntax:75",
+                                "type": "QueryLiteral",
+                                "value": "No transition accepts this event"
+                              },
+                              "type": "RuntimeLiteral"
+                            }
+                          ],
+                          "builtin": "ValueError",
+                          "id": "recipe:syntax:74",
+                          "type": "RuntimeCall"
+                        }
+                      }
+                    ],
+                    "id": "recipe:event-loop",
+                    "iterable": {
+                      "id": "recipe:syntax:71",
+                      "left": {
+                        "id": "recipe:syntax:67",
+                        "query": {
+                          "binding_id": "build:event",
+                          "collection": {
+                            "id": "recipe:syntax:63",
+                            "role_id": "fsm:machine:events",
+                            "source": {
+                              "binding_id": "build:machine",
+                              "id": "recipe:syntax:64",
+                              "type": "QueryVariable"
+                            },
+                            "type": "QueryRole"
+                          },
+                          "id": "recipe:syntax:62",
+                          "type": "QueryMap",
+                          "value": {
+                            "id": "recipe:syntax:65",
+                            "property_id": "fsm:event:name",
+                            "source": {
+                              "binding_id": "build:event",
+                              "id": "recipe:syntax:66",
+                              "type": "QueryVariable"
+                            },
+                            "type": "QueryProperty"
+                          }
+                        },
+                        "type": "RuntimeLiteral"
+                      },
+                      "operator": "multiply",
+                      "right": {
+                        "id": "recipe:syntax:70",
+                        "query": {
+                          "id": "recipe:syntax:68",
+                          "property_id": "fsm:machine:steps",
+                          "source": {
+                            "binding_id": "build:machine",
+                            "id": "recipe:syntax:69",
+                            "type": "QueryVariable"
+                          },
+                          "type": "QueryProperty"
+                        },
+                        "type": "RuntimeLiteral"
+                      },
+                      "type": "RuntimeBinary"
+                    },
+                    "origins": [],
+                    "symbol_id": "recipe:symbol:event",
+                    "type": "TemplateFor"
+                  },
+                  {
+                    "id": "recipe:return-state",
+                    "kind": "return",
+                    "origins": [],
+                    "type": "TemplateTransfer",
+                    "value": {
+                      "id": "recipe:syntax:77",
+                      "symbol_id": "recipe:symbol:state",
+                      "type": "RuntimeVariable"
+                    }
+                  }
+                ],
+                "display_name": {
+                  "id": "recipe:syntax:53",
+                  "property_id": "fsm:machine:name",
+                  "source": {
+                    "binding_id": "build:machine",
+                    "id": "recipe:syntax:54",
+                    "type": "QueryVariable"
+                  },
+                  "type": "QueryProperty"
+                },
+                "entrypoint": true,
+                "id": "recipe:function",
+                "identifier_prefix": "run",
+                "parameters": [],
+                "source": {
+                  "concept_id": "fsm:machine",
+                  "id": "recipe:syntax:52",
+                  "roots_only": true,
+                  "type": "QueryNodes"
+                },
+                "symbols": [
+                  {
+                    "id": "recipe:symbol:state",
+                    "name": "state",
+                    "type": "TemplateSymbol"
+                  },
+                  {
+                    "id": "recipe:symbol:event",
+                    "name": "event",
+                    "type": "TemplateSymbol"
+                  }
+                ],
+                "type": "FunctionTemplate"
+              }
+            ],
+            "type": "AuthoredTransformation"
+          }
+        ],
+        "type": "AuthoredDomainLanguage",
+        "validators": [
+          {
+            "binding_id": "rule:machine",
+            "code": "AUTHORED_UNIQUE_TRANSITION",
+            "concept_id": "fsm:machine",
+            "id": "recipe:unique-transitions",
+            "message": "Each state and event pair must select only one transition",
+            "predicate": {
+              "binding_id": "rule:transition",
+              "collection": {
+                "id": "recipe:syntax:1",
+                "role_id": "fsm:machine:transitions",
+                "source": {
+                  "binding_id": "rule:machine",
+                  "id": "recipe:syntax:2",
+                  "type": "QueryVariable"
+                },
+                "type": "QueryRole"
+              },
+              "id": "recipe:syntax:0",
+              "key": {
+                "id": "recipe:syntax:3",
+                "items": [
+                  {
+                    "id": "recipe:syntax:4",
+                    "source": {
+                      "id": "recipe:syntax:5",
+                      "operand": {
+                        "id": "recipe:syntax:6",
+                        "role_id": "fsm:transition:source",
+                        "source": {
+                          "binding_id": "rule:transition",
+                          "id": "recipe:syntax:7",
+                          "type": "QueryVariable"
+                        },
+                        "type": "QueryRole"
+                      },
+                      "operator": "first",
+                      "type": "QueryUnary"
+                    },
+                    "type": "QueryIdentity"
+                  },
+                  {
+                    "id": "recipe:syntax:8",
+                    "source": {
+                      "id": "recipe:syntax:9",
+                      "operand": {
+                        "id": "recipe:syntax:10",
+                        "role_id": "fsm:transition:event",
+                        "source": {
+                          "binding_id": "rule:transition",
+                          "id": "recipe:syntax:11",
+                          "type": "QueryVariable"
+                        },
+                        "type": "QueryRole"
+                      },
+                      "operator": "first",
+                      "type": "QueryUnary"
+                    },
+                    "type": "QueryIdentity"
+                  }
+                ],
+                "type": "QueryTuple"
+              },
+              "type": "QueryUnique"
+            },
+            "type": "ValidatorDefinition"
+          },
+          {
+            "binding_id": "rule:initial-machine",
+            "code": "AUTHORED_INITIAL_STATE",
+            "concept_id": "fsm:machine",
+            "id": "recipe:initial-owned",
+            "message": "The initial state must belong to this machine",
+            "predicate": {
+              "id": "recipe:syntax:12",
+              "left": {
+                "id": "recipe:syntax:13",
+                "operand": {
+                  "id": "recipe:syntax:14",
+                  "role_id": "fsm:machine:initial",
+                  "source": {
+                    "binding_id": "rule:initial-machine",
+                    "id": "recipe:syntax:15",
+                    "type": "QueryVariable"
+                  },
+                  "type": "QueryRole"
+                },
+                "operator": "first",
+                "type": "QueryUnary"
+              },
+              "operator": "in",
+              "right": {
+                "id": "recipe:syntax:16",
+                "role_id": "fsm:machine:states",
+                "source": {
+                  "binding_id": "rule:initial-machine",
+                  "id": "recipe:syntax:17",
+                  "type": "QueryVariable"
+                },
+                "type": "QueryRole"
+              },
+              "type": "QueryBinary"
+            },
+            "type": "ValidatorDefinition"
+          }
+        ],
+        "version": "1"
+      }
+    ],
+    "models": [
+      {
+        "id": "traffic:model",
+        "nodes": [
+          {
+            "children": [
+              {
+                "node_ids": [
+                  "traffic:red",
+                  "traffic:green",
+                  "traffic:yellow"
+                ],
+                "role_id": "fsm:machine:states"
+              },
+              {
+                "node_ids": [
+                  "traffic:red-green",
+                  "traffic:green-yellow",
+                  "traffic:yellow-red"
+                ],
+                "role_id": "fsm:machine:transitions"
+              },
+              {
+                "node_ids": [
+                  "traffic:timer"
+                ],
+                "role_id": "fsm:machine:events"
+              },
+              {
+                "node_ids": [
+                  "traffic:signal"
+                ],
+                "role_id": "fsm:machine:actions"
+              }
+            ],
+            "concept_id": "fsm:machine",
+            "id": "traffic:machine",
+            "properties": [
+              {
+                "property_id": "fsm:machine:name",
+                "value": "Traffic Light"
+              },
+              {
+                "property_id": "fsm:machine:steps",
+                "value": 3
+              }
+            ],
+            "references": [
+              {
+                "node_ids": [
+                  "traffic:red"
+                ],
+                "role_id": "fsm:machine:initial"
+              }
+            ]
+          },
+          {
+            "children": [],
+            "concept_id": "fsm:state",
+            "id": "traffic:red",
+            "properties": [
+              {
+                "property_id": "fsm:state:name",
+                "value": "Red"
+              }
+            ],
+            "references": []
+          },
+          {
+            "children": [],
+            "concept_id": "fsm:state",
+            "id": "traffic:green",
+            "properties": [
+              {
+                "property_id": "fsm:state:name",
+                "value": "Green"
+              }
+            ],
+            "references": []
+          },
+          {
+            "children": [],
+            "concept_id": "fsm:state",
+            "id": "traffic:yellow",
+            "properties": [
+              {
+                "property_id": "fsm:state:name",
+                "value": "Yellow"
+              }
+            ],
+            "references": []
+          },
+          {
+            "children": [],
+            "concept_id": "fsm:event",
+            "id": "traffic:timer",
+            "properties": [
+              {
+                "property_id": "fsm:event:name",
+                "value": "timer"
+              }
+            ],
+            "references": []
+          },
+          {
+            "children": [],
+            "concept_id": "fsm:action",
+            "id": "traffic:signal",
+            "properties": [
+              {
+                "property_id": "fsm:action:name",
+                "value": "Signal change"
+              },
+              {
+                "property_id": "fsm:action:message",
+                "value": "The signal changes."
+              }
+            ],
+            "references": []
+          },
+          {
+            "children": [],
+            "concept_id": "fsm:transition",
+            "id": "traffic:red-green",
+            "properties": [],
+            "references": [
+              {
+                "node_ids": [
+                  "traffic:red"
+                ],
+                "role_id": "fsm:transition:source"
+              },
+              {
+                "node_ids": [
+                  "traffic:timer"
+                ],
+                "role_id": "fsm:transition:event"
+              },
+              {
+                "node_ids": [
+                  "traffic:green"
+                ],
+                "role_id": "fsm:transition:target"
+              },
+              {
+                "node_ids": [
+                  "traffic:signal"
+                ],
+                "role_id": "fsm:transition:action"
+              }
+            ]
+          },
+          {
+            "children": [],
+            "concept_id": "fsm:transition",
+            "id": "traffic:green-yellow",
+            "properties": [],
+            "references": [
+              {
+                "node_ids": [
+                  "traffic:green"
+                ],
+                "role_id": "fsm:transition:source"
+              },
+              {
+                "node_ids": [
+                  "traffic:timer"
+                ],
+                "role_id": "fsm:transition:event"
+              },
+              {
+                "node_ids": [
+                  "traffic:yellow"
+                ],
+                "role_id": "fsm:transition:target"
+              },
+              {
+                "node_ids": [
+                  "traffic:signal"
+                ],
+                "role_id": "fsm:transition:action"
+              }
+            ]
+          },
+          {
+            "children": [],
+            "concept_id": "fsm:transition",
+            "id": "traffic:yellow-red",
+            "properties": [],
+            "references": [
+              {
+                "node_ids": [
+                  "traffic:yellow"
+                ],
+                "role_id": "fsm:transition:source"
+              },
+              {
+                "node_ids": [
+                  "traffic:timer"
+                ],
+                "role_id": "fsm:transition:event"
+              },
+              {
+                "node_ids": [
+                  "traffic:red"
+                ],
+                "role_id": "fsm:transition:target"
+              },
+              {
+                "node_ids": [
+                  "traffic:signal"
+                ],
+                "role_id": "fsm:transition:action"
+              }
+            ]
+          }
+        ],
+        "roots": [
+          "traffic:machine"
+        ],
+        "schema_id": "fsm:schema",
+        "schema_version": "1",
+        "title": "Traffic Light"
+      }
+    ],
+    "schemas": [
+      {
+        "bundle": null,
+        "concepts": [
+          {
+            "constraints": [],
+            "containment_roles": [
+              {
+                "allowed_concept_ids": [
+                  "fsm:state"
+                ],
+                "id": "fsm:machine:states",
+                "max_count": null,
+                "min_count": 1,
+                "name": "States",
+                "ordered": true
+              },
+              {
+                "allowed_concept_ids": [
+                  "fsm:transition"
+                ],
+                "id": "fsm:machine:transitions",
+                "max_count": null,
+                "min_count": 0,
+                "name": "Transitions",
+                "ordered": true
+              },
+              {
+                "allowed_concept_ids": [
+                  "fsm:event"
+                ],
+                "id": "fsm:machine:events",
+                "max_count": null,
+                "min_count": 1,
+                "name": "Events",
+                "ordered": true
+              },
+              {
+                "allowed_concept_ids": [
+                  "fsm:action"
+                ],
+                "id": "fsm:machine:actions",
+                "max_count": null,
+                "min_count": 0,
+                "name": "Actions",
+                "ordered": true
+              }
+            ],
+            "description": "An ordered event sequence drives transitions from the initial state.",
+            "display_property_id": "fsm:machine:name",
+            "id": "fsm:machine",
+            "name": "State machine",
+            "properties": [
+              {
+                "choices": [],
+                "default": null,
+                "id": "fsm:machine:name",
+                "maximum": null,
+                "minimum": null,
+                "name": "Name",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "string"
+              },
+              {
+                "choices": [],
+                "default": 3,
+                "id": "fsm:machine:steps",
+                "maximum": 10000.0,
+                "minimum": 1.0,
+                "name": "Event cycles",
+                "required": false,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "integer"
+              }
+            ],
+            "reference_roles": [
+              {
+                "allowed_concept_ids": [
+                  "fsm:state"
+                ],
+                "id": "fsm:machine:initial",
+                "max_count": 1,
+                "min_count": 1,
+                "name": "Initial",
+                "ordered": true
+              }
+            ]
+          },
+          {
+            "constraints": [],
+            "containment_roles": [],
+            "description": "",
+            "display_property_id": "fsm:state:name",
+            "id": "fsm:state",
+            "name": "State",
+            "properties": [
+              {
+                "choices": [],
+                "default": null,
+                "id": "fsm:state:name",
+                "maximum": null,
+                "minimum": null,
+                "name": "Name",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "string"
+              }
+            ],
+            "reference_roles": []
+          },
+          {
+            "constraints": [],
+            "containment_roles": [],
+            "description": "",
+            "display_property_id": "fsm:event:name",
+            "id": "fsm:event",
+            "name": "Event",
+            "properties": [
+              {
+                "choices": [],
+                "default": null,
+                "id": "fsm:event:name",
+                "maximum": null,
+                "minimum": null,
+                "name": "Name",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "string"
+              }
+            ],
+            "reference_roles": []
+          },
+          {
+            "constraints": [],
+            "containment_roles": [],
+            "description": "",
+            "display_property_id": "fsm:action:name",
+            "id": "fsm:action",
+            "name": "Action",
+            "properties": [
+              {
+                "choices": [],
+                "default": null,
+                "id": "fsm:action:name",
+                "maximum": null,
+                "minimum": null,
+                "name": "Name",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "string"
+              },
+              {
+                "choices": [],
+                "default": null,
+                "id": "fsm:action:message",
+                "maximum": null,
+                "minimum": null,
+                "name": "Message",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "string"
+              }
+            ],
+            "reference_roles": []
+          },
+          {
+            "constraints": [],
+            "containment_roles": [],
+            "description": "",
+            "display_property_id": null,
+            "id": "fsm:transition",
+            "name": "Transition",
+            "properties": [],
+            "reference_roles": [
+              {
+                "allowed_concept_ids": [
+                  "fsm:state"
+                ],
+                "id": "fsm:transition:source",
+                "max_count": 1,
+                "min_count": 1,
+                "name": "Source",
+                "ordered": true
+              },
+              {
+                "allowed_concept_ids": [
+                  "fsm:event"
+                ],
+                "id": "fsm:transition:event",
+                "max_count": 1,
+                "min_count": 1,
+                "name": "Event",
+                "ordered": true
+              },
+              {
+                "allowed_concept_ids": [
+                  "fsm:state"
+                ],
+                "id": "fsm:transition:target",
+                "max_count": 1,
+                "min_count": 1,
+                "name": "Target",
+                "ordered": true
+              },
+              {
+                "allowed_concept_ids": [
+                  "fsm:action"
+                ],
+                "id": "fsm:transition:action",
+                "max_count": 1,
+                "min_count": 0,
+                "name": "Action",
+                "ordered": true
+              }
+            ]
+          }
+        ],
+        "description": "Finite state machines with stable state, transition, event, and action identities.",
+        "id": "fsm:schema",
+        "namespace": "example.authored.fsm",
+        "version": "1"
+      }
+    ]
+  },
+  "drakon_views": [],
+  "extensions": [],
+  "format_revision": 11,
+  "managed_assets": [],
+  "program_model": {
+    "entrypoint": {
+      "arguments": {
+        "keywords": [],
+        "kind": "literal",
+        "positional": []
+      },
+      "callable_id": null,
+      "id": "entrypoint:project_traffic_light",
+      "startup": []
+    },
+    "functions": [],
+    "modules": [
+      {
+        "body": [],
+        "docstring": "",
+        "id": "module:app.main",
+        "kind": "module",
+        "path": "main"
+      }
+    ],
+    "package": "app",
+    "symbols": []
+  },
+  "project_id": "project_traffic_light",
+  "projection_definitions": [],
+  "revision": 0,
+  "runtime_settings": {
+    "active_run_profile": "Default",
+    "run_profiles": [
+      {
+        "arguments": "",
+        "environment": [],
+        "interpreter": "",
+        "name": "Default",
+        "working_directory": "."
+      }
+    ]
+  },
+  "semantic_relations": [],
+  "shape_packs": [],
+  "title": "Traffic Light — Intentional Domain Workbench"
+}

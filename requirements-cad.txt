@@ -1,0 +1,6 @@
+# Optional trusted CAD implementation, qualified on Windows / CPython 3.13.
+# Installing this extra does not change any canonical domain or resource contract.
+-r requirements-science.txt
+build123d==0.11.1
+cadquery-ocp-novtk==7.9.3.1.1
+cadquery-ocp-proxy==7.9.3.1.1

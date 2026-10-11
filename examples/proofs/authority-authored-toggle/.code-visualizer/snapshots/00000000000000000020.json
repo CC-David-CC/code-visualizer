@@ -1,0 +1,256 @@
+{
+  "concepts": [],
+  "description": "",
+  "documents": [],
+  "domain_workspace": {
+    "bundle_references": [],
+    "language_definitions": [],
+    "models": [
+      {
+        "id": "proof:model",
+        "nodes": [
+          {
+            "children": [
+              {
+                "node_ids": [
+                  "proof:idle",
+                  "proof:active"
+                ],
+                "role_id": "proof:states"
+              }
+            ],
+            "concept_id": "proof:Machine",
+            "id": "proof:toggle",
+            "properties": [
+              {
+                "property_id": "proof:machine-name",
+                "value": "Toggle"
+              },
+              {
+                "property_id": "proof:step-count",
+                "value": 3
+              }
+            ],
+            "references": []
+          },
+          {
+            "children": [],
+            "concept_id": "proof:State",
+            "id": "proof:idle",
+            "properties": [
+              {
+                "property_id": "proof:state-name",
+                "value": "Idle"
+              }
+            ],
+            "references": []
+          },
+          {
+            "children": [],
+            "concept_id": "proof:State",
+            "id": "proof:active",
+            "properties": [
+              {
+                "property_id": "proof:state-name",
+                "value": "Active"
+              }
+            ],
+            "references": []
+          }
+        ],
+        "roots": [
+          "proof:toggle"
+        ],
+        "schema_id": "proof:schema",
+        "schema_version": "1",
+        "title": "Two-state toggle"
+      }
+    ],
+    "schemas": [
+      {
+        "bundle": null,
+        "concepts": [
+          {
+            "constraints": [],
+            "containment_roles": [
+              {
+                "allowed_concept_ids": [
+                  "proof:State"
+                ],
+                "id": "proof:states",
+                "max_count": null,
+                "min_count": 2,
+                "name": "States",
+                "ordered": true
+              },
+              {
+                "allowed_concept_ids": [
+                  "proof:Transition"
+                ],
+                "id": "proof:transitions",
+                "max_count": null,
+                "min_count": 2,
+                "name": "Transitions",
+                "ordered": true
+              }
+            ],
+            "description": "",
+            "display_property_id": "proof:machine-name",
+            "id": "proof:Machine",
+            "name": "Machine",
+            "properties": [
+              {
+                "choices": [],
+                "default": null,
+                "id": "proof:machine-name",
+                "maximum": null,
+                "minimum": null,
+                "name": "Name",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "string"
+              },
+              {
+                "choices": [],
+                "default": null,
+                "id": "proof:step-count",
+                "maximum": 20.0,
+                "minimum": 1.0,
+                "name": "Steps",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "integer"
+              }
+            ],
+            "reference_roles": [
+              {
+                "allowed_concept_ids": [
+                  "proof:State"
+                ],
+                "id": "proof:initial",
+                "max_count": 1,
+                "min_count": 1,
+                "name": "Initial",
+                "ordered": true
+              }
+            ]
+          },
+          {
+            "constraints": [],
+            "containment_roles": [],
+            "description": "",
+            "display_property_id": "proof:state-name",
+            "id": "proof:State",
+            "name": "State",
+            "properties": [
+              {
+                "choices": [],
+                "default": null,
+                "id": "proof:state-name",
+                "maximum": null,
+                "minimum": null,
+                "name": "Name",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "string"
+              }
+            ],
+            "reference_roles": []
+          },
+          {
+            "constraints": [],
+            "containment_roles": [],
+            "description": "",
+            "display_property_id": "proof:event-name",
+            "id": "proof:Transition",
+            "name": "Transition",
+            "properties": [
+              {
+                "choices": [],
+                "default": null,
+                "id": "proof:event-name",
+                "maximum": null,
+                "minimum": null,
+                "name": "Event",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "string"
+              }
+            ],
+            "reference_roles": [
+              {
+                "allowed_concept_ids": [
+                  "proof:State"
+                ],
+                "id": "proof:source",
+                "max_count": 1,
+                "min_count": 1,
+                "name": "Source",
+                "ordered": true
+              },
+              {
+                "allowed_concept_ids": [
+                  "proof:State"
+                ],
+                "id": "proof:target",
+                "max_count": 1,
+                "min_count": 1,
+                "name": "Target",
+                "ordered": true
+              }
+            ]
+          }
+        ],
+        "description": "",
+        "id": "proof:schema",
+        "namespace": "proof.authored.toggle",
+        "version": "1"
+      }
+    ]
+  },
+  "drakon_views": [],
+  "extensions": [],
+  "format_revision": 11,
+  "managed_assets": [],
+  "program_model": {
+    "entrypoint": null,
+    "functions": [],
+    "modules": [],
+    "package": "app",
+    "symbols": []
+  },
+  "project_id": "proof:project",
+  "projection_definitions": [],
+  "revision": 20,
+  "runtime_settings": {
+    "active_run_profile": "Default",
+    "run_profiles": [
+      {
+        "arguments": "",
+        "environment": [],
+        "interpreter": "",
+        "name": "Default",
+        "working_directory": "."
+      }
+    ]
+  },
+  "semantic_relations": [],
+  "shape_packs": [],
+  "title": "Authority-authored toggle"
+}

@@ -1,0 +1,37 @@
+syntax = "proto3";
+package code_visualizer.protocol.v1;
+import "code_visualizer/protocol/v1/value.proto";
+
+message ResourceAxis { string name = 1; optional string semantic_id = 2; }
+message TensorDescriptor {
+  TensorDType dtype = 1; repeated uint64 shape = 2; repeated ResourceAxis axes = 3;
+  UnitReference unit = 4;
+}
+message ResourceLogicalTypeReference { string id = 1; string version = 2; }
+message DataResource {
+  uint32 schema_version = 1;
+  string id = 2; string content_hash = 3; uint64 byte_size = 4; string media_type = 5;
+  TensorDescriptor tensor = 6;
+  // Descriptor v1 is supported only without an interpretation contract.
+  // The former opaque logical_type cannot be assigned a version by inference.
+  reserved 7;
+  reserved "logical_type";
+  // Descriptor v2 requires an exact typed interpretation contract.
+  ResourceLogicalTypeReference logical_type_reference = 8;
+}
+
+// One resource per transfer. Transfer IDs are ephemeral, opaque identities, never paths.
+// Descriptor identity hashes its metadata; content_hash hashes the streamed bytes.
+message ResourceChunk { uint64 offset = 1; bytes data = 2; }
+message ResourceTransferFinish {}
+message ResourceTransferAbort { string reason = 1; }
+message ResourceTransferFrame {
+  uint32 schema_version = 1;
+  string transfer_id = 2;
+  oneof frame {
+    DataResource start = 10;
+    ResourceChunk chunk = 11;
+    ResourceTransferFinish finish = 12;
+    ResourceTransferAbort abort = 13;
+  }
+}

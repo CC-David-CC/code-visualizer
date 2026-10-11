@@ -1,0 +1,33 @@
+{
+  "fixture": {
+    "diagram_count": 500,
+    "large_diagram_atoms": 300,
+    "native_bytes": 341047,
+    "semantic_atoms_per_diagram": 20
+  },
+  "measurements_seconds": {
+    "generate_python": 0.09792089997790754,
+    "gui_open": 0.6798849999904633,
+    "layout_300_atoms": 0.015317399986088276,
+    "native_open": 0.12193670007400215,
+    "native_save": 0.02917760005220771,
+    "search": 0.0019482000498101115,
+    "semantic_index": 2.8597565999953076,
+    "validate": 0.010906099923886359
+  },
+  "observations": {
+    "diagnostic_count": 0,
+    "generated_characters": 15547,
+    "gui_eager_tabs": 1,
+    "large_scene_nodes": 302,
+    "search_matches": 20,
+    "semantic_objects": 74003,
+    "semantic_relations": 105502
+  },
+  "platform": {
+    "machine": "AMD64",
+    "operating_system": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 142 Stepping 10, GenuineIntel",
+    "python": "3.13.15"
+  }
+}

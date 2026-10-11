@@ -1,0 +1,330 @@
+{
+  "concepts": [],
+  "description": "",
+  "documents": [
+    {
+      "description": "",
+      "extensions": [],
+      "id": "diagram_83100f73128d4fadbdfc016f200426af",
+      "kind": "drakon",
+      "title": "main"
+    }
+  ],
+  "domain_workspace": {
+    "bundle_references": [],
+    "language_definitions": [],
+    "models": [],
+    "schemas": []
+  },
+  "drakon_views": [
+    {
+      "document_id": "diagram_83100f73128d4fadbdfc016f200426af",
+      "end_id": "end_0252e1650f724cf8b41842e16c07b603",
+      "function_id": "diagram_83100f73128d4fadbdfc016f200426af",
+      "header_id": "header_f070b449e82f4f9295101ead688b4fb4",
+      "title": "main"
+    }
+  ],
+  "extensions": [],
+  "format_revision": 11,
+  "managed_assets": [],
+  "program_model": {
+    "entrypoint": {
+      "arguments": {
+        "keywords": [],
+        "kind": "literal",
+        "positional": []
+      },
+      "callable_id": "diagram_83100f73128d4fadbdfc016f200426af",
+      "id": "entrypoint:project_4a96b23c34a4428485ae94ed63df0faf",
+      "startup": []
+    },
+    "functions": [
+      {
+        "body": {
+          "id": "sequence_7b75d1d32ca74f3a89c727b1140455ca",
+          "statements": [
+            {
+              "annotation": null,
+              "id": "atom_ac8123a5b88e49a98bbf4b1bd64fe298",
+              "kind": "assignment",
+              "operator": "=",
+              "target": {
+                "id": "expression:atom_ac8123a5b88e49a98bbf4b1bd64fe298:target",
+                "role": "target",
+                "tree": {
+                  "context": "store",
+                  "id": "expression:atom_ac8123a5b88e49a98bbf4b1bd64fe298:target:parse:8bf73972309d4c0a948758987580a2a8:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "symbol",
+                  "name": "result",
+                  "symbol_id": "symbol_6749ca804522857e4ac3774c"
+                }
+              },
+              "value": {
+                "id": "expression:atom_ac8123a5b88e49a98bbf4b1bd64fe298:value",
+                "role": "value",
+                "tree": {
+                  "id": "expression:atom_ac8123a5b88e49a98bbf4b1bd64fe298:value:parse:a3bd58d72f3744ebb1436a8d7a6b9718:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "literal",
+                  "literal_kind": null,
+                  "value": {
+                    "kind": "none",
+                    "value": ""
+                  }
+                }
+              },
+              "written_symbol_ids": [
+                "symbol_6749ca804522857e4ac3774c"
+              ]
+            },
+            {
+              "condition": {
+                "id": "expression:atom_601b1962005945c79ddf6bf4ab7cc56d:condition",
+                "role": "condition",
+                "tree": {
+                  "id": "expression:atom_601b1962005945c79ddf6bf4ab7cc56d:condition:parse:6bea53dcdbb14b46b0d4d9b7bcee015a:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "literal",
+                  "literal_kind": null,
+                  "value": {
+                    "kind": "bool",
+                    "value": "1"
+                  }
+                }
+              },
+              "false_branch": {
+                "id": "sequence_atom_601b1962005945c79ddf6bf4ab7cc56d_false",
+                "statements": [
+                  {
+                    "id": "atom_atom_601b1962005945c79ddf6bf4ab7cc56d_false_action",
+                    "kind": "action",
+                    "source": {
+                      "id": "expression:atom_atom_601b1962005945c79ddf6bf4ab7cc56d_false_action:source",
+                      "role": "statements",
+                      "tree": {
+                        "fields": [
+                          {
+                            "name": "body",
+                            "value": {
+                              "items": [
+                                {
+                                  "value": {
+                                    "fields": [
+                                      {
+                                        "name": "value",
+                                        "value": {
+                                          "value": {
+                                            "arguments": [
+                                              {
+                                                "id": "expression:atom_atom_601b1962005945c79ddf6bf4ab7cc56d_false_action:source:parse:9bda34e344b9463d8ff7f905448b3438:node:cdab044052e82df79580e3e9b25351a3da7a1bb9f802ced25f38a238e71a7030",
+                                                "kind": "literal",
+                                                "literal_kind": null,
+                                                "value": {
+                                                  "kind": "str",
+                                                  "value": "false branch action"
+                                                }
+                                              }
+                                            ],
+                                            "callee": {
+                                              "context": "load",
+                                              "id": "expression:atom_atom_601b1962005945c79ddf6bf4ab7cc56d_false_action:source:parse:9bda34e344b9463d8ff7f905448b3438:node:5bf23479175df1c3e596a8889a4e7114e0032dd1dc6aacb22a68f268a9085b66",
+                                              "kind": "symbol",
+                                              "name": "print",
+                                              "symbol_id": null
+                                            },
+                                            "id": "expression:atom_atom_601b1962005945c79ddf6bf4ab7cc56d_false_action:source:parse:9bda34e344b9463d8ff7f905448b3438:node:0c70ce0ac4f8bd15b6b151fbf0399d9be60b8f0688b42a0d7166a5d82693c493",
+                                            "keywords": [],
+                                            "kind": "call"
+                                          },
+                                          "value_kind": "node"
+                                        }
+                                      }
+                                    ],
+                                    "id": "expression:atom_atom_601b1962005945c79ddf6bf4ab7cc56d_false_action:source:parse:9bda34e344b9463d8ff7f905448b3438:node:ff524f8f9cdf6fb1f58d37ea4a0b77c67426f3582e7cb4c5c00949acc1f0c2fd",
+                                    "kind": "composite",
+                                    "python_kind": "Expr"
+                                  },
+                                  "value_kind": "node"
+                                }
+                              ],
+                              "value_kind": "list"
+                            }
+                          },
+                          {
+                            "name": "type_ignores",
+                            "value": {
+                              "items": [],
+                              "value_kind": "list"
+                            }
+                          }
+                        ],
+                        "id": "expression:atom_atom_601b1962005945c79ddf6bf4ab7cc56d_false_action:source:parse:9bda34e344b9463d8ff7f905448b3438:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                        "kind": "composite",
+                        "python_kind": "Module"
+                      }
+                    }
+                  }
+                ]
+              },
+              "id": "atom_601b1962005945c79ddf6bf4ab7cc56d",
+              "kind": "if",
+              "preferred_truth": true,
+              "true_branch": {
+                "id": "sequence_atom_601b1962005945c79ddf6bf4ab7cc56d_true",
+                "statements": [
+                  {
+                    "id": "atom_atom_601b1962005945c79ddf6bf4ab7cc56d_true_action",
+                    "kind": "action",
+                    "source": {
+                      "id": "expression:atom_atom_601b1962005945c79ddf6bf4ab7cc56d_true_action:source",
+                      "role": "statements",
+                      "tree": {
+                        "fields": [
+                          {
+                            "name": "body",
+                            "value": {
+                              "items": [
+                                {
+                                  "value": {
+                                    "fields": [
+                                      {
+                                        "name": "value",
+                                        "value": {
+                                          "value": {
+                                            "arguments": [
+                                              {
+                                                "id": "expression:atom_atom_601b1962005945c79ddf6bf4ab7cc56d_true_action:source:parse:d578b899636b4360b94258f41f0f4585:node:cdab044052e82df79580e3e9b25351a3da7a1bb9f802ced25f38a238e71a7030",
+                                                "kind": "literal",
+                                                "literal_kind": null,
+                                                "value": {
+                                                  "kind": "str",
+                                                  "value": "true branch action"
+                                                }
+                                              }
+                                            ],
+                                            "callee": {
+                                              "context": "load",
+                                              "id": "expression:atom_atom_601b1962005945c79ddf6bf4ab7cc56d_true_action:source:parse:d578b899636b4360b94258f41f0f4585:node:5bf23479175df1c3e596a8889a4e7114e0032dd1dc6aacb22a68f268a9085b66",
+                                              "kind": "symbol",
+                                              "name": "print",
+                                              "symbol_id": null
+                                            },
+                                            "id": "expression:atom_atom_601b1962005945c79ddf6bf4ab7cc56d_true_action:source:parse:d578b899636b4360b94258f41f0f4585:node:0c70ce0ac4f8bd15b6b151fbf0399d9be60b8f0688b42a0d7166a5d82693c493",
+                                            "keywords": [],
+                                            "kind": "call"
+                                          },
+                                          "value_kind": "node"
+                                        }
+                                      }
+                                    ],
+                                    "id": "expression:atom_atom_601b1962005945c79ddf6bf4ab7cc56d_true_action:source:parse:d578b899636b4360b94258f41f0f4585:node:ff524f8f9cdf6fb1f58d37ea4a0b77c67426f3582e7cb4c5c00949acc1f0c2fd",
+                                    "kind": "composite",
+                                    "python_kind": "Expr"
+                                  },
+                                  "value_kind": "node"
+                                }
+                              ],
+                              "value_kind": "list"
+                            }
+                          },
+                          {
+                            "name": "type_ignores",
+                            "value": {
+                              "items": [],
+                              "value_kind": "list"
+                            }
+                          }
+                        ],
+                        "id": "expression:atom_atom_601b1962005945c79ddf6bf4ab7cc56d_true_action:source:parse:d578b899636b4360b94258f41f0f4585:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                        "kind": "composite",
+                        "python_kind": "Module"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "destination": null,
+              "end": null,
+              "expression": {
+                "id": "expression:atom_0fd34c2376814267957a4f6fdec7de26:expression",
+                "role": "expression",
+                "tree": {
+                  "id": "expression:atom_0fd34c2376814267957a4f6fdec7de26:expression:parse:d177a05917f34e25a8942c3318f639c7:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "literal",
+                  "literal_kind": null,
+                  "value": {
+                    "kind": "str",
+                    "value": "output"
+                  }
+                }
+              },
+              "id": "atom_0fd34c2376814267957a4f6fdec7de26",
+              "kind": "output"
+            }
+          ]
+        },
+        "decorators": [],
+        "display_name": "main",
+        "docstring": null,
+        "id": "diagram_83100f73128d4fadbdfc016f200426af",
+        "identifier": "main",
+        "kind": "sync",
+        "method_kind": null,
+        "parameters": [],
+        "return_annotation": null,
+        "symbol_id": "symbol_c8aad9e8ec3ae74fb7fd9799",
+        "type_parameters": []
+      }
+    ],
+    "modules": [
+      {
+        "body": [
+          {
+            "function_id": "diagram_83100f73128d4fadbdfc016f200426af",
+            "kind": "function_reference"
+          }
+        ],
+        "docstring": "",
+        "id": "module:app.main",
+        "kind": "module",
+        "path": "main"
+      }
+    ],
+    "package": "app",
+    "symbols": [
+      {
+        "declaration_id": "diagram_83100f73128d4fadbdfc016f200426af",
+        "id": "symbol_c8aad9e8ec3ae74fb7fd9799",
+        "kind": "function",
+        "name": "main",
+        "owner_id": "diagram_83100f73128d4fadbdfc016f200426af"
+      },
+      {
+        "declaration_id": "atom_ac8123a5b88e49a98bbf4b1bd64fe298",
+        "id": "symbol_6749ca804522857e4ac3774c",
+        "kind": "local",
+        "name": "result",
+        "owner_id": "diagram_83100f73128d4fadbdfc016f200426af"
+      }
+    ]
+  },
+  "project_id": "project_4a96b23c34a4428485ae94ed63df0faf",
+  "projection_definitions": [],
+  "revision": 5,
+  "runtime_settings": {
+    "active_run_profile": "Default",
+    "run_profiles": [
+      {
+        "arguments": "",
+        "environment": [],
+        "interpreter": "",
+        "name": "Default",
+        "working_directory": "."
+      }
+    ]
+  },
+  "semantic_relations": [],
+  "shape_packs": [],
+  "title": "Binary Decision Example"
+}

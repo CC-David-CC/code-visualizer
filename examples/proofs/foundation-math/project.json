@@ -1,0 +1,1132 @@
+{
+  "concepts": [],
+  "description": "",
+  "documents": [],
+  "domain_workspace": {
+    "bundle_references": [
+      {
+        "id": "foundation.math",
+        "version": "1"
+      }
+    ],
+    "language_definitions": [],
+    "models": [
+      {
+        "id": "matrix:model",
+        "nodes": [
+          {
+            "children": [],
+            "concept_id": "foundation.math:Symbol",
+            "id": "matrix:i",
+            "properties": [
+              {
+                "property_id": "foundation.math:Symbol:name",
+                "value": "i"
+              }
+            ],
+            "references": []
+          },
+          {
+            "children": [],
+            "concept_id": "foundation.math:Symbol",
+            "id": "matrix:j",
+            "properties": [
+              {
+                "property_id": "foundation.math:Symbol:name",
+                "value": "j"
+              }
+            ],
+            "references": []
+          },
+          {
+            "children": [],
+            "concept_id": "foundation.math:Symbol",
+            "id": "matrix:k",
+            "properties": [
+              {
+                "property_id": "foundation.math:Symbol:name",
+                "value": "k"
+              }
+            ],
+            "references": []
+          },
+          {
+            "children": [],
+            "concept_id": "foundation.math:TensorSymbol",
+            "id": "matrix:A",
+            "properties": [
+              {
+                "property_id": "foundation.math:TensorSymbol:name",
+                "value": "A"
+              },
+              {
+                "property_id": "foundation.math:TensorSymbol:shape",
+                "value": {
+                  "$value": "tensor",
+                  "dtype": "int64",
+                  "elements": [
+                    2,
+                    2
+                  ],
+                  "shape": [
+                    2
+                  ],
+                  "version": 1
+                }
+              }
+            ],
+            "references": [
+              {
+                "node_ids": [
+                  "matrix:A:value"
+                ],
+                "role_id": "foundation.math:TensorSymbol:binding"
+              }
+            ]
+          },
+          {
+            "children": [],
+            "concept_id": "foundation.math:TensorLiteral",
+            "id": "matrix:A:value",
+            "properties": [
+              {
+                "property_id": "foundation.math:TensorLiteral:value",
+                "value": {
+                  "$value": "tensor",
+                  "dtype": "float64",
+                  "elements": [
+                    1.0,
+                    2.0,
+                    3.0,
+                    4.0
+                  ],
+                  "shape": [
+                    2,
+                    2
+                  ],
+                  "version": 1
+                }
+              }
+            ],
+            "references": []
+          },
+          {
+            "children": [],
+            "concept_id": "foundation.math:TensorSymbol",
+            "id": "matrix:B",
+            "properties": [
+              {
+                "property_id": "foundation.math:TensorSymbol:name",
+                "value": "B"
+              },
+              {
+                "property_id": "foundation.math:TensorSymbol:shape",
+                "value": {
+                  "$value": "tensor",
+                  "dtype": "int64",
+                  "elements": [
+                    2,
+                    2
+                  ],
+                  "shape": [
+                    2
+                  ],
+                  "version": 1
+                }
+              }
+            ],
+            "references": [
+              {
+                "node_ids": [
+                  "matrix:B:value"
+                ],
+                "role_id": "foundation.math:TensorSymbol:binding"
+              }
+            ]
+          },
+          {
+            "children": [],
+            "concept_id": "foundation.math:TensorLiteral",
+            "id": "matrix:B:value",
+            "properties": [
+              {
+                "property_id": "foundation.math:TensorLiteral:value",
+                "value": {
+                  "$value": "tensor",
+                  "dtype": "float64",
+                  "elements": [
+                    5.0,
+                    6.0,
+                    7.0,
+                    8.0
+                  ],
+                  "shape": [
+                    2,
+                    2
+                  ],
+                  "version": 1
+                }
+              }
+            ],
+            "references": []
+          },
+          {
+            "children": [],
+            "concept_id": "foundation.math:TensorSymbol",
+            "id": "matrix:C",
+            "properties": [
+              {
+                "property_id": "foundation.math:TensorSymbol:name",
+                "value": "C"
+              },
+              {
+                "property_id": "foundation.math:TensorSymbol:shape",
+                "value": {
+                  "$value": "tensor",
+                  "dtype": "int64",
+                  "elements": [
+                    2,
+                    2
+                  ],
+                  "shape": [
+                    2
+                  ],
+                  "version": 1
+                }
+              }
+            ],
+            "references": []
+          },
+          {
+            "children": [],
+            "concept_id": "foundation.math:SymbolReference",
+            "id": "matrix:expression:C:index:0",
+            "properties": [],
+            "references": [
+              {
+                "node_ids": [
+                  "matrix:i"
+                ],
+                "role_id": "foundation.math:SymbolReference:symbol"
+              }
+            ]
+          },
+          {
+            "children": [],
+            "concept_id": "foundation.math:SymbolReference",
+            "id": "matrix:expression:C:index:1",
+            "properties": [],
+            "references": [
+              {
+                "node_ids": [
+                  "matrix:j"
+                ],
+                "role_id": "foundation.math:SymbolReference:symbol"
+              }
+            ]
+          },
+          {
+            "children": [
+              {
+                "node_ids": [
+                  "matrix:expression:C:index:0",
+                  "matrix:expression:C:index:1"
+                ],
+                "role_id": "foundation.math:Index:indices"
+              }
+            ],
+            "concept_id": "foundation.math:Index",
+            "id": "matrix:expression:C",
+            "properties": [],
+            "references": [
+              {
+                "node_ids": [
+                  "matrix:C"
+                ],
+                "role_id": "foundation.math:Index:tensor"
+              }
+            ]
+          },
+          {
+            "children": [],
+            "concept_id": "foundation.math:SymbolReference",
+            "id": "matrix:expression:A:index:0",
+            "properties": [],
+            "references": [
+              {
+                "node_ids": [
+                  "matrix:i"
+                ],
+                "role_id": "foundation.math:SymbolReference:symbol"
+              }
+            ]
+          },
+          {
+            "children": [],
+            "concept_id": "foundation.math:SymbolReference",
+            "id": "matrix:expression:A:index:1",
+            "properties": [],
+            "references": [
+              {
+                "node_ids": [
+                  "matrix:k"
+                ],
+                "role_id": "foundation.math:SymbolReference:symbol"
+              }
+            ]
+          },
+          {
+            "children": [
+              {
+                "node_ids": [
+                  "matrix:expression:A:index:0",
+                  "matrix:expression:A:index:1"
+                ],
+                "role_id": "foundation.math:Index:indices"
+              }
+            ],
+            "concept_id": "foundation.math:Index",
+            "id": "matrix:expression:A",
+            "properties": [],
+            "references": [
+              {
+                "node_ids": [
+                  "matrix:A"
+                ],
+                "role_id": "foundation.math:Index:tensor"
+              }
+            ]
+          },
+          {
+            "children": [],
+            "concept_id": "foundation.math:SymbolReference",
+            "id": "matrix:expression:B:index:0",
+            "properties": [],
+            "references": [
+              {
+                "node_ids": [
+                  "matrix:k"
+                ],
+                "role_id": "foundation.math:SymbolReference:symbol"
+              }
+            ]
+          },
+          {
+            "children": [],
+            "concept_id": "foundation.math:SymbolReference",
+            "id": "matrix:expression:B:index:1",
+            "properties": [],
+            "references": [
+              {
+                "node_ids": [
+                  "matrix:j"
+                ],
+                "role_id": "foundation.math:SymbolReference:symbol"
+              }
+            ]
+          },
+          {
+            "children": [
+              {
+                "node_ids": [
+                  "matrix:expression:B:index:0",
+                  "matrix:expression:B:index:1"
+                ],
+                "role_id": "foundation.math:Index:indices"
+              }
+            ],
+            "concept_id": "foundation.math:Index",
+            "id": "matrix:expression:B",
+            "properties": [],
+            "references": [
+              {
+                "node_ids": [
+                  "matrix:B"
+                ],
+                "role_id": "foundation.math:Index:tensor"
+              }
+            ]
+          },
+          {
+            "children": [
+              {
+                "node_ids": [
+                  "matrix:expression:A",
+                  "matrix:expression:B"
+                ],
+                "role_id": "foundation.math:OperatorApplication:operands"
+              }
+            ],
+            "concept_id": "foundation.math:OperatorApplication",
+            "id": "matrix:expression:multiply",
+            "properties": [
+              {
+                "property_id": "foundation.math:OperatorApplication:operator",
+                "value": "multiply"
+              }
+            ],
+            "references": []
+          },
+          {
+            "children": [
+              {
+                "node_ids": [
+                  "matrix:expression:multiply"
+                ],
+                "role_id": "foundation.math:OperatorApplication:operands"
+              }
+            ],
+            "concept_id": "foundation.math:OperatorApplication",
+            "id": "matrix:expression:sum",
+            "properties": [
+              {
+                "property_id": "foundation.math:OperatorApplication:operator",
+                "value": "sum"
+              }
+            ],
+            "references": [
+              {
+                "node_ids": [
+                  "matrix:k"
+                ],
+                "role_id": "foundation.math:OperatorApplication:bound_symbols"
+              }
+            ]
+          },
+          {
+            "children": [
+              {
+                "node_ids": [
+                  "matrix:expression:C"
+                ],
+                "role_id": "foundation.math:Equation:left"
+              },
+              {
+                "node_ids": [
+                  "matrix:expression:sum"
+                ],
+                "role_id": "foundation.math:Equation:right"
+              }
+            ],
+            "concept_id": "foundation.math:Equation",
+            "id": "matrix:equation",
+            "properties": [
+              {
+                "property_id": "foundation.math:Equation:name",
+                "value": "Matrix product by contraction"
+              }
+            ],
+            "references": []
+          }
+        ],
+        "roots": [
+          "matrix:i",
+          "matrix:j",
+          "matrix:k",
+          "matrix:A",
+          "matrix:A:value",
+          "matrix:B",
+          "matrix:B:value",
+          "matrix:C",
+          "matrix:equation"
+        ],
+        "schema_id": "foundation.math:schema",
+        "schema_version": "1",
+        "title": "C[i,j] = sum(k, A[i,k] * B[k,j])"
+      }
+    ],
+    "schemas": [
+      {
+        "bundle": {
+          "id": "foundation.math",
+          "version": "1"
+        },
+        "concepts": [
+          {
+            "constraints": [],
+            "containment_roles": [],
+            "description": "",
+            "display_property_id": "foundation.math:Literal:value",
+            "id": "foundation.math:Literal",
+            "name": "Literal",
+            "properties": [
+              {
+                "choices": [],
+                "default": null,
+                "id": "foundation.math:Literal:value",
+                "maximum": null,
+                "minimum": null,
+                "name": "Value",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "number"
+              }
+            ],
+            "reference_roles": []
+          },
+          {
+            "constraints": [],
+            "containment_roles": [],
+            "description": "",
+            "display_property_id": "foundation.math:ComplexLiteral:value",
+            "id": "foundation.math:ComplexLiteral",
+            "name": "Complex Literal",
+            "properties": [
+              {
+                "choices": [],
+                "default": null,
+                "id": "foundation.math:ComplexLiteral:value",
+                "maximum": null,
+                "minimum": null,
+                "name": "Value",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "complex"
+              }
+            ],
+            "reference_roles": []
+          },
+          {
+            "constraints": [],
+            "containment_roles": [],
+            "description": "",
+            "display_property_id": "foundation.math:QuantityLiteral:value",
+            "id": "foundation.math:QuantityLiteral",
+            "name": "Quantity Literal",
+            "properties": [
+              {
+                "choices": [],
+                "default": null,
+                "id": "foundation.math:QuantityLiteral:value",
+                "maximum": null,
+                "minimum": null,
+                "name": "Value",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "quantity"
+              }
+            ],
+            "reference_roles": []
+          },
+          {
+            "constraints": [],
+            "containment_roles": [],
+            "description": "",
+            "display_property_id": "foundation.math:TensorLiteral:value",
+            "id": "foundation.math:TensorLiteral",
+            "name": "Tensor Literal",
+            "properties": [
+              {
+                "choices": [],
+                "default": null,
+                "id": "foundation.math:TensorLiteral:value",
+                "maximum": null,
+                "minimum": null,
+                "name": "Value",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "tensor"
+              }
+            ],
+            "reference_roles": []
+          },
+          {
+            "constraints": [],
+            "containment_roles": [],
+            "description": "",
+            "display_property_id": "foundation.math:ResourceLiteral:value",
+            "id": "foundation.math:ResourceLiteral",
+            "name": "Resource Literal",
+            "properties": [
+              {
+                "choices": [],
+                "default": null,
+                "id": "foundation.math:ResourceLiteral:value",
+                "maximum": null,
+                "minimum": null,
+                "name": "Value",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "resource"
+              }
+            ],
+            "reference_roles": []
+          },
+          {
+            "constraints": [],
+            "containment_roles": [],
+            "description": "A stable symbol declaration. Its name is presentation, not identity.",
+            "display_property_id": "foundation.math:Symbol:name",
+            "id": "foundation.math:Symbol",
+            "name": "Symbol",
+            "properties": [
+              {
+                "choices": [],
+                "default": null,
+                "id": "foundation.math:Symbol:name",
+                "maximum": null,
+                "minimum": null,
+                "name": "Name",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "string"
+              }
+            ],
+            "reference_roles": [
+              {
+                "allowed_concept_ids": [
+                  "foundation.math:Literal",
+                  "foundation.math:ComplexLiteral",
+                  "foundation.math:QuantityLiteral",
+                  "foundation.math:TensorLiteral",
+                  "foundation.math:ResourceLiteral"
+                ],
+                "id": "foundation.math:Symbol:binding",
+                "max_count": 1,
+                "min_count": 0,
+                "name": "Binding",
+                "ordered": true
+              }
+            ]
+          },
+          {
+            "constraints": [],
+            "containment_roles": [],
+            "description": "Tensor declaration; a rank-one integer value optionally declares its shape.",
+            "display_property_id": "foundation.math:TensorSymbol:name",
+            "id": "foundation.math:TensorSymbol",
+            "name": "Tensor symbol",
+            "properties": [
+              {
+                "choices": [],
+                "default": null,
+                "id": "foundation.math:TensorSymbol:name",
+                "maximum": null,
+                "minimum": null,
+                "name": "Name",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "string"
+              },
+              {
+                "choices": [],
+                "default": null,
+                "id": "foundation.math:TensorSymbol:shape",
+                "maximum": null,
+                "minimum": null,
+                "name": "Shape",
+                "required": false,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "tensor"
+              }
+            ],
+            "reference_roles": [
+              {
+                "allowed_concept_ids": [
+                  "foundation.math:TensorLiteral",
+                  "foundation.math:ResourceLiteral"
+                ],
+                "id": "foundation.math:TensorSymbol:binding",
+                "max_count": 1,
+                "min_count": 0,
+                "name": "Binding",
+                "ordered": true
+              }
+            ]
+          },
+          {
+            "constraints": [],
+            "containment_roles": [],
+            "description": "An occurrence points to one declaration; repeated indices retain occurrence identity.",
+            "display_property_id": null,
+            "id": "foundation.math:SymbolReference",
+            "name": "Symbol reference",
+            "properties": [],
+            "reference_roles": [
+              {
+                "allowed_concept_ids": [
+                  "foundation.math:Symbol",
+                  "foundation.math:TensorSymbol"
+                ],
+                "id": "foundation.math:SymbolReference:symbol",
+                "max_count": 1,
+                "min_count": 1,
+                "name": "Symbol",
+                "ordered": true
+              }
+            ]
+          },
+          {
+            "constraints": [],
+            "containment_roles": [
+              {
+                "allowed_concept_ids": [
+                  "foundation.math:Literal",
+                  "foundation.math:ComplexLiteral",
+                  "foundation.math:QuantityLiteral",
+                  "foundation.math:TensorLiteral",
+                  "foundation.math:ResourceLiteral",
+                  "foundation.math:SymbolReference",
+                  "foundation.math:OperatorApplication",
+                  "foundation.math:Index",
+                  "foundation.math:Derivative",
+                  "foundation.math:Integral"
+                ],
+                "id": "foundation.math:OperatorApplication:operands",
+                "max_count": null,
+                "min_count": 1,
+                "name": "Operands",
+                "ordered": true
+              }
+            ],
+            "description": "",
+            "display_property_id": "foundation.math:OperatorApplication:operator",
+            "id": "foundation.math:OperatorApplication",
+            "name": "Operator application",
+            "properties": [
+              {
+                "choices": [],
+                "default": null,
+                "id": "foundation.math:OperatorApplication:operator",
+                "maximum": null,
+                "minimum": null,
+                "name": "Operator",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "string"
+              }
+            ],
+            "reference_roles": [
+              {
+                "allowed_concept_ids": [
+                  "foundation.math:Symbol",
+                  "foundation.math:TensorSymbol"
+                ],
+                "id": "foundation.math:OperatorApplication:bound_symbols",
+                "max_count": null,
+                "min_count": 0,
+                "name": "Bound_Symbols",
+                "ordered": true
+              }
+            ]
+          },
+          {
+            "constraints": [],
+            "containment_roles": [
+              {
+                "allowed_concept_ids": [
+                  "foundation.math:Literal",
+                  "foundation.math:ComplexLiteral",
+                  "foundation.math:QuantityLiteral",
+                  "foundation.math:TensorLiteral",
+                  "foundation.math:ResourceLiteral",
+                  "foundation.math:SymbolReference",
+                  "foundation.math:OperatorApplication",
+                  "foundation.math:Index",
+                  "foundation.math:Derivative",
+                  "foundation.math:Integral"
+                ],
+                "id": "foundation.math:Equation:left",
+                "max_count": 1,
+                "min_count": 1,
+                "name": "Left",
+                "ordered": true
+              },
+              {
+                "allowed_concept_ids": [
+                  "foundation.math:Literal",
+                  "foundation.math:ComplexLiteral",
+                  "foundation.math:QuantityLiteral",
+                  "foundation.math:TensorLiteral",
+                  "foundation.math:ResourceLiteral",
+                  "foundation.math:SymbolReference",
+                  "foundation.math:OperatorApplication",
+                  "foundation.math:Index",
+                  "foundation.math:Derivative",
+                  "foundation.math:Integral"
+                ],
+                "id": "foundation.math:Equation:right",
+                "max_count": 1,
+                "min_count": 1,
+                "name": "Right",
+                "ordered": true
+              }
+            ],
+            "description": "",
+            "display_property_id": "foundation.math:Equation:name",
+            "id": "foundation.math:Equation",
+            "name": "Equation",
+            "properties": [
+              {
+                "choices": [],
+                "default": null,
+                "id": "foundation.math:Equation:name",
+                "maximum": null,
+                "minimum": null,
+                "name": "Name",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "string"
+              }
+            ],
+            "reference_roles": []
+          },
+          {
+            "constraints": [],
+            "containment_roles": [
+              {
+                "allowed_concept_ids": [
+                  "foundation.math:Literal",
+                  "foundation.math:ComplexLiteral",
+                  "foundation.math:QuantityLiteral",
+                  "foundation.math:TensorLiteral",
+                  "foundation.math:ResourceLiteral",
+                  "foundation.math:SymbolReference",
+                  "foundation.math:OperatorApplication",
+                  "foundation.math:Index",
+                  "foundation.math:Derivative",
+                  "foundation.math:Integral"
+                ],
+                "id": "foundation.math:Constraint:predicate",
+                "max_count": 1,
+                "min_count": 1,
+                "name": "Predicate",
+                "ordered": true
+              }
+            ],
+            "description": "",
+            "display_property_id": "foundation.math:Constraint:name",
+            "id": "foundation.math:Constraint",
+            "name": "Constraint",
+            "properties": [
+              {
+                "choices": [],
+                "default": null,
+                "id": "foundation.math:Constraint:name",
+                "maximum": null,
+                "minimum": null,
+                "name": "Name",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "string"
+              }
+            ],
+            "reference_roles": []
+          },
+          {
+            "constraints": [],
+            "containment_roles": [
+              {
+                "allowed_concept_ids": [
+                  "foundation.math:Literal",
+                  "foundation.math:ComplexLiteral",
+                  "foundation.math:QuantityLiteral",
+                  "foundation.math:TensorLiteral",
+                  "foundation.math:ResourceLiteral",
+                  "foundation.math:SymbolReference",
+                  "foundation.math:OperatorApplication",
+                  "foundation.math:Index",
+                  "foundation.math:Derivative",
+                  "foundation.math:Integral"
+                ],
+                "id": "foundation.math:Index:indices",
+                "max_count": null,
+                "min_count": 1,
+                "name": "Indices",
+                "ordered": true
+              }
+            ],
+            "description": "",
+            "display_property_id": null,
+            "id": "foundation.math:Index",
+            "name": "Indexed expression",
+            "properties": [],
+            "reference_roles": [
+              {
+                "allowed_concept_ids": [
+                  "foundation.math:TensorSymbol"
+                ],
+                "id": "foundation.math:Index:tensor",
+                "max_count": 1,
+                "min_count": 1,
+                "name": "Tensor",
+                "ordered": true
+              }
+            ]
+          },
+          {
+            "constraints": [],
+            "containment_roles": [
+              {
+                "allowed_concept_ids": [
+                  "foundation.math:Literal",
+                  "foundation.math:ComplexLiteral",
+                  "foundation.math:QuantityLiteral",
+                  "foundation.math:TensorLiteral",
+                  "foundation.math:ResourceLiteral",
+                  "foundation.math:SymbolReference",
+                  "foundation.math:OperatorApplication",
+                  "foundation.math:Index",
+                  "foundation.math:Derivative",
+                  "foundation.math:Integral"
+                ],
+                "id": "foundation.math:Derivative:operand",
+                "max_count": 1,
+                "min_count": 1,
+                "name": "Operand",
+                "ordered": true
+              }
+            ],
+            "description": "",
+            "display_property_id": null,
+            "id": "foundation.math:Derivative",
+            "name": "Derivative",
+            "properties": [
+              {
+                "choices": [],
+                "default": 1,
+                "id": "foundation.math:Derivative:order",
+                "maximum": null,
+                "minimum": 1.0,
+                "name": "Order",
+                "required": false,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "integer"
+              }
+            ],
+            "reference_roles": [
+              {
+                "allowed_concept_ids": [
+                  "foundation.math:Symbol"
+                ],
+                "id": "foundation.math:Derivative:variable",
+                "max_count": 1,
+                "min_count": 1,
+                "name": "Variable",
+                "ordered": true
+              }
+            ]
+          },
+          {
+            "constraints": [],
+            "containment_roles": [
+              {
+                "allowed_concept_ids": [
+                  "foundation.math:Literal",
+                  "foundation.math:ComplexLiteral",
+                  "foundation.math:QuantityLiteral",
+                  "foundation.math:TensorLiteral",
+                  "foundation.math:ResourceLiteral",
+                  "foundation.math:SymbolReference",
+                  "foundation.math:OperatorApplication",
+                  "foundation.math:Index",
+                  "foundation.math:Derivative",
+                  "foundation.math:Integral"
+                ],
+                "id": "foundation.math:Integral:integrand",
+                "max_count": 1,
+                "min_count": 1,
+                "name": "Integrand",
+                "ordered": true
+              },
+              {
+                "allowed_concept_ids": [
+                  "foundation.math:Literal",
+                  "foundation.math:ComplexLiteral",
+                  "foundation.math:QuantityLiteral",
+                  "foundation.math:TensorLiteral",
+                  "foundation.math:ResourceLiteral",
+                  "foundation.math:SymbolReference",
+                  "foundation.math:OperatorApplication",
+                  "foundation.math:Index",
+                  "foundation.math:Derivative",
+                  "foundation.math:Integral"
+                ],
+                "id": "foundation.math:Integral:lower",
+                "max_count": 1,
+                "min_count": 0,
+                "name": "Lower",
+                "ordered": true
+              },
+              {
+                "allowed_concept_ids": [
+                  "foundation.math:Literal",
+                  "foundation.math:ComplexLiteral",
+                  "foundation.math:QuantityLiteral",
+                  "foundation.math:TensorLiteral",
+                  "foundation.math:ResourceLiteral",
+                  "foundation.math:SymbolReference",
+                  "foundation.math:OperatorApplication",
+                  "foundation.math:Index",
+                  "foundation.math:Derivative",
+                  "foundation.math:Integral"
+                ],
+                "id": "foundation.math:Integral:upper",
+                "max_count": 1,
+                "min_count": 0,
+                "name": "Upper",
+                "ordered": true
+              }
+            ],
+            "description": "",
+            "display_property_id": null,
+            "id": "foundation.math:Integral",
+            "name": "Integral",
+            "properties": [],
+            "reference_roles": [
+              {
+                "allowed_concept_ids": [
+                  "foundation.math:Symbol"
+                ],
+                "id": "foundation.math:Integral:variable",
+                "max_count": 1,
+                "min_count": 1,
+                "name": "Variable",
+                "ordered": true
+              }
+            ]
+          },
+          {
+            "constraints": [],
+            "containment_roles": [
+              {
+                "allowed_concept_ids": [
+                  "foundation.math:Literal",
+                  "foundation.math:ComplexLiteral",
+                  "foundation.math:QuantityLiteral",
+                  "foundation.math:TensorLiteral",
+                  "foundation.math:ResourceLiteral",
+                  "foundation.math:SymbolReference",
+                  "foundation.math:OperatorApplication",
+                  "foundation.math:Index",
+                  "foundation.math:Derivative",
+                  "foundation.math:Integral"
+                ],
+                "id": "foundation.math:Function:body",
+                "max_count": 1,
+                "min_count": 1,
+                "name": "Body",
+                "ordered": true
+              }
+            ],
+            "description": "",
+            "display_property_id": "foundation.math:Function:name",
+            "id": "foundation.math:Function",
+            "name": "Mathematical function",
+            "properties": [
+              {
+                "choices": [],
+                "default": null,
+                "id": "foundation.math:Function:name",
+                "maximum": null,
+                "minimum": null,
+                "name": "Name",
+                "required": true,
+                "value_constraints": {
+                  "dimension": null,
+                  "tensor_dtype": null,
+                  "tensor_shape": null
+                },
+                "value_kind": "string"
+              }
+            ],
+            "reference_roles": [
+              {
+                "allowed_concept_ids": [
+                  "foundation.math:Symbol",
+                  "foundation.math:TensorSymbol"
+                ],
+                "id": "foundation.math:Function:parameters",
+                "max_count": null,
+                "min_count": 0,
+                "name": "Parameters",
+                "ordered": true
+              }
+            ]
+          }
+        ],
+        "description": "Mathematical declarations, expression occurrences, relations and binders.",
+        "id": "foundation.math:schema",
+        "namespace": "foundation.math",
+        "version": "1"
+      }
+    ]
+  },
+  "drakon_views": [],
+  "extensions": [],
+  "format_revision": 11,
+  "managed_assets": [],
+  "program_model": {
+    "entrypoint": null,
+    "functions": [],
+    "modules": [],
+    "package": "app",
+    "symbols": []
+  },
+  "project_id": "foundation:matrix-product",
+  "projection_definitions": [],
+  "revision": 0,
+  "runtime_settings": {
+    "active_run_profile": "Default",
+    "run_profiles": [
+      {
+        "arguments": "",
+        "environment": [],
+        "interpreter": "",
+        "name": "Default",
+        "working_directory": "."
+      }
+    ]
+  },
+  "semantic_relations": [],
+  "shape_packs": [],
+  "title": "Indexed matrix product"
+}

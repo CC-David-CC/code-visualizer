@@ -1,0 +1,75 @@
+syntax = "proto3";
+package code_visualizer.protocol.v1;
+import "code_visualizer/protocol/v1/domain.proto";
+import "code_visualizer/protocol/v1/value.proto";
+import "code_visualizer/protocol/v1/identity.proto";
+import "code_visualizer/protocol/v1/evidence.proto";
+
+message NodeAddress { string model_id = 1; string node_id = 2; }
+message PropertyAddress { string model_id = 1; string node_id = 2; string property_id = 3; }
+message SetProperty { PropertyAddress target = 1; CanonicalValue value = 2; }
+message CreateNode {
+  string model_id = 1; IntentionalNode node = 2;
+  optional string parent_id = 3; optional string role_id = 4; optional sint64 index = 5;
+}
+message MoveChild {
+  NodeAddress target = 1; optional string parent_id = 2; optional string role_id = 3;
+  sint64 index = 4;
+}
+message SetReference { NodeAddress target = 1; string role_id = 2; repeated string target_ids = 3; }
+message RemoveReference { NodeAddress target = 1; string role_id = 2; optional string target_id = 3; }
+message PutConcept { string schema_id = 1; ConceptDefinition concept = 2; }
+message DeleteConcept { string schema_id = 1; string concept_id = 2; }
+message PutPropertyDefinition {
+  string schema_id = 1; string concept_id = 2; PropertyDefinition definition = 3;
+}
+message PutRoleDefinition {
+  string schema_id = 1; string concept_id = 2; RoleDefinition definition = 3; bool containment = 4;
+}
+message HistoryCommand {}
+message PromoteEvidence {
+  PropertyAddress target = 1; ComputationEvidence evidence = 2; string observation_id = 3;
+}
+message CommandEnvelope {
+  uint32 schema_version = 1;
+  string actor_id = 2; string operation_id = 3; string project_id = 4;
+  optional uint64 expected_revision = 5; optional string transaction_id = 6; string intent = 7;
+  reserved 8, 9;
+  oneof command {
+    DomainSchema put_schema = 10; string delete_schema_id = 11;
+    DomainModel put_model = 12; string delete_model_id = 13;
+    CreateNode create_node = 14; NodeAddress delete_node = 15;
+    SetProperty set_property = 16; PropertyAddress unset_property = 17;
+    MoveChild move_child = 18; SetReference set_reference = 19;
+    RemoveReference remove_reference = 20; PutConcept put_concept = 21;
+    DeleteConcept delete_concept = 22; PutPropertyDefinition put_property_definition = 23;
+    PutRoleDefinition put_role_definition = 24; VersionedReference put_bundle = 25;
+    VersionedReference delete_bundle = 26; HistoryCommand undo = 27; HistoryCommand redo = 28;
+    MoveChild insert_child = 29; NodeAddress remove_child = 30;
+    PromoteEvidence promote_evidence = 31;
+  }
+}
+// Receipts summarize authority events without inventing another event payload language.
+// Full existing event/history payloads remain available through the JSON automation API.
+message EventReceipt {
+  uint32 schema_version = 1; string event_type = 2; string actor_id = 3;
+  string operation_id = 4; string project_id = 5; uint64 revision = 6;
+  repeated string affected_ids = 7; string occurred_at = 8;
+}
+message CommandAccepted {
+  uint64 revision = 1; repeated string affected_ids = 2;
+  repeated EventReceipt events = 3; string undo_group_id = 4;
+}
+message CommandRejected { string code = 1; string message = 2; uint64 current_revision = 3; }
+// No canonical mutation has been accepted. Poll the host operation before retrying.
+message CommandDeferred {
+  string code = 1; string message = 2; uint64 current_revision = 3; string host_operation_id = 4;
+}
+message ProtocolError { sint32 code = 1; string message = 2; }
+message CommandResponse {
+  uint32 schema_version = 1; string operation_id = 2;
+  oneof result {
+    CommandAccepted accepted = 3; CommandRejected rejected = 4; ProtocolError error = 5;
+    CommandDeferred deferred = 6;
+  }
+}

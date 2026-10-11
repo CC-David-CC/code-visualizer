@@ -1,0 +1,57 @@
+syntax = "proto3";
+package code_visualizer.protocol.v1;
+
+message IntegerValue {
+  oneof representation { sint64 small = 1; string decimal = 2; }
+}
+message ComplexValue { double real = 1; double imaginary = 2; }
+message DimensionPower { string basis_id = 1; sint32 exponent = 2; }
+message RationalDimensionPower {
+  string basis_id = 1; sint32 numerator = 2; uint32 denominator = 3;
+}
+message Dimension {
+  // Released integer encoding has version 0 and only powers. Fractional encoding
+  // is explicitly version 2 and only rational_powers; never send both.
+  repeated DimensionPower powers = 1;
+  uint32 schema_version = 2;
+  repeated RationalDimensionPower rational_powers = 3;
+}
+message UnitReference { string id = 1; string version = 2; Dimension dimension = 3; }
+message NumericValue {
+  oneof value { IntegerValue integer = 1; double floating = 2; ComplexValue complex = 3; }
+}
+message QuantityValue { NumericValue magnitude = 1; UnitReference unit = 2; }
+enum TensorDType {
+  TENSOR_DTYPE_UNSPECIFIED = 0;
+  TENSOR_BOOL = 1; TENSOR_INT8 = 2; TENSOR_UINT8 = 3;
+  TENSOR_INT16 = 4; TENSOR_UINT16 = 5; TENSOR_INT32 = 6; TENSOR_UINT32 = 7;
+  TENSOR_INT64 = 8; TENSOR_UINT64 = 9; TENSOR_FLOAT32 = 10; TENSOR_FLOAT64 = 11;
+  TENSOR_COMPLEX64 = 12; TENSOR_COMPLEX128 = 13;
+}
+message TensorElement {
+  oneof value {
+    bool boolean = 1; IntegerValue integer = 2; double floating = 3; ComplexValue complex = 4;
+  }
+}
+message TensorValue {
+  TensorDType dtype = 1;
+  repeated uint64 shape = 2;
+  repeated TensorElement elements = 3;
+}
+message ResourceReference { string id = 1; string content_hash = 2; }
+message CanonicalValue {
+  uint32 schema_version = 1;
+  reserved 2 to 9;
+  oneof value {
+    string text = 10; bool boolean = 11; IntegerValue integer = 12; double floating = 13;
+    ComplexValue complex = 14; QuantityValue quantity = 15;
+    TensorValue tensor = 16; ResourceReference resource = 17;
+  }
+}
+message ShapeExtent { optional uint64 size = 1; }
+message TensorShape { repeated ShapeExtent dimensions = 1; }
+message ValueConstraints {
+  Dimension dimension = 1;
+  optional TensorDType tensor_dtype = 2;
+  TensorShape tensor_shape = 3;
+}

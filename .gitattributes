@@ -1,0 +1,15 @@
+* text=auto
+*.py text eol=lf
+*.toml text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.txt text eol=lf
+*.pdf -text
+*.png -text
+*.ttf -text
+*.dll -text
+*.zip -text
+src/code_visualizer/resources/** -text
+examples/physical/**/resources/** -text
+assets/goldens/** -text

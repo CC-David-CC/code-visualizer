@@ -1,0 +1,44 @@
+{
+  "authored_program_functions": 0,
+  "canonical_nodes": [
+    "proof:toggle",
+    "proof:idle",
+    "proof:active",
+    "proof:activate",
+    "proof:deactivate"
+  ],
+  "canonical_project_sha256": "06e5995084369383e90502a1eb3b715502acd6110a4f0adebb6f8b023098e0da",
+  "command_count": 41,
+  "derived_program_functions": 1,
+  "deterministic_build": true,
+  "host_bundles": [
+    "code_visualizer.intentional",
+    "code_visualizer.program"
+  ],
+  "native_roundtrip": true,
+  "passed": true,
+  "project_id": "proof:project",
+  "revision": 41,
+  "runtime_highlights": [
+    {
+      "event_sequence": 15,
+      "form_state": "proof:active",
+      "generated_semantic_id": "derived:e33ce2f92ff78e34caf29d2d2722",
+      "graph_state": "proof:active",
+      "graph_transition": "proof:activate",
+      "origin_ids": [
+        "proof:activate",
+        "proof:active",
+        "proof:toggle"
+      ],
+      "project_revision": 41,
+      "table_transition": "proof:activate"
+    }
+  ],
+  "starts_blank": true,
+  "stdout": "Engaged\nRest\nEngaged\n",
+  "transformations": [
+    "proof:lower@1"
+  ],
+  "undo_redo": true
+}

@@ -1,0 +1,40 @@
+{
+  "concepts": [],
+  "description": "",
+  "documents": [],
+  "domain_workspace": {
+    "bundle_references": [],
+    "language_definitions": [],
+    "models": [],
+    "schemas": []
+  },
+  "drakon_views": [],
+  "extensions": [],
+  "format_revision": 11,
+  "managed_assets": [],
+  "program_model": {
+    "entrypoint": null,
+    "functions": [],
+    "modules": [],
+    "package": "app",
+    "symbols": []
+  },
+  "project_id": "proof:project",
+  "projection_definitions": [],
+  "revision": 0,
+  "runtime_settings": {
+    "active_run_profile": "Default",
+    "run_profiles": [
+      {
+        "arguments": "",
+        "environment": [],
+        "interpreter": "",
+        "name": "Default",
+        "working_directory": "."
+      }
+    ]
+  },
+  "semantic_relations": [],
+  "shape_packs": [],
+  "title": "Authority-authored toggle"
+}

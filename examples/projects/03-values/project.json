@@ -1,0 +1,239 @@
+{
+  "concepts": [],
+  "description": "",
+  "documents": [
+    {
+      "description": "",
+      "extensions": [],
+      "id": "diagram_9e9e0bf253244961bff012f4fd3b38b3",
+      "kind": "drakon",
+      "title": "main"
+    }
+  ],
+  "domain_workspace": {
+    "bundle_references": [],
+    "language_definitions": [],
+    "models": [],
+    "schemas": []
+  },
+  "drakon_views": [
+    {
+      "document_id": "diagram_9e9e0bf253244961bff012f4fd3b38b3",
+      "end_id": "end_f9080c1a2d7e4191bcc8246b8bfdc860",
+      "function_id": "diagram_9e9e0bf253244961bff012f4fd3b38b3",
+      "header_id": "header_3ba5afbcb2fa44b0ba9a9610022894e0",
+      "title": "main"
+    }
+  ],
+  "extensions": [],
+  "format_revision": 11,
+  "managed_assets": [],
+  "program_model": {
+    "entrypoint": {
+      "arguments": {
+        "keywords": [],
+        "kind": "literal",
+        "positional": []
+      },
+      "callable_id": "diagram_9e9e0bf253244961bff012f4fd3b38b3",
+      "id": "entrypoint:project_e729cc0517ff472696b53b57911ce3fa",
+      "startup": []
+    },
+    "functions": [
+      {
+        "body": {
+          "id": "sequence_f2a97d0cc8b94cb2bec0d972402342da",
+          "statements": [
+            {
+              "annotation": null,
+              "id": "atom_8f0ddfca2b5d4bb399cb6bb74494afaf",
+              "kind": "assignment",
+              "operator": "=",
+              "target": {
+                "id": "expression:atom_8f0ddfca2b5d4bb399cb6bb74494afaf:target",
+                "role": "target",
+                "tree": {
+                  "context": "store",
+                  "id": "expression:atom_8f0ddfca2b5d4bb399cb6bb74494afaf:target:parse:cfc15458d67b44d685eeb66b9f9b7dc5:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "symbol",
+                  "name": "result",
+                  "symbol_id": "symbol_b3a9e120d787222897667edd"
+                }
+              },
+              "value": {
+                "id": "expression:atom_8f0ddfca2b5d4bb399cb6bb74494afaf:value",
+                "role": "value",
+                "tree": {
+                  "id": "expression:atom_8f0ddfca2b5d4bb399cb6bb74494afaf:value:parse:1481eabfb944430cbd7af68e0c9f37f9:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "binary",
+                  "left": {
+                    "id": "expression:atom_8f0ddfca2b5d4bb399cb6bb74494afaf:value:parse:1481eabfb944430cbd7af68e0c9f37f9:node:ddf0086c4fc387b360c7953f66ab9eba6655b06a5685dc398f7a9e9e1cad12e7",
+                    "kind": "literal",
+                    "literal_kind": null,
+                    "value": {
+                      "kind": "int",
+                      "value": "6"
+                    }
+                  },
+                  "operator": "*",
+                  "right": {
+                    "id": "expression:atom_8f0ddfca2b5d4bb399cb6bb74494afaf:value:parse:1481eabfb944430cbd7af68e0c9f37f9:node:796c90172466c34ca7a937a2c03c37ee45ef346ae2920b6a040377f0e30934cb",
+                    "kind": "literal",
+                    "literal_kind": null,
+                    "value": {
+                      "kind": "int",
+                      "value": "7"
+                    }
+                  }
+                }
+              },
+              "written_symbol_ids": [
+                "symbol_b3a9e120d787222897667edd"
+              ]
+            },
+            {
+              "destination": null,
+              "end": null,
+              "expression": {
+                "id": "expression:atom_c7ee0ff5b3364aa8b40f514450d46976:expression",
+                "role": "expression",
+                "tree": {
+                  "fields": [
+                    {
+                      "name": "values",
+                      "value": {
+                        "items": [
+                          {
+                            "value": {
+                              "id": "expression:atom_c7ee0ff5b3364aa8b40f514450d46976:expression:parse:469c6cc70e004a4a841e16fb65c3ec01:node:7204e20b9118786ae03a6b6211539e0df7a4b51889af109e010500b96d973591",
+                              "kind": "literal",
+                              "literal_kind": null,
+                              "value": {
+                                "kind": "str",
+                                "value": "The answer is "
+                              }
+                            },
+                            "value_kind": "node"
+                          },
+                          {
+                            "value": {
+                              "fields": [
+                                {
+                                  "name": "value",
+                                  "value": {
+                                    "value": {
+                                      "context": "load",
+                                      "id": "expression:atom_c7ee0ff5b3364aa8b40f514450d46976:expression:parse:469c6cc70e004a4a841e16fb65c3ec01:node:5d6c6b2ead35467f243c53551bd0d8d8eb9ed124fb5d55cdda4cd10c5c8be734",
+                                      "kind": "symbol",
+                                      "name": "result",
+                                      "symbol_id": "symbol_b3a9e120d787222897667edd"
+                                    },
+                                    "value_kind": "node"
+                                  }
+                                },
+                                {
+                                  "name": "conversion",
+                                  "value": {
+                                    "value": {
+                                      "kind": "int",
+                                      "value": "-1"
+                                    },
+                                    "value_kind": "scalar"
+                                  }
+                                },
+                                {
+                                  "name": "format_spec",
+                                  "value": {
+                                    "value": {
+                                      "kind": "none",
+                                      "value": ""
+                                    },
+                                    "value_kind": "scalar"
+                                  }
+                                }
+                              ],
+                              "id": "expression:atom_c7ee0ff5b3364aa8b40f514450d46976:expression:parse:469c6cc70e004a4a841e16fb65c3ec01:node:5e145cabaabaf36bb221dea92f1d1335ecca8bd218bf84601de528cf3fbc2a0d",
+                              "kind": "composite",
+                              "python_kind": "FormattedValue"
+                            },
+                            "value_kind": "node"
+                          }
+                        ],
+                        "value_kind": "list"
+                      }
+                    }
+                  ],
+                  "id": "expression:atom_c7ee0ff5b3364aa8b40f514450d46976:expression:parse:469c6cc70e004a4a841e16fb65c3ec01:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "composite",
+                  "python_kind": "JoinedStr"
+                }
+              },
+              "id": "atom_c7ee0ff5b3364aa8b40f514450d46976",
+              "kind": "output"
+            }
+          ]
+        },
+        "decorators": [],
+        "display_name": "main",
+        "docstring": null,
+        "id": "diagram_9e9e0bf253244961bff012f4fd3b38b3",
+        "identifier": "main",
+        "kind": "sync",
+        "method_kind": null,
+        "parameters": [],
+        "return_annotation": null,
+        "symbol_id": "symbol_50302ba295892ea697950edb",
+        "type_parameters": []
+      }
+    ],
+    "modules": [
+      {
+        "body": [
+          {
+            "function_id": "diagram_9e9e0bf253244961bff012f4fd3b38b3",
+            "kind": "function_reference"
+          }
+        ],
+        "docstring": "",
+        "id": "module:app.main",
+        "kind": "module",
+        "path": "main"
+      }
+    ],
+    "package": "app",
+    "symbols": [
+      {
+        "declaration_id": "diagram_9e9e0bf253244961bff012f4fd3b38b3",
+        "id": "symbol_50302ba295892ea697950edb",
+        "kind": "function",
+        "name": "main",
+        "owner_id": "diagram_9e9e0bf253244961bff012f4fd3b38b3"
+      },
+      {
+        "declaration_id": "atom_8f0ddfca2b5d4bb399cb6bb74494afaf",
+        "id": "symbol_b3a9e120d787222897667edd",
+        "kind": "local",
+        "name": "result",
+        "owner_id": "diagram_9e9e0bf253244961bff012f4fd3b38b3"
+      }
+    ]
+  },
+  "project_id": "project_e729cc0517ff472696b53b57911ce3fa",
+  "projection_definitions": [],
+  "revision": 6,
+  "runtime_settings": {
+    "active_run_profile": "Default",
+    "run_profiles": [
+      {
+        "arguments": "",
+        "environment": [],
+        "interpreter": "",
+        "name": "Default",
+        "working_directory": "."
+      }
+    ]
+  },
+  "semantic_relations": [],
+  "shape_packs": [],
+  "title": "Values and Assignment Example"
+}

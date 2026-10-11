@@ -1,0 +1,63 @@
+syntax = "proto3";
+package code_visualizer.protocol.v1;
+import "code_visualizer/protocol/v1/value.proto";
+import "code_visualizer/protocol/v1/identity.proto";
+
+message ComputationParameter { string name = 1; CanonicalValue value = 2; }
+enum BackendExecutionMode {
+  BACKEND_EXECUTION_MODE_UNSPECIFIED = 0; MODE_BATCH = 1; MODE_STREAMING = 2;
+}
+message BackendCapabilities {
+  BackendExecutionMode execution_mode = 1;
+  bool progress = 2; bool observations = 3; bool cancellation = 4;
+  bool deterministic = 5; bool seeded = 6; bool external_worker = 7;
+  bool publications = 8;
+}
+message BackendDefinition {
+  uint32 schema_version = 1;
+  string id = 2; string version = 3; string title = 4;
+  VersionedReference input_representation = 5;
+  optional string input_schema_id = 6; optional string input_schema_version = 7;
+  string description = 8;
+  uint32 api_version = 9;
+  BackendCapabilities capabilities = 10;
+}
+message ComputationRequest {
+  uint32 schema_version = 1;
+  string project_id = 2; uint64 revision = 3; string backend_id = 4; string backend_version = 5;
+  optional string model_id = 6; repeated ComputationParameter configuration = 7;
+  IntegerValue seed = 8; repeated ResourceReference resources = 9;
+  repeated ResourceInput inputs = 10;
+  repeated ResourceOutput outputs = 11;
+}
+message ResourceInput {
+  string name = 1; ResourceReference resource = 2; VersionedReference logical_type = 3;
+}
+message ResourceOutput {
+  string name = 1; VersionedReference logical_type = 2;
+  repeated string semantic_ids = 3; bool required = 4;
+}
+message ComputationPlan {
+  uint32 schema_version = 1;
+  ComputationRequest request = 2; VersionedReference representation = 3;
+  ResourceReference model = 4; repeated string transformations = 5;
+  OriginMap origins = 6; string input_digest = 7;
+}
+enum ComputationStatus {
+  COMPUTATION_STATUS_UNSPECIFIED = 0; STATUS_QUEUED = 1; STATUS_RUNNING = 2;
+  STATUS_SUCCEEDED = 3; STATUS_FAILED = 4; STATUS_CANCELLED = 5;
+}
+message ComputationSession {
+  uint32 schema_version = 1;
+  string id = 2; string project_id = 3; uint64 revision = 4;
+  string backend_id = 5; string backend_version = 6; ComputationStatus status = 7;
+  bool cancellation_supported = 8; optional string evidence_id = 9;
+}
+message ProgressEvent {
+  uint32 schema_version = 1;
+  string session_id = 2; uint64 sequence = 3; double completed = 4;
+  optional double total = 5; string message = 6;
+}
+message CancelRequest {
+  uint32 schema_version = 1; string session_id = 2; string reason = 3;
+}

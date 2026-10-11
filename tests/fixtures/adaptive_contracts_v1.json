@@ -1,0 +1,19 @@
+{
+  "metadata_sha256": {
+    "CellHistory": [
+      "77e0cca9fe0c151550f94b888799f263dd2a923c9b202a7e6e0706e0b4cdae49"
+    ],
+    "CellInterpretation": [
+      "a95c4c27bb415b172bd3eda874ccee5ea7db2374dd6a9551ee25c0a63e8a6e81",
+      "db157797d254d287e60edf4bf290f7781edddf31ddeb73e71669870c04099765"
+    ],
+    "CellSupport": [
+      "94f71257569e9ed34b253ec54ca395c6d7e9b7e884537b1e098d7323d29e50e3",
+      "efb6f0da4c685ca5d1a4becf6b4f2f7d051741c9616b4bfcd7059c64dbede4ad"
+    ],
+    "CellTransfer": [
+      "89138328395ad4869eb8975b1186a8d0466d487ceb557db612db3edf2f6b6a8b",
+      "a809f8f5583b3d97d06b759c437d2433395b3ce6b2edc4eccd6496f6f5bfd0fd"
+    ]
+  }
+}

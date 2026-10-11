@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="-1 -1 738 626" width="738" height="626">
+<title>DRAKON algorithm</title>
+<style>.field{fill:#dff4f8}.route,.divider{fill:none;stroke:#111827;stroke-width:2}.icon{fill:#fff;stroke:#111827;stroke-width:2;stroke-linejoin:round}.code,.route-label{fill:#111827;font-family:'DejaVu Sans Mono',monospace;font-size:13px}</style>
+<rect x="-1" y="-1" width="738" height="626" class="field"/>
+<line id="route_0001" data-insertion-boundary="sequence_root:0" x1="156" y1="80" x2="156" y2="112" class="route"/>
+<line id="route_0002" data-insertion-boundary="sequence_root:1" x1="156" y1="160" x2="156" y2="192" class="route"/>
+<line id="route_0003" data-insertion-boundary="sequence_reject:0" x1="320" y1="216" x2="540" y2="216" class="route"/>
+<line id="route_0004" data-insertion-boundary="sequence_reject:0" x1="540" y1="216" x2="540" y2="240" class="route"/>
+<line id="route_0005" data-insertion-boundary="sequence_process:0" x1="156" y1="240" x2="156" y2="272" class="route"/>
+<line id="route_0006" data-insertion-boundary="sequence_process:1" x1="156" y1="320" x2="156" y2="352" class="route"/>
+<line id="route_0007" data-insertion-boundary="sequence_reject:0" x1="540" y1="240" x2="540" y2="272" class="route"/>
+<line id="route_0008" data-insertion-boundary="sequence_process:2" x1="156" y1="400" x2="156" y2="432" class="route"/>
+<line id="route_0009" data-insertion-boundary="sequence_reject:1" x1="540" y1="320" x2="540" y2="432" class="route"/>
+<line id="route_0010" data-insertion-boundary="sequence_reject:1" x1="540" y1="432" x2="156" y2="432" class="route"/>
+<line id="route_0011" data-insertion-boundary="sequence_root:2" x1="156" y1="432" x2="156" y2="464" class="route"/>
+<line id="route_0012" data-insertion-boundary="sequence_root:3" x1="156" y1="512" x2="156" y2="544" class="route"/>
+<g id="header_route_demo" aria-label="Function Header: route demo · route_demo()">
+<rect x="32" y="32" width="248" height="48" rx="16" class="icon"/>
+<text x="48" y="63.04" class="code">route demo · route_demo()</text>
+</g>
+<g id="action_receive" aria-label="Action: print(&quot;receive request&quot;)">
+<polygon points="32,112 280,112 280,160 32,160" class="icon"/>
+<text x="48" y="143.04" class="code">print(&quot;receive request&quot;)</text>
+</g>
+<g id="if_request_validity" aria-label="If Question: request_is_invalid">
+<polygon points="32,192 280,192 320,216 280,240 32,240" class="icon"/>
+<line x1="280" y1="192" x2="280" y2="240" class="divider"/>
+<text x="48" y="223.04" class="code">request_is_invalid</text>
+</g>
+<g id="action_process" aria-label="Action: print(&quot;process request&quot;)">
+<polygon points="32,272 280,272 280,320 32,320" class="icon"/>
+<text x="48" y="303.04" class="code">print(&quot;process request&quot;)</text>
+</g>
+<g id="action_record" aria-label="Action: print(&quot;record success&quot;)">
+<polygon points="32,352 280,352 280,400 32,400" class="icon"/>
+<text x="48" y="383.04" class="code">print(&quot;record success&quot;)</text>
+</g>
+<g id="output_rejection" aria-label="Output: &quot;request rejected&quot;">
+<polygon points="416,272 664,272 704,296 664,320 416,320" class="icon"/>
+<line x1="664" y1="272" x2="664" y2="320" class="divider"/>
+<text x="432" y="303.04" class="code">&quot;request rejected&quot;</text>
+</g>
+<g id="output_complete" aria-label="Output: &quot;complete&quot;">
+<polygon points="32,464 280,464 320,488 280,512 32,512" class="icon"/>
+<line x1="280" y1="464" x2="280" y2="512" class="divider"/>
+<text x="48" y="495.04" class="code">&quot;complete&quot;</text>
+</g>
+<g id="end_route_demo" aria-label="End: End">
+<rect x="32" y="544" width="248" height="48" rx="24" class="icon"/>
+<text x="48" y="575.04" class="code">End</text>
+</g>
+<text x="164" y="257" class="route-label">False · preferred</text>
+<text x="328" y="209" class="route-label">True · alternate</text>
+</svg>

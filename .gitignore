@@ -1,0 +1,40 @@
+# Local runtimes and Python/tool caches
+.venv/
+.venv-*/
+.runtime/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache*/
+.pytest-cache-*/
+.pytest_tmp*/
+.mypy*/
+.ruff_cache/
+.hypothesis/
+.test-*
+.profile-*/
+.font-download/
+.coverage
+.coverage.*
+htmlcov/
+*.log
+
+# Generated builds and local releases
+build/
+dist/
+wheels/
+generated/
+/artifacts/*
+!/artifacts/performance/
+/artifacts/performance/*
+!/artifacts/performance/m9-scale-results.json
+!/artifacts/performance/README.md
+
+# Local machine/account state
+.env
+.env.*
+!.env.example
+.aws/
+.codex/
+.DS_Store
+Thumbs.db

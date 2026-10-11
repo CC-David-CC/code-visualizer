@@ -1,0 +1,43 @@
+name: quality
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+        python-version: ["3.12", "3.13"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m pip install -e ".[dev,debug,release,science,cad,fields]"
+      - run: python -m ruff check src tests tools packaging
+      - run: python -m ruff format --check src tests tools packaging
+      - run: python -m mypy src
+      - run: python tools/generate_protocol.py --check
+      - run: python -m pytest
+        env:
+          QT_QPA_PLATFORM: offscreen
+      - run: python -m build
+      - run: python tools/smoke_wheel.py dist
+
+  package:
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install ".[release]"
+      - run: python tools/build_source_release.py --skip-download
+        env:
+          QT_QPA_PLATFORM: offscreen

@@ -1,0 +1,43 @@
+syntax = "proto3";
+package code_visualizer.protocol.v1;
+import "code_visualizer/protocol/v1/value.proto";
+import "code_visualizer/protocol/v1/computation.proto";
+import "code_visualizer/protocol/v1/identity.proto";
+
+message EvidenceObservation {
+  string id = 1; repeated string semantic_ids = 2; CanonicalValue value = 3;
+  string label = 4; uint64 sequence = 5;
+}
+message EvidenceArtifact {
+  string id = 1; ResourceReference resource = 2; repeated string semantic_ids = 3; string label = 4;
+}
+message EvidenceDiagnostic { string code = 1; string message = 2; repeated string semantic_ids = 3; }
+message EvidenceProvenance {
+  string project_id = 1; uint64 revision = 2; optional string source_model_id = 3;
+  string backend_id = 4; string backend_version = 5; string input_digest = 6;
+  repeated ComputationParameter configuration = 7; IntegerValue seed = 8;
+  repeated ResourceReference resources = 9; repeated string transformations = 10;
+  OriginMap origins = 11;
+  ResourceReference terminal_resource = 12;
+}
+enum ComputationOutcome {
+  COMPUTATION_OUTCOME_UNSPECIFIED = 0; COMPUTATION_SUCCEEDED = 1;
+  COMPUTATION_FAILED = 2; COMPUTATION_CANCELLED = 3;
+}
+message ComputationEvidence {
+  uint32 schema_version = 1;
+  string id = 2; EvidenceProvenance provenance = 3; ComputationOutcome outcome = 4;
+  repeated EvidenceObservation observations = 5; repeated EvidenceArtifact artifacts = 6;
+  repeated EvidenceDiagnostic diagnostics = 7;
+}
+message ObservationEvent {
+  uint32 schema_version = 1; string session_id = 2; EvidenceObservation observation = 3;
+}
+message EvidencePublication {
+  uint32 schema_version = 1;
+  string id = 2; EvidenceProvenance provenance = 3; EvidenceArtifact artifact = 4;
+}
+message PublicationEvent {
+  uint32 schema_version = 1;
+  string session_id = 2; uint64 sequence = 3; EvidencePublication publication = 4;
+}

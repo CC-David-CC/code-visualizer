@@ -1,0 +1,96 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "code-visualizer"
+version = "0.1.0"
+description = "A source-informed, from-scratch DRAKON Python development studio."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "Code Visualizer contributors" }]
+dependencies = [
+    "PySide6>=6.8,<7",
+    "Pillow>=11,<13",
+    "websockets>=14,<17",
+    "protobuf==6.33.5",
+]
+
+[project.optional-dependencies]
+fields = [
+    "pint==0.26.1",
+    "sympy==1.14.0",
+    "numpy==2.5.3",
+    "scipy==1.18.1",
+]
+cad = [
+    "pint==0.26.1",
+    "sympy==1.14.0",
+    "numpy==2.5.3",
+    "build123d==0.11.1",
+    "cadquery-ocp-novtk==7.9.3.1.1",
+    "cadquery-ocp-proxy==7.9.3.1.1",
+]
+science = [
+    "pint==0.26.1",
+    "sympy==1.14.0",
+    "numpy==2.5.3",
+]
+debug = ["debugpy>=1.8,<2"]
+release = [
+    "build>=1.2,<2",
+    "pyinstaller>=6.11,<7",
+]
+dev = [
+    "hypothesis>=6.120,<7",
+    "mypy>=1.13,<2",
+    "pytest>=8.3,<10",
+    "pytest-qt>=4.4,<5",
+    "ruff>=0.9,<1",
+    "grpcio-tools==1.78.0",
+    "types-protobuf==6.32.1.20260221",
+]
+
+[project.scripts]
+code-visualizer = "code_visualizer.cli:main"
+code-visualizer-gui = "code_visualizer.ui_qt.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+code_visualizer = ["resources/*.json", "resources/fonts/*.ttf", "resources/fonts/*.txt", "resources/sparta/*", "resources/hybrid_gas/*.json", "resources/hybrid_gas/resources/descriptors/*.json", "resources/hybrid_gas/resources/sha256/*/*", "protocol/v1/*.proto", "protocol/v1/*.pyi"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-config --strict-markers --basetemp=.test-tmp"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = ["artifacts", ".test-*", "*_pb2.py", "*_pb2.pyi"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "C4", "SIM", "RUF"]
+
+# Imported review evidence is retained byte-for-byte; other lint checks still apply.
+[tool.ruff.lint.per-file-ignores]
+"tests/test_review_generated_name_hygiene.py" = ["I001"]
+
+[tool.ruff.format]
+exclude = ["tests/test_review_generated_name_hygiene.py"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unreachable = true
+pretty = true
+packages = ["code_visualizer"]
+
+[[tool.mypy.overrides]]
+module = ["code_visualizer.protocol.v1.*"]
+ignore_errors = true
+
+[tool.coverage.run]
+branch = true
+source = ["code_visualizer"]

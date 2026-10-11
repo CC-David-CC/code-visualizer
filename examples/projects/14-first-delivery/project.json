@@ -1,0 +1,983 @@
+{
+  "concepts": [
+    {
+      "description": "Start with output, add a visible choice, then introduce iteration.",
+      "id": "concept_first_delivery_happy_path",
+      "member_ids": [
+        "diagram_first_hello",
+        "output_first_hello",
+        "diagram_first_decision",
+        "if_first_positive",
+        "diagram_first_loop",
+        "loop_first_three"
+      ],
+      "tags": [
+        "learning",
+        "happy-path"
+      ],
+      "title": "First delivery happy path"
+    }
+  ],
+  "description": "A deliberately small executable program with DRAKON, mind-map, and free-form views anchored to shared semantic identities; unanchored objects remain annotations.",
+  "documents": [
+    {
+      "description": "The smallest complete generated Python application: one Output operation.",
+      "extensions": [],
+      "id": "diagram_first_hello",
+      "kind": "drakon",
+      "title": "Hello World"
+    },
+    {
+      "description": "Truth and preference are distinct: True is explicitly bound to the vertical preferred route in this example.",
+      "extensions": [],
+      "id": "diagram_first_decision",
+      "kind": "drakon",
+      "title": "Preferred route decision"
+    },
+    {
+      "description": "A compact Python iterable For whose body remains inside the loop graphic.",
+      "extensions": [],
+      "id": "diagram_first_loop",
+      "kind": "drakon",
+      "title": "Small iterable loop"
+    },
+    {
+      "cross_links": [
+        {
+          "id": "cross_first_feedback",
+          "label": "feedback",
+          "label_override": null,
+          "semantic_relation_id": null,
+          "source_topic_id": "topic_first_verify",
+          "target_topic_id": "topic_first_design"
+        }
+      ],
+      "extensions": [],
+      "id": "diagram_first_mind_map",
+      "kind": "mind_map",
+      "layout": "balanced",
+      "live_projection": null,
+      "root": {
+        "attachments": [],
+        "children": [
+          {
+            "attachments": [],
+            "children": [
+              {
+                "attachments": [],
+                "children": [],
+                "collapsed": false,
+                "id": "topic_first_happy",
+                "label_override": null,
+                "links": [],
+                "notes": "",
+                "semantic_id": null,
+                "text": "Teach the happy path"
+              },
+              {
+                "attachments": [],
+                "children": [],
+                "collapsed": false,
+                "id": "topic_first_readable",
+                "label_override": null,
+                "links": [],
+                "notes": "",
+                "semantic_id": "loop_first_three",
+                "text": "Keep every icon readable"
+              }
+            ],
+            "collapsed": false,
+            "id": "topic_first_design",
+            "label_override": null,
+            "links": [],
+            "notes": "Prefer direct, visible controls over hidden properties.",
+            "semantic_id": "diagram_first_hello",
+            "text": "Design"
+          },
+          {
+            "attachments": [],
+            "children": [
+              {
+                "attachments": [],
+                "children": [],
+                "collapsed": false,
+                "id": "topic_first_run",
+                "label_override": null,
+                "links": [],
+                "notes": "",
+                "semantic_id": "output_first_hello",
+                "text": "Run generated Python"
+              },
+              {
+                "attachments": [],
+                "children": [],
+                "collapsed": false,
+                "id": "topic_first_export",
+                "label_override": null,
+                "links": [],
+                "notes": "",
+                "semantic_id": null,
+                "text": "Inspect all three export modes"
+              }
+            ],
+            "collapsed": false,
+            "id": "topic_first_verify",
+            "label_override": null,
+            "links": [],
+            "notes": "",
+            "semantic_id": "diagram_first_decision",
+            "text": "Verify"
+          },
+          {
+            "attachments": [],
+            "children": [],
+            "collapsed": false,
+            "id": "topic_first_share",
+            "label_override": null,
+            "links": [],
+            "notes": "",
+            "semantic_id": null,
+            "text": "Share and extend"
+          }
+        ],
+        "collapsed": false,
+        "id": "topic_first_root",
+        "label_override": null,
+        "links": [],
+        "notes": "",
+        "semantic_id": "project_first_delivery",
+        "text": "Deliver a useful visual Python project"
+      },
+      "title": "First delivery plan"
+    },
+    {
+      "extensions": [],
+      "grid_size": 20.0,
+      "guides": [],
+      "id": "diagram_first_freeform",
+      "kind": "freeform",
+      "layers": [
+        {
+          "hidden": false,
+          "id": "layer_default",
+          "locked": false,
+          "name": "Layer 1"
+        }
+      ],
+      "live_projection": null,
+      "objects": [
+        {
+          "asset_id": null,
+          "bounds": {
+            "height": 82.0,
+            "width": 180.0,
+            "x": 20.0,
+            "y": 40.0
+          },
+          "fill": "#dbeafe",
+          "group_id": null,
+          "hidden": false,
+          "id": "shape_first_input",
+          "kind": "shape",
+          "label_override": null,
+          "layer_id": "layer_default",
+          "locked": false,
+          "points": [],
+          "rotation": 0.0,
+          "semantic_id": null,
+          "shape": "rounded_rectangle",
+          "stroke": "#1d4ed8",
+          "text": "Human or agent edit",
+          "z_index": 0
+        },
+        {
+          "asset_id": null,
+          "bounds": {
+            "height": 82.0,
+            "width": 190.0,
+            "x": 280.0,
+            "y": 40.0
+          },
+          "fill": "#dcfce7",
+          "group_id": null,
+          "hidden": false,
+          "id": "shape_first_authority",
+          "kind": "shape",
+          "label_override": null,
+          "layer_id": "layer_default",
+          "locked": false,
+          "points": [],
+          "rotation": 0.0,
+          "semantic_id": "project_first_delivery",
+          "shape": "rounded_rectangle",
+          "stroke": "#15803d",
+          "text": "Single project authority",
+          "z_index": 1
+        },
+        {
+          "asset_id": null,
+          "bounds": {
+            "height": 82.0,
+            "width": 190.0,
+            "x": 550.0,
+            "y": 40.0
+          },
+          "fill": "#fef3c7",
+          "group_id": null,
+          "hidden": false,
+          "id": "shape_first_output",
+          "kind": "shape",
+          "label_override": null,
+          "layer_id": "layer_default",
+          "locked": false,
+          "points": [],
+          "rotation": 0.0,
+          "semantic_id": "diagram_first_hello",
+          "shape": "rounded_rectangle",
+          "stroke": "#b45309",
+          "text": "Diagram + Python artifacts",
+          "z_index": 2
+        },
+        {
+          "arrow_end": true,
+          "arrow_start": false,
+          "id": "connector_first_input",
+          "kind": "connector",
+          "label": "semantic command",
+          "label_override": null,
+          "layer_id": "layer_default",
+          "locked": false,
+          "orthogonal": true,
+          "points": [],
+          "semantic_relation_id": null,
+          "source_id": "shape_first_input",
+          "target_id": "shape_first_authority"
+        },
+        {
+          "arrow_end": true,
+          "arrow_start": false,
+          "id": "connector_first_output",
+          "kind": "connector",
+          "label": "one revision",
+          "label_override": null,
+          "layer_id": "layer_default",
+          "locked": false,
+          "orthogonal": true,
+          "points": [],
+          "semantic_relation_id": null,
+          "source_id": "shape_first_authority",
+          "target_id": "shape_first_output"
+        }
+      ],
+      "snap_to_grid": true,
+      "title": "First delivery architecture"
+    }
+  ],
+  "domain_workspace": {
+    "bundle_references": [],
+    "language_definitions": [],
+    "models": [],
+    "schemas": []
+  },
+  "drakon_views": [
+    {
+      "document_id": "diagram_first_hello",
+      "end_id": "end_first_hello",
+      "function_id": "diagram_first_hello",
+      "header_id": "header_first_hello",
+      "title": "Hello World"
+    },
+    {
+      "document_id": "diagram_first_decision",
+      "end_id": "end_first_decision",
+      "function_id": "diagram_first_decision",
+      "header_id": "header_first_decision",
+      "title": "Preferred route decision"
+    },
+    {
+      "document_id": "diagram_first_loop",
+      "end_id": "end_first_loop",
+      "function_id": "diagram_first_loop",
+      "header_id": "header_first_loop",
+      "title": "Small iterable loop"
+    }
+  ],
+  "extensions": [],
+  "format_revision": 11,
+  "managed_assets": [],
+  "program_model": {
+    "entrypoint": {
+      "arguments": {
+        "keywords": [],
+        "kind": "literal",
+        "positional": []
+      },
+      "callable_id": "diagram_first_hello",
+      "id": "entrypoint:project_first_delivery",
+      "startup": []
+    },
+    "functions": [
+      {
+        "body": {
+          "id": "sequence_first_hello",
+          "statements": [
+            {
+              "destination": null,
+              "end": null,
+              "expression": {
+                "id": "expression:output_first_hello:expression",
+                "role": "expression",
+                "tree": {
+                  "id": "expression:output_first_hello:expression:parse:initial:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "literal",
+                  "literal_kind": null,
+                  "value": {
+                    "kind": "str",
+                    "value": "Hello, world!"
+                  }
+                }
+              },
+              "id": "output_first_hello",
+              "kind": "output"
+            }
+          ]
+        },
+        "decorators": [],
+        "display_name": "Hello World",
+        "docstring": null,
+        "id": "diagram_first_hello",
+        "identifier": "main",
+        "kind": "sync",
+        "method_kind": null,
+        "parameters": [],
+        "return_annotation": null,
+        "symbol_id": "symbol_ebbc8e8bf31c1962140d0e72",
+        "type_parameters": []
+      },
+      {
+        "body": {
+          "id": "sequence_first_decision",
+          "statements": [
+            {
+              "condition": {
+                "id": "expression:if_first_positive:condition",
+                "role": "condition",
+                "tree": {
+                  "fields": [
+                    {
+                      "name": "left",
+                      "value": {
+                        "value": {
+                          "context": "load",
+                          "id": "expression:if_first_positive:condition:parse:initial:node:ddf0086c4fc387b360c7953f66ab9eba6655b06a5685dc398f7a9e9e1cad12e7",
+                          "kind": "symbol",
+                          "name": "value",
+                          "symbol_id": "symbol_d1859936342d3e756970af7d"
+                        },
+                        "value_kind": "node"
+                      }
+                    },
+                    {
+                      "name": "ops",
+                      "value": {
+                        "items": [
+                          {
+                            "value": {
+                              "fields": [],
+                              "id": "expression:if_first_positive:condition:parse:initial:node:3fe0c7d2fd664c934dee999e99793feb61f1c00bef74df9609c8204a14c15751",
+                              "kind": "composite",
+                              "python_kind": "GtE"
+                            },
+                            "value_kind": "node"
+                          }
+                        ],
+                        "value_kind": "list"
+                      }
+                    },
+                    {
+                      "name": "comparators",
+                      "value": {
+                        "items": [
+                          {
+                            "value": {
+                              "id": "expression:if_first_positive:condition:parse:initial:node:48fed222ee292b1d3b8e46f6dc2ac1da9e0284ba94ddd81c3f4434e5f58b7160",
+                              "kind": "literal",
+                              "literal_kind": null,
+                              "value": {
+                                "kind": "int",
+                                "value": "0"
+                              }
+                            },
+                            "value_kind": "node"
+                          }
+                        ],
+                        "value_kind": "list"
+                      }
+                    }
+                  ],
+                  "id": "expression:if_first_positive:condition:parse:initial:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "composite",
+                  "python_kind": "Compare"
+                }
+              },
+              "false_branch": {
+                "id": "sequence_first_negative",
+                "statements": [
+                  {
+                    "destination": null,
+                    "end": null,
+                    "expression": {
+                      "id": "expression:output_first_negative:expression",
+                      "role": "expression",
+                      "tree": {
+                        "id": "expression:output_first_negative:expression:parse:initial:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                        "kind": "literal",
+                        "literal_kind": null,
+                        "value": {
+                          "kind": "str",
+                          "value": "right branch / False: negative"
+                        }
+                      }
+                    },
+                    "id": "output_first_negative",
+                    "kind": "output"
+                  }
+                ]
+              },
+              "id": "if_first_positive",
+              "kind": "if",
+              "preferred_truth": true,
+              "true_branch": {
+                "id": "sequence_first_positive",
+                "statements": [
+                  {
+                    "destination": null,
+                    "end": null,
+                    "expression": {
+                      "id": "expression:output_first_positive:expression",
+                      "role": "expression",
+                      "tree": {
+                        "id": "expression:output_first_positive:expression:parse:initial:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                        "kind": "literal",
+                        "literal_kind": null,
+                        "value": {
+                          "kind": "str",
+                          "value": "preferred / True: non-negative"
+                        }
+                      }
+                    },
+                    "id": "output_first_positive",
+                    "kind": "output"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "decorators": [],
+        "display_name": "Describe a number",
+        "docstring": null,
+        "id": "diagram_first_decision",
+        "identifier": "describe_sign",
+        "kind": "sync",
+        "method_kind": null,
+        "parameters": [
+          {
+            "annotation": {
+              "id": "expression:parameter_cd075d89b2975694d3fd94ac:annotation",
+              "role": "annotation",
+              "tree": {
+                "context": "load",
+                "id": "expression:parameter_cd075d89b2975694d3fd94ac:annotation:parse:initial:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                "kind": "symbol",
+                "name": "int",
+                "symbol_id": null
+              }
+            },
+            "default": {
+              "id": "expression:parameter_cd075d89b2975694d3fd94ac:default",
+              "role": "default",
+              "tree": {
+                "id": "expression:parameter_cd075d89b2975694d3fd94ac:default:parse:initial:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                "kind": "literal",
+                "literal_kind": null,
+                "value": {
+                  "kind": "int",
+                  "value": "1"
+                }
+              }
+            },
+            "id": "parameter_cd075d89b2975694d3fd94ac",
+            "kind": "positional_or_keyword",
+            "name": "value",
+            "symbol_id": "symbol_d1859936342d3e756970af7d"
+          }
+        ],
+        "return_annotation": null,
+        "symbol_id": "symbol_99aac8f4543d23f9c8778421",
+        "type_parameters": []
+      },
+      {
+        "body": {
+          "id": "sequence_first_loop",
+          "statements": [
+            {
+              "body": {
+                "id": "sequence_first_loop_body",
+                "statements": [
+                  {
+                    "destination": null,
+                    "end": null,
+                    "expression": {
+                      "id": "expression:output_first_loop_value:expression",
+                      "role": "expression",
+                      "tree": {
+                        "fields": [
+                          {
+                            "name": "values",
+                            "value": {
+                              "items": [
+                                {
+                                  "value": {
+                                    "id": "expression:output_first_loop_value:expression:parse:initial:node:7204e20b9118786ae03a6b6211539e0df7a4b51889af109e010500b96d973591",
+                                    "kind": "literal",
+                                    "literal_kind": null,
+                                    "value": {
+                                      "kind": "str",
+                                      "value": "loop value: "
+                                    }
+                                  },
+                                  "value_kind": "node"
+                                },
+                                {
+                                  "value": {
+                                    "fields": [
+                                      {
+                                        "name": "value",
+                                        "value": {
+                                          "value": {
+                                            "context": "load",
+                                            "id": "expression:output_first_loop_value:expression:parse:initial:node:5d6c6b2ead35467f243c53551bd0d8d8eb9ed124fb5d55cdda4cd10c5c8be734",
+                                            "kind": "symbol",
+                                            "name": "number",
+                                            "symbol_id": "symbol_1538353c97e33afa5fe16878"
+                                          },
+                                          "value_kind": "node"
+                                        }
+                                      },
+                                      {
+                                        "name": "conversion",
+                                        "value": {
+                                          "value": {
+                                            "kind": "int",
+                                            "value": "-1"
+                                          },
+                                          "value_kind": "scalar"
+                                        }
+                                      },
+                                      {
+                                        "name": "format_spec",
+                                        "value": {
+                                          "value": {
+                                            "kind": "none",
+                                            "value": ""
+                                          },
+                                          "value_kind": "scalar"
+                                        }
+                                      }
+                                    ],
+                                    "id": "expression:output_first_loop_value:expression:parse:initial:node:5e145cabaabaf36bb221dea92f1d1335ecca8bd218bf84601de528cf3fbc2a0d",
+                                    "kind": "composite",
+                                    "python_kind": "FormattedValue"
+                                  },
+                                  "value_kind": "node"
+                                }
+                              ],
+                              "value_kind": "list"
+                            }
+                          }
+                        ],
+                        "id": "expression:output_first_loop_value:expression:parse:initial:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                        "kind": "composite",
+                        "python_kind": "JoinedStr"
+                      }
+                    },
+                    "id": "output_first_loop_value",
+                    "kind": "output"
+                  }
+                ]
+              },
+              "children": {
+                "id": "expression:loop_first_three:children",
+                "role": "expression",
+                "tree": {
+                  "fields": [
+                    {
+                      "name": "args",
+                      "value": {
+                        "value": {
+                          "fields": [
+                            {
+                              "name": "posonlyargs",
+                              "value": {
+                                "items": [],
+                                "value_kind": "list"
+                              }
+                            },
+                            {
+                              "name": "args",
+                              "value": {
+                                "items": [
+                                  {
+                                    "value": {
+                                      "fields": [
+                                        {
+                                          "name": "arg",
+                                          "value": {
+                                            "value": {
+                                              "kind": "str",
+                                              "value": "node"
+                                            },
+                                            "value_kind": "scalar"
+                                          }
+                                        },
+                                        {
+                                          "name": "annotation",
+                                          "value": {
+                                            "value": {
+                                              "kind": "none",
+                                              "value": ""
+                                            },
+                                            "value_kind": "scalar"
+                                          }
+                                        },
+                                        {
+                                          "name": "type_comment",
+                                          "value": {
+                                            "value": {
+                                              "kind": "none",
+                                              "value": ""
+                                            },
+                                            "value_kind": "scalar"
+                                          }
+                                        }
+                                      ],
+                                      "id": "expression:loop_first_three:children:parse:initial:node:ba6284ea6c9d970bbb95c1ceb4483fd22338655d0a9da322757a69d18744f76d",
+                                      "kind": "composite",
+                                      "python_kind": "arg"
+                                    },
+                                    "value_kind": "node"
+                                  }
+                                ],
+                                "value_kind": "list"
+                              }
+                            },
+                            {
+                              "name": "vararg",
+                              "value": {
+                                "value": {
+                                  "kind": "none",
+                                  "value": ""
+                                },
+                                "value_kind": "scalar"
+                              }
+                            },
+                            {
+                              "name": "kwonlyargs",
+                              "value": {
+                                "items": [],
+                                "value_kind": "list"
+                              }
+                            },
+                            {
+                              "name": "kw_defaults",
+                              "value": {
+                                "items": [],
+                                "value_kind": "list"
+                              }
+                            },
+                            {
+                              "name": "kwarg",
+                              "value": {
+                                "value": {
+                                  "kind": "none",
+                                  "value": ""
+                                },
+                                "value_kind": "scalar"
+                              }
+                            },
+                            {
+                              "name": "defaults",
+                              "value": {
+                                "items": [],
+                                "value_kind": "list"
+                              }
+                            }
+                          ],
+                          "id": "expression:loop_first_three:children:parse:initial:node:25d4a0b79b493e114c5c3c4f1849d749d57240cdc0aed6ac0ada84881ad9cf26",
+                          "kind": "composite",
+                          "python_kind": "arguments"
+                        },
+                        "value_kind": "node"
+                      }
+                    },
+                    {
+                      "name": "body",
+                      "value": {
+                        "value": {
+                          "fields": [
+                            {
+                              "name": "elts",
+                              "value": {
+                                "items": [],
+                                "value_kind": "list"
+                              }
+                            },
+                            {
+                              "name": "ctx",
+                              "value": {
+                                "value": {
+                                  "fields": [],
+                                  "id": "expression:loop_first_three:children:parse:initial:node:92fb0c05a25880dc771fe28a5a8cf719dc9475d2dfa8fdb7605c8ddd4fccf674",
+                                  "kind": "composite",
+                                  "python_kind": "Load"
+                                },
+                                "value_kind": "node"
+                              }
+                            }
+                          ],
+                          "id": "expression:loop_first_three:children:parse:initial:node:d98a5d611b99717b4052ab5939d7d38d79703d801c32ed798aa2f594f5e25a29",
+                          "kind": "composite",
+                          "python_kind": "List"
+                        },
+                        "value_kind": "node"
+                      }
+                    }
+                  ],
+                  "id": "expression:loop_first_three:children:parse:initial:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "composite",
+                  "python_kind": "Lambda"
+                }
+              },
+              "condition": {
+                "id": "expression:loop_first_three:condition",
+                "role": "condition",
+                "tree": {
+                  "id": "expression:loop_first_three:condition:parse:initial:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "literal",
+                  "literal_kind": null,
+                  "value": {
+                    "kind": "bool",
+                    "value": "0"
+                  }
+                }
+              },
+              "delay_seconds": {
+                "id": "expression:loop_first_three:delay_seconds",
+                "role": "expression",
+                "tree": {
+                  "id": "expression:loop_first_three:delay_seconds:parse:initial:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "literal",
+                  "literal_kind": null,
+                  "value": {
+                    "kind": "float",
+                    "value": "0x1.999999999999ap-4"
+                  }
+                }
+              },
+              "else_body": {
+                "id": "sequence_first_loop_else",
+                "statements": []
+              },
+              "id": "loop_first_three",
+              "iterable": {
+                "id": "expression:loop_first_three:iterable",
+                "role": "expression",
+                "tree": {
+                  "arguments": [
+                    {
+                      "id": "expression:loop_first_three:iterable:parse:initial:node:0b3074de96474d81cbe270638db284f45b95f3aadc665c2b0d33316c172b27a0",
+                      "kind": "literal",
+                      "literal_kind": null,
+                      "value": {
+                        "kind": "int",
+                        "value": "1"
+                      }
+                    },
+                    {
+                      "id": "expression:loop_first_three:iterable:parse:initial:node:3a62084ed6e1194b7a365626e81bfc43b7b18cee43aac098d0dff9a49051e25a",
+                      "kind": "literal",
+                      "literal_kind": null,
+                      "value": {
+                        "kind": "int",
+                        "value": "4"
+                      }
+                    }
+                  ],
+                  "callee": {
+                    "context": "load",
+                    "id": "expression:loop_first_three:iterable:parse:initial:node:d39ce10a7f02853a540336b9564501a48784ff61e231c6d8e80f9bf049753136",
+                    "kind": "symbol",
+                    "name": "range",
+                    "symbol_id": null
+                  },
+                  "id": "expression:loop_first_three:iterable:parse:initial:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "keywords": [],
+                  "kind": "call"
+                }
+              },
+              "kind": "loop",
+              "loop_kind": "for",
+              "target": {
+                "id": "expression:loop_first_three:target",
+                "role": "target",
+                "tree": {
+                  "context": "store",
+                  "id": "expression:loop_first_three:target:parse:initial:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "symbol",
+                  "name": "number",
+                  "symbol_id": "symbol_1538353c97e33afa5fe16878"
+                }
+              }
+            }
+          ]
+        },
+        "decorators": [],
+        "display_name": "Count three values",
+        "docstring": null,
+        "id": "diagram_first_loop",
+        "identifier": "count_three",
+        "kind": "sync",
+        "method_kind": null,
+        "parameters": [],
+        "return_annotation": null,
+        "symbol_id": "symbol_c6715c4bc42f77f00a655285",
+        "type_parameters": []
+      }
+    ],
+    "modules": [
+      {
+        "body": [
+          {
+            "function_id": "diagram_first_hello",
+            "kind": "function_reference"
+          },
+          {
+            "function_id": "diagram_first_decision",
+            "kind": "function_reference"
+          },
+          {
+            "function_id": "diagram_first_loop",
+            "kind": "function_reference"
+          }
+        ],
+        "docstring": "Small executable algorithms from the First Delivery collection.",
+        "id": "module:first_delivery.main",
+        "kind": "module",
+        "path": "main"
+      }
+    ],
+    "package": "first_delivery",
+    "symbols": [
+      {
+        "declaration_id": "diagram_first_hello",
+        "id": "symbol_ebbc8e8bf31c1962140d0e72",
+        "kind": "function",
+        "name": "main",
+        "owner_id": "diagram_first_hello"
+      },
+      {
+        "declaration_id": "diagram_first_decision",
+        "id": "symbol_99aac8f4543d23f9c8778421",
+        "kind": "function",
+        "name": "describe_sign",
+        "owner_id": "diagram_first_decision"
+      },
+      {
+        "declaration_id": "parameter_cd075d89b2975694d3fd94ac",
+        "id": "symbol_d1859936342d3e756970af7d",
+        "kind": "parameter",
+        "name": "value",
+        "owner_id": "diagram_first_decision"
+      },
+      {
+        "declaration_id": "diagram_first_loop",
+        "id": "symbol_c6715c4bc42f77f00a655285",
+        "kind": "function",
+        "name": "count_three",
+        "owner_id": "diagram_first_loop"
+      },
+      {
+        "declaration_id": "loop_first_three",
+        "id": "symbol_1538353c97e33afa5fe16878",
+        "kind": "local",
+        "name": "number",
+        "owner_id": "diagram_first_loop"
+      }
+    ]
+  },
+  "project_id": "project_first_delivery",
+  "projection_definitions": [
+    {
+      "decorations": [
+        "kind",
+        "detail"
+      ],
+      "direction": "outgoing",
+      "expanded_ids": [],
+      "focus_ids": [],
+      "grouping": "concept",
+      "id": "projection_first_delivery_learning",
+      "include_isolated": false,
+      "include_scope": true,
+      "label_style": "short",
+      "layout": "radial",
+      "max_depth": 4,
+      "node_limit": 100,
+      "object_kinds": [
+        "concept",
+        "function",
+        "operation"
+      ],
+      "relation_kinds": [
+        "conceptually_contains",
+        "authored"
+      ],
+      "scope_id": "concept_first_delivery_happy_path",
+      "title": "Learning progression"
+    }
+  ],
+  "revision": 0,
+  "runtime_settings": {
+    "active_run_profile": "Default",
+    "run_profiles": [
+      {
+        "arguments": "",
+        "environment": [],
+        "interpreter": "",
+        "name": "Default",
+        "working_directory": "."
+      }
+    ]
+  },
+  "semantic_relations": [
+    {
+      "description": "The learning sequence grows one control idea at a time.",
+      "id": "semantic_relation_first_output_to_choice",
+      "kind": "precedes_conceptually",
+      "label": "then add a choice",
+      "source_id": "diagram_first_hello",
+      "target_id": "diagram_first_decision"
+    },
+    {
+      "description": "Iteration follows once the preferred route is readable.",
+      "id": "semantic_relation_first_choice_to_loop",
+      "kind": "precedes_conceptually",
+      "label": "then add repetition",
+      "source_id": "diagram_first_decision",
+      "target_id": "diagram_first_loop"
+    }
+  ],
+  "shape_packs": [],
+  "title": "First Delivery — Shared Semantic Starter"
+}

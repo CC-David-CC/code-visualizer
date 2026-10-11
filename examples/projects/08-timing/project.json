@@ -1,0 +1,333 @@
+{
+  "concepts": [],
+  "description": "",
+  "documents": [
+    {
+      "description": "",
+      "extensions": [],
+      "id": "diagram_26ad814cde7247a2a91846391bc3adb6",
+      "kind": "drakon",
+      "title": "main"
+    }
+  ],
+  "domain_workspace": {
+    "bundle_references": [],
+    "language_definitions": [],
+    "models": [],
+    "schemas": []
+  },
+  "drakon_views": [
+    {
+      "document_id": "diagram_26ad814cde7247a2a91846391bc3adb6",
+      "end_id": "end_08e34eba2c314314a6bf4cddd084cbf5",
+      "function_id": "diagram_26ad814cde7247a2a91846391bc3adb6",
+      "header_id": "header_4e69995d95314103b02c067649a467e0",
+      "title": "main"
+    }
+  ],
+  "extensions": [],
+  "format_revision": 11,
+  "managed_assets": [],
+  "program_model": {
+    "entrypoint": {
+      "arguments": {
+        "keywords": [],
+        "kind": "literal",
+        "positional": []
+      },
+      "callable_id": "diagram_26ad814cde7247a2a91846391bc3adb6",
+      "id": "entrypoint:project_eddfde2bf6e142b8869e633a2d9e5ad1",
+      "startup": []
+    },
+    "functions": [
+      {
+        "body": {
+          "id": "sequence_985460975eb145b58d3f74ab75edd361",
+          "statements": [
+            {
+              "id": "atom_5a755f5f21b445a283755aa3623f1fd5",
+              "kind": "start_timer",
+              "timer": "operation"
+            },
+            {
+              "asynchronous": false,
+              "id": "atom_eefa3519cf1c48ca87ed458784eee1e1",
+              "kind": "delay",
+              "seconds": {
+                "id": "expression:atom_eefa3519cf1c48ca87ed458784eee1e1:seconds",
+                "role": "expression",
+                "tree": {
+                  "id": "expression:atom_eefa3519cf1c48ca87ed458784eee1e1:seconds:parse:68cc0e96aa9f4ff98d02227f3c41aca3:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "literal",
+                  "literal_kind": null,
+                  "value": {
+                    "kind": "float",
+                    "value": "0x1.999999999999ap-4"
+                  }
+                }
+              }
+            },
+            {
+              "asynchronous": false,
+              "id": "atom_1b9c8288638b4a8e8179b0dec814cfb9",
+              "kind": "period",
+              "seconds": {
+                "id": "expression:atom_1b9c8288638b4a8e8179b0dec814cfb9:seconds",
+                "role": "expression",
+                "tree": {
+                  "id": "expression:atom_1b9c8288638b4a8e8179b0dec814cfb9:seconds:parse:73291b11a396486e9e7f5a4be6380fc9:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "literal",
+                  "literal_kind": null,
+                  "value": {
+                    "kind": "float",
+                    "value": "0x1.0000000000000p+0"
+                  }
+                }
+              },
+              "timer": "operation"
+            },
+            {
+              "deadline": {
+                "id": "expression:atom_1ed61a2ea3bf41ca990ffdebef25a161:deadline",
+                "role": "expression",
+                "tree": {
+                  "id": "expression:atom_1ed61a2ea3bf41ca990ffdebef25a161:deadline:parse:0bf64bd9bd444843b32478fc27bddbc5:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "literal",
+                  "literal_kind": null,
+                  "value": {
+                    "kind": "float",
+                    "value": "0x1.0000000000000p+0"
+                  }
+                }
+              },
+              "id": "atom_1ed61a2ea3bf41ca990ffdebef25a161",
+              "kind": "synchronizer",
+              "on_time": {
+                "id": "sequence_atom_1ed61a2ea3bf41ca990ffdebef25a161_on_time",
+                "statements": [
+                  {
+                    "id": "atom_atom_1ed61a2ea3bf41ca990ffdebef25a161_on_time_action",
+                    "kind": "action",
+                    "source": {
+                      "id": "expression:atom_atom_1ed61a2ea3bf41ca990ffdebef25a161_on_time_action:source",
+                      "role": "statements",
+                      "tree": {
+                        "fields": [
+                          {
+                            "name": "body",
+                            "value": {
+                              "items": [
+                                {
+                                  "value": {
+                                    "fields": [
+                                      {
+                                        "name": "value",
+                                        "value": {
+                                          "value": {
+                                            "arguments": [
+                                              {
+                                                "id": "expression:atom_atom_1ed61a2ea3bf41ca990ffdebef25a161_on_time_action:source:parse:119a367facc741b4bd080f67e581d25d:node:cdab044052e82df79580e3e9b25351a3da7a1bb9f802ced25f38a238e71a7030",
+                                                "kind": "literal",
+                                                "literal_kind": null,
+                                                "value": {
+                                                  "kind": "str",
+                                                  "value": "on time"
+                                                }
+                                              }
+                                            ],
+                                            "callee": {
+                                              "context": "load",
+                                              "id": "expression:atom_atom_1ed61a2ea3bf41ca990ffdebef25a161_on_time_action:source:parse:119a367facc741b4bd080f67e581d25d:node:5bf23479175df1c3e596a8889a4e7114e0032dd1dc6aacb22a68f268a9085b66",
+                                              "kind": "symbol",
+                                              "name": "print",
+                                              "symbol_id": null
+                                            },
+                                            "id": "expression:atom_atom_1ed61a2ea3bf41ca990ffdebef25a161_on_time_action:source:parse:119a367facc741b4bd080f67e581d25d:node:0c70ce0ac4f8bd15b6b151fbf0399d9be60b8f0688b42a0d7166a5d82693c493",
+                                            "keywords": [],
+                                            "kind": "call"
+                                          },
+                                          "value_kind": "node"
+                                        }
+                                      }
+                                    ],
+                                    "id": "expression:atom_atom_1ed61a2ea3bf41ca990ffdebef25a161_on_time_action:source:parse:119a367facc741b4bd080f67e581d25d:node:ff524f8f9cdf6fb1f58d37ea4a0b77c67426f3582e7cb4c5c00949acc1f0c2fd",
+                                    "kind": "composite",
+                                    "python_kind": "Expr"
+                                  },
+                                  "value_kind": "node"
+                                }
+                              ],
+                              "value_kind": "list"
+                            }
+                          },
+                          {
+                            "name": "type_ignores",
+                            "value": {
+                              "items": [],
+                              "value_kind": "list"
+                            }
+                          }
+                        ],
+                        "id": "expression:atom_atom_1ed61a2ea3bf41ca990ffdebef25a161_on_time_action:source:parse:119a367facc741b4bd080f67e581d25d:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                        "kind": "composite",
+                        "python_kind": "Module"
+                      }
+                    }
+                  }
+                ]
+              },
+              "on_timeout": {
+                "id": "sequence_atom_1ed61a2ea3bf41ca990ffdebef25a161_on_timeout",
+                "statements": [
+                  {
+                    "id": "atom_atom_1ed61a2ea3bf41ca990ffdebef25a161_on_timeout_action",
+                    "kind": "action",
+                    "source": {
+                      "id": "expression:atom_atom_1ed61a2ea3bf41ca990ffdebef25a161_on_timeout_action:source",
+                      "role": "statements",
+                      "tree": {
+                        "fields": [
+                          {
+                            "name": "body",
+                            "value": {
+                              "items": [
+                                {
+                                  "value": {
+                                    "fields": [
+                                      {
+                                        "name": "value",
+                                        "value": {
+                                          "value": {
+                                            "arguments": [
+                                              {
+                                                "id": "expression:atom_atom_1ed61a2ea3bf41ca990ffdebef25a161_on_timeout_action:source:parse:b2d1979d23694c39a41b0ce23acbafa9:node:cdab044052e82df79580e3e9b25351a3da7a1bb9f802ced25f38a238e71a7030",
+                                                "kind": "literal",
+                                                "literal_kind": null,
+                                                "value": {
+                                                  "kind": "str",
+                                                  "value": "timed out"
+                                                }
+                                              }
+                                            ],
+                                            "callee": {
+                                              "context": "load",
+                                              "id": "expression:atom_atom_1ed61a2ea3bf41ca990ffdebef25a161_on_timeout_action:source:parse:b2d1979d23694c39a41b0ce23acbafa9:node:5bf23479175df1c3e596a8889a4e7114e0032dd1dc6aacb22a68f268a9085b66",
+                                              "kind": "symbol",
+                                              "name": "print",
+                                              "symbol_id": null
+                                            },
+                                            "id": "expression:atom_atom_1ed61a2ea3bf41ca990ffdebef25a161_on_timeout_action:source:parse:b2d1979d23694c39a41b0ce23acbafa9:node:0c70ce0ac4f8bd15b6b151fbf0399d9be60b8f0688b42a0d7166a5d82693c493",
+                                            "keywords": [],
+                                            "kind": "call"
+                                          },
+                                          "value_kind": "node"
+                                        }
+                                      }
+                                    ],
+                                    "id": "expression:atom_atom_1ed61a2ea3bf41ca990ffdebef25a161_on_timeout_action:source:parse:b2d1979d23694c39a41b0ce23acbafa9:node:ff524f8f9cdf6fb1f58d37ea4a0b77c67426f3582e7cb4c5c00949acc1f0c2fd",
+                                    "kind": "composite",
+                                    "python_kind": "Expr"
+                                  },
+                                  "value_kind": "node"
+                                }
+                              ],
+                              "value_kind": "list"
+                            }
+                          },
+                          {
+                            "name": "type_ignores",
+                            "value": {
+                              "items": [],
+                              "value_kind": "list"
+                            }
+                          }
+                        ],
+                        "id": "expression:atom_atom_1ed61a2ea3bf41ca990ffdebef25a161_on_timeout_action:source:parse:b2d1979d23694c39a41b0ce23acbafa9:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                        "kind": "composite",
+                        "python_kind": "Module"
+                      }
+                    }
+                  }
+                ]
+              },
+              "preferred_on_time": true,
+              "timer": "operation"
+            },
+            {
+              "destination": null,
+              "end": null,
+              "expression": {
+                "id": "expression:atom_a35385c822714a72b07296cc1e3cb648:expression",
+                "role": "expression",
+                "tree": {
+                  "id": "expression:atom_a35385c822714a72b07296cc1e3cb648:expression:parse:e64b3c5d7231447282d6869ca79d7620:node:4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+                  "kind": "literal",
+                  "literal_kind": null,
+                  "value": {
+                    "kind": "str",
+                    "value": "output"
+                  }
+                }
+              },
+              "id": "atom_a35385c822714a72b07296cc1e3cb648",
+              "kind": "output"
+            }
+          ]
+        },
+        "decorators": [],
+        "display_name": "main",
+        "docstring": null,
+        "id": "diagram_26ad814cde7247a2a91846391bc3adb6",
+        "identifier": "main",
+        "kind": "sync",
+        "method_kind": null,
+        "parameters": [],
+        "return_annotation": null,
+        "symbol_id": "symbol_c3a426b7c6545a8c5f3d6ec1",
+        "type_parameters": []
+      }
+    ],
+    "modules": [
+      {
+        "body": [
+          {
+            "function_id": "diagram_26ad814cde7247a2a91846391bc3adb6",
+            "kind": "function_reference"
+          }
+        ],
+        "docstring": "",
+        "id": "module:app.main",
+        "kind": "module",
+        "path": "main"
+      }
+    ],
+    "package": "app",
+    "symbols": [
+      {
+        "declaration_id": "diagram_26ad814cde7247a2a91846391bc3adb6",
+        "id": "symbol_c3a426b7c6545a8c5f3d6ec1",
+        "kind": "function",
+        "name": "main",
+        "owner_id": "diagram_26ad814cde7247a2a91846391bc3adb6"
+      }
+    ]
+  },
+  "project_id": "project_eddfde2bf6e142b8869e633a2d9e5ad1",
+  "projection_definitions": [],
+  "revision": 7,
+  "runtime_settings": {
+    "active_run_profile": "Default",
+    "run_profiles": [
+      {
+        "arguments": "",
+        "environment": [],
+        "interpreter": "",
+        "name": "Default",
+        "working_directory": "."
+      }
+    ]
+  },
+  "semantic_relations": [],
+  "shape_packs": [],
+  "title": "Timing and Synchronization Example"
+}

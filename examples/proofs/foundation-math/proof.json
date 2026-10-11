@@ -1,0 +1,50 @@
+{
+  "canonical_unchanged": true,
+  "equation": "C[i,j] = sum(k, A[i,k] * B[k,j])",
+  "evidence_id": "evidence:edf583c0c4ff42df0a867fc7b3ead3ee13450848314384b12a5bb8d8484f4759",
+  "expected_tensor": [
+    [
+      19.0,
+      22.0
+    ],
+    [
+      43.0,
+      50.0
+    ]
+  ],
+  "highlighted_notations": [
+    "graph",
+    "table",
+    "tree_form"
+  ],
+  "input_digest": "2349bfc5963968cb80ee1768a49984b4d31dcd8a30214d1ad96d83a3c16ef859",
+  "origin_ids": [
+    "matrix:A",
+    "matrix:A:value",
+    "matrix:B",
+    "matrix:B:value",
+    "matrix:C",
+    "matrix:equation",
+    "matrix:expression:A",
+    "matrix:expression:A:index:0",
+    "matrix:expression:A:index:1",
+    "matrix:expression:B",
+    "matrix:expression:B:index:0",
+    "matrix:expression:B:index:1",
+    "matrix:expression:C",
+    "matrix:expression:C:index:0",
+    "matrix:expression:C:index:1",
+    "matrix:expression:multiply",
+    "matrix:expression:sum",
+    "matrix:i",
+    "matrix:j",
+    "matrix:k"
+  ],
+  "output_resource": "resource:1a923dc490a87f8b4a385691d80f541af791454530121010a3f8c47212133ec6",
+  "passed": true,
+  "portable_worker_equal": true,
+  "program_functions": 0,
+  "protobuf_roundtrip_equal": true,
+  "terminal_resource": "resource:c38c82827a9e4b54a0d4e172dbf2cb383cf87e2ca0104c369ff86fc9b0082345",
+  "transformations": []
+}
